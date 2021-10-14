@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const Template = styled.div``;
+export const Template = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 export const PageContainer = styled.div`
   max-width: 1000px;

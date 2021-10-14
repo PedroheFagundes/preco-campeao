@@ -6,7 +6,7 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import SignIn from './pages/SignIn';
 
-export default () => {
+export default function () {
   return (
     <Switch>
       <Route exact path='/'>
