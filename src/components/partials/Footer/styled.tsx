@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
 export const FooterArea = styled.div`
-  height: 60px;
+  height: var(--navBarHeight);
   background-color: #ccc;
 `;

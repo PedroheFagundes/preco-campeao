@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+/* Variáveis do Projeto */
+:root{
+ --navBarHeight: 60px;
+}
+
 body {
   margin:0;
   font-family: 'Open Sans', sans-serif;
