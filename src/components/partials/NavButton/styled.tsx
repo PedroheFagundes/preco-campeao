@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const NavButtonArea = styled.div`
+
+  img {
+    height 30px;
+  }
   
   a {
     text-decoration: none;
@@ -16,25 +20,19 @@ export const NavButtonArea = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40px;
-
+    height: 60px;
+    background-color: #748a8e;
   }
 
   li {
     flex: 1;
     text-align: center;
+    bo
     
     a {
       color: #000;
       font-size: 14px;
       text-decoration: none;
-
-      &.button {
-        background-color: #ff8100;
-        border-radius: 4px;
-        color: #fff;
-        padding: 5px 10px;
-      }
     }
   }
 `;

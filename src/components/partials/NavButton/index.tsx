@@ -8,27 +8,27 @@ const NavButton = () => {
       <ul>
         <li>
         <Link to= '/'>
-          Início
+          <img src="/images/home.png" />
         </Link>
         </li>
         <li>
         <Link to= '/prices-change'>
-          Mudança
+        <img src="/images/prices-change.png" />
         </Link>
         </li>
         <li>
         <Link to= '/super-deals'>
-          Super
+        <img src="/images/super-deals.png" />
         </Link>
         </li>
         <li>
         <Link to= '/simulation'>
-          Simulação
+        <img src="/images/simulation.png" />
         </Link>
         </li>
         <li>
         <Link to= '/profile'>
-          Perfil
+        <img src="/images/profile.png" />
         </Link>
         </li>
       </ul>
