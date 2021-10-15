@@ -12,23 +12,23 @@ const NavButton = () => {
         </Link>
         </li>
         <li>
-        <Link to= '/about'>
-          Sobre
+        <Link to= '/prices-change'>
+          Mudança
         </Link>
         </li>
         <li>
-        <Link to= '/about'>
-          Sobre
+        <Link to= '/super-deals'>
+          Super
         </Link>
         </li>
         <li>
-        <Link to= '/about'>
-          Sobre
+        <Link to= '/simulation'>
+          Simulação
         </Link>
         </li>
         <li>
-        <Link to= '/about'>
-          Sobre
+        <Link to= '/profile'>
+          Perfil
         </Link>
         </li>
       </ul>
