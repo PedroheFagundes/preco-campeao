@@ -21,13 +21,13 @@ export const NavButtonArea = styled.div`
   }
 
   ul {
-    background-color: #748a8e;
-    box-shadow: inset 0px 5px 5px #9cbabf;
+    background-color: #60718c;
+    box-shadow: inset 0px 5px 5px #839bbf;
   }
 
   li {
-    border-right: 0.5px solid #9cbabf;
-    border-left: 0.5px solid #495759;
+    border-right: 1px solid #839bbf;
+    border-left: 1px solid #3d4859;
     flex: 1;
     
     a {
