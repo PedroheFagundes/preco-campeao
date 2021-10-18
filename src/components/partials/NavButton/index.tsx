@@ -5,7 +5,7 @@ import{ NavButtonArea } from './styled';
 const NavButton = () => {
   return(
     <NavButtonArea>
-      <ul>
+      <ul className="noSelect">
         <li>
         <Link to= '/'>
           <img src="/images/home.png" alt=""/>

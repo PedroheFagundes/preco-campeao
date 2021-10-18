@@ -1,10 +1,11 @@
 import React from "react";
+import{ HomeArea } from './styled';
 
 const Page = () => {
   return (
-    <div>
+    <HomeArea>
       Página Inicial
-    </div>
+    </HomeArea>
   );
 }
 
