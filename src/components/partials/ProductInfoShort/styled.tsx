@@ -10,10 +10,15 @@ export const ProductInfoShortArea = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
   
   div{
     display: flex;
     flex-direction: column;
+
+    span {
+
+    }
   }
 
   span {
@@ -39,6 +44,6 @@ export const ProductInfoShortArea = styled.div`
 
   img {
     border-radius: 7px;
-    height: 60px;
+    width: 50px;
   }
 `;
