@@ -9,10 +9,18 @@ export const SearchBarArea = styled.div`
   align-items: center;
 
   input {
-    height: 35px;
+    height: 38px;
     width: 90%;
     margin: 15px 0px;
     border-radius: 7px;
+    border: none;
+    box-shadow: inset 0px 2px 3px #11414F;
+
+
+    &:focus{
+      outline: none;
+    }
+
 
     &::placeholder {
       color: #11414f;
