@@ -5,7 +5,7 @@ import{ SearchBarArea } from './styled';
 const SearchBar = () => {
   return(
     <SearchBarArea>
-      Pesquisar Promoções
+      <input type="text" placeholder="Pesquisar promoções..."/>
       <img src="/images/search.png" alt=""/>
     </SearchBarArea>
   );

@@ -1,13 +1,35 @@
 import styled from "styled-components";
 
 export const SearchBarArea = styled.div`
-  height: 35px;
-  width: 90%;
-  margin: 15px 0px;
-  border-radius: 7px;
-  background-color: #fff;
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    height: 35px;
+    width: 90%;
+    margin: 15px 0px;
+    border-radius: 7px;
+
+    &::placeholder {
+      color: #11414f;
+      padding-left 5px;
+      font-size: 18px;
+    }
+
+  }
 
   img {
-    height 25px;
+    height 22px;
+    float: right;
+    margin-left: 77%;
+    margin-top: -45px;
+    position: relative;
+    z-index: 2;
+    opacity: 70%;
+    transform: scaleX(-1);
   }
 `;
