@@ -17,6 +17,8 @@ export const ProductInfoShortArea = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-itens: center;
+    height: 43px;
 
     span {
       font-size: 25px;
@@ -29,7 +31,7 @@ export const ProductInfoShortArea = styled.div`
   }
 
   span {
-
+    height: 55px;
     font-family: 'Contrail One', sans-serif;
     color: #00404a;
 
