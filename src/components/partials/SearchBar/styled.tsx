@@ -14,20 +14,17 @@ export const SearchBarArea = styled.div`
     margin: 15px 0px;
     border-radius: 7px;
     border: none;
-    box-shadow: inset 0px 2px 3px #11414F;
-
 
     &:focus{
       outline: none;
+      box-shadow: inset 0px 4px 4px #777;
     }
-
 
     &::placeholder {
       color: #11414f;
       padding-left 5px;
       font-size: 18px;
     }
-
   }
 
   img {
