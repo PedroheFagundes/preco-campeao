@@ -11,6 +11,7 @@ export const ProductInfoShortArea = styled.div`
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  margin-bottom: 20px;
   
   div{
     flex: 1;
@@ -45,12 +46,11 @@ export const ProductInfoShortArea = styled.div`
     span {
       font-size: 55px;
     }
-
-    
   }
 
   img {
     border-radius: 7px;
     width: 50px;
+    margin: 0px 5px:
   }
 `;

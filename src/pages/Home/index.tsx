@@ -8,6 +8,9 @@ const Page = () => {
     <HomeArea>
       <SearchBar />
       <ProductInfoShort />
+      <ProductInfoShort />
+      <ProductInfoShort />
+      <ProductInfoShort />
     </HomeArea>
   );
 }
