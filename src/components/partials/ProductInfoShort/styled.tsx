@@ -29,9 +29,9 @@ export const ProductInfoShortArea = styled.div`
   }
 
   span {
+
     font-family: 'Contrail One', sans-serif;
     color: #00404a;
-    margin-right: 5px;
 
     span:first-child,
     span:last-child {
@@ -39,18 +39,18 @@ export const ProductInfoShortArea = styled.div`
     }
 
     span:last-child {
-      position: relative;
-      bottom: 10px;
+      vertical-align: top;
+      margin-right: 10px;
     }
 
     span {
       font-size: 55px;
     }
   }
-
+  
   img {
     border-radius: 7px;
     width: 50px;
-    margin: 0px 5px:
+    margin: 0px 5px;
   }
 `;
