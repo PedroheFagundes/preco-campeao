@@ -2,7 +2,7 @@ import{ ProductInfoShortArea } from './styled';
 
 const ProductInfoShort = () => {
   return(
-    <ProductInfoShortArea>
+    <ProductInfoShortArea className="noSelect">
       <img src="/images/leitemacuco.png" alt=""/>
       <div>
         <span>Leite Macuco</span>
