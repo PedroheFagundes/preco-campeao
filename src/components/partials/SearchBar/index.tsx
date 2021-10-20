@@ -1,5 +1,3 @@
-import React from "react";
-import NavButton from "../NavButton";
 import{ SearchBarArea } from './styled';
 
 const SearchBar = () => {

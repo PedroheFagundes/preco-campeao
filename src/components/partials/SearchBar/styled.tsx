@@ -7,6 +7,7 @@ export const SearchBarArea = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 
   input {
     padding-left: 10px;
