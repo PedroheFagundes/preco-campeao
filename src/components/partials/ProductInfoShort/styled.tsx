@@ -8,11 +8,12 @@ export const ProductInfoShortArea = styled.div`
   box-shadow: 0px 2px 2px #333;
   border-radius: 7px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   
   div{
+    flex: 1;
     display: flex;
     flex-direction: column;
 
@@ -29,6 +30,7 @@ export const ProductInfoShortArea = styled.div`
   span {
     font-family: 'Contrail One', sans-serif;
     color: #00404a;
+    margin-right: 5px;
 
     span:first-child,
     span:last-child {
