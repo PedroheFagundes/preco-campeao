@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Template = styled.div`
   position: fixed;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;

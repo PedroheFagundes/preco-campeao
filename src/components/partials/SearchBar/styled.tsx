@@ -9,6 +9,7 @@ export const SearchBarArea = styled.div`
   align-items: center;
 
   input {
+    padding-left: 10px;
     height: 38px;
     width: 90%;
     margin: 15px 0px;
@@ -22,7 +23,6 @@ export const SearchBarArea = styled.div`
 
     &::placeholder {
       color: #11414f;
-      padding-left 5px;
       font-size: 18px;
     }
   }
