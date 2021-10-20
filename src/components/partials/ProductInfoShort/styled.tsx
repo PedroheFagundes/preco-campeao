@@ -17,7 +17,12 @@ export const ProductInfoShortArea = styled.div`
     flex-direction: column;
 
     span {
+      font-size: 25px;
+      line-height: 100%;
+    }
 
+    span:last-child {
+      font-size: 18px;
     }
   }
 
@@ -27,7 +32,7 @@ export const ProductInfoShortArea = styled.div`
 
     span:first-child,
     span:last-child {
-      font-size: 25px;
+      font-size: 30px;
     }
 
     span:last-child {
@@ -36,7 +41,7 @@ export const ProductInfoShortArea = styled.div`
     }
 
     span {
-      font-size: 40px;
+      font-size: 55px;
     }
 
     
