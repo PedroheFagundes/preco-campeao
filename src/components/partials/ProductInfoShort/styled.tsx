@@ -18,15 +18,15 @@ export const ProductInfoShortArea = styled.div`
     display: flex;
     flex-direction: column;
     align-itens: center;
-    height: 43px;
+    height: 50px;
 
     span {
-      font-size: 25px;
+      font-size: 29px;
       line-height: 100%;
     }
 
     span:last-child {
-      font-size: 18px;
+      font-size: 21px;
     }
   }
 
