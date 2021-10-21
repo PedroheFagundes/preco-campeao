@@ -7,7 +7,8 @@ export const NavButtonArea = styled.div`
 
   .homeImg {
     opacity: ${({ theme }) => theme.homeOpacity}%;
-    filter: invert(63%) sepia(60%) saturate(4540%) hue-rotate(358deg) brightness(94%) contrast(98%);
+    filter: invert(51%) sepia(38%) saturate(6679%) hue-rotate(351deg) brightness(98%) contrast(86%);
+    box-shadow: 0px 4px 4px #742604;
   }
 
   .pricesChangeImg {
