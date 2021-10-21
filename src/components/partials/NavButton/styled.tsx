@@ -1,7 +1,9 @@
 import styled from "styled-components";
 export const NavButtonArea = styled.div`
 
-
+  img {
+    margin-bottom: -5px;
+  }
 
   .homeImg {
     opacity: ${({ theme }) => theme.homeOpacity}%;
