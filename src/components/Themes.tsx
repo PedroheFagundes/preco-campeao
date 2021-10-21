@@ -12,7 +12,9 @@ export const themes = {
     simulationHeight: 30,
     profileHeight: 30,
 
-    homeSpanDisplay: 'block'
+    homeDisplay: 'block',
+
+    homeLiJustify: 'flex-end'
   },
   'pricesChangeActive': {
     homeOpacity: 70,
@@ -27,7 +29,7 @@ export const themes = {
     simulationHeight: 30,
     profileHeight: 30,
 
-    homeSpanDisplay: 'none'
+    homeDisplay: 'none'
   },
   'superDealsActive': {
     homeOpacity: 70,
@@ -42,7 +44,7 @@ export const themes = {
     simulationHeight: 30,
     profileHeight: 30,
 
-    homeSpanDisplay: 'none'
+    homeDisplay: 'none'
   },
   'simulationActive': {
     homeOpacity: 70,
@@ -57,7 +59,7 @@ export const themes = {
     simulationHeight: 50,
     profileHeight: 30,
 
-    homeSpanDisplay: 'none'
+    homeDisplay: 'none'
   },
   'profileActive': {
     homeOpacity: 70,
@@ -72,6 +74,6 @@ export const themes = {
     simulationHeight: 30,
     profileHeight: 50,
 
-    homeSpanDisplay: 'none'
+    homeDisplay: 'none'
   }
 };

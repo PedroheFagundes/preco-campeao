@@ -47,6 +47,10 @@ export const NavButtonArea = styled.div`
     filter: invert(77%);
   }
 
+  .homeImg.arrow {
+    display: ${({ theme }) => theme.homeDisplay};
+  }
+
   ul, li {
     height: var(--navBarHeight);
     margin: 0;
@@ -66,7 +70,6 @@ export const NavButtonArea = styled.div`
     display: flex;
     flex-direction: column;
     border-right: 1px solid #839bbf;
-    justify-content: flex-end;
     border-left: 1px solid #3d4859;
     flex: 1;
 
@@ -75,8 +78,12 @@ export const NavButtonArea = styled.div`
       text-shadow: 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
     }
 
+    .homeLi {
+      justify-content: ${({ theme }) => theme.homeLiJustify};
+    }
+
     .homeSpan {
-      display: ${({ theme }) => theme.homeSpanDisplay};
+      display: ${({ theme }) => theme.homeDisplay};
     }
 
     a {
@@ -84,6 +91,10 @@ export const NavButtonArea = styled.div`
       font-size: 14px;
       text-decoration: none;
     }
+  }
+
+  .homeLi {
+    justify-content: ${({ theme }) => theme.homeLiJustify};
   }
 
   li:first-child {

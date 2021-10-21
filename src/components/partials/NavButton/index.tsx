@@ -15,7 +15,7 @@ const NavButton = () => {
     <ThemeProvider theme={theme}>
       <NavButtonArea>
         <ul className="noSelect">
-          <li onClick={() => setThemes(themes['homeActive'])}>
+          <li className="homeLi" onClick={() => setThemes(themes['homeActive'])}>
             <div className="buttonImages">
               <img className='homeImg arrow' src="/images/left-arrow.png" alt="" />
               <Link to= '/'>
