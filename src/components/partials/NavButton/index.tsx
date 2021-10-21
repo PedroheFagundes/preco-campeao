@@ -19,6 +19,7 @@ const NavButton = () => {
           <Link to= '/'>
             <img className='homeImg' src="/images/home.png" alt="" />
           </Link>
+          <span>Início</span>
           </li>
           <li onClick={() => setThemes(themes['pricesChangeActive'])}>
           <Link to= '/prices-change'>

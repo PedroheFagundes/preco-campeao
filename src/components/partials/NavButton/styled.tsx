@@ -1,30 +1,31 @@
 import styled from "styled-components";
 export const NavButtonArea = styled.div`
 
-  img {
-    height 30px;
-  }
+
 
   .homeImg {
     opacity: ${({ theme }) => theme.homeOpacity}%;
-    filter: invert(51%) sepia(38%) saturate(6679%) hue-rotate(351deg) brightness(98%) contrast(86%);
-    box-shadow: 0px 4px 4px #742604;
+    height: ${({ theme }) => theme.homeHeight}px;
   }
 
   .pricesChangeImg {
     opacity: ${({ theme }) => theme.pricesChangeOpacity}%;
+    height: ${({ theme }) => theme.pricesChangeHeight}px;
   }
 
   .superDealsImg {
     opacity: ${({ theme }) => theme.superDealsOpacity}%;
+    height: ${({ theme }) => theme.superDealsHeight}px;
   }
 
   .simulationImg {
     opacity: ${({ theme }) => theme.simulationOpacity}%;
+    height: ${({ theme }) => theme.simulationHeight}px;
   }
 
   .profileImg {
     opacity: ${({ theme }) => theme.profileOpacity}%;
+    height: ${({ theme }) => theme.profileHeight}px;
   }
   
   a {
@@ -47,9 +48,15 @@ export const NavButtonArea = styled.div`
   }
 
   li {
+    display: flex;
+    flex-direction: column;
     border-right: 1px solid #839bbf;
     border-left: 1px solid #3d4859;
     flex: 1;
+
+    span {
+      display: none;
+    }
     
     a {
       color: #000;
