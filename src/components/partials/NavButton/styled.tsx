@@ -1,9 +1,28 @@
 import styled from "styled-components";
-
 export const NavButtonArea = styled.div`
 
   img {
     height 30px;
+  }
+
+  .homeImg {
+    opacity: ${({ theme }) => theme.homeOpacity}%;
+  }
+
+  .pricesChangeImg {
+    opacity: ${({ theme }) => theme.pricesChangeOpacity}%;
+  }
+
+  .superDealsImg {
+    opacity: ${({ theme }) => theme.superDealsOpacity}%;
+  }
+
+  .simulationImg {
+    opacity: ${({ theme }) => theme.simulationOpacity}%;
+  }
+
+  .profileImg {
+    opacity: ${({ theme }) => theme.profileOpacity}%;
   }
   
   a {
