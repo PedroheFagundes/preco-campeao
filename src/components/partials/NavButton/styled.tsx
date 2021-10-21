@@ -51,11 +51,14 @@ export const NavButtonArea = styled.div`
     display: flex;
     flex-direction: column;
     border-right: 1px solid #839bbf;
+    justify-content: flex-end;
     border-left: 1px solid #3d4859;
     flex: 1;
 
     span {
-      display: none;
+      color: #fff;
+      text-shadow: 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+      display: block;
     }
     
     a {
