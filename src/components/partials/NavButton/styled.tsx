@@ -34,6 +34,19 @@ export const NavButtonArea = styled.div`
     text-decoration: none;
   }
 
+  .buttonImages {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+  }
+
+  .arrow {
+    width: 8px;
+    height: 8px;
+    margin: 0px 10px;
+    filter: invert(77%);
+  }
+
   ul, li {
     height: var(--navBarHeight);
     margin: 0;
@@ -60,9 +73,12 @@ export const NavButtonArea = styled.div`
     span {
       color: #fff;
       text-shadow: 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-      display: block;
     }
-    
+
+    .homeSpan {
+      display: ${({ theme }) => theme.homeSpanDisplay};
+    }
+
     a {
       color: #000;
       font-size: 14px;

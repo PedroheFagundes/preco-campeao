@@ -16,10 +16,14 @@ const NavButton = () => {
       <NavButtonArea>
         <ul className="noSelect">
           <li onClick={() => setThemes(themes['homeActive'])}>
-          <Link to= '/'>
-            <img className='homeImg' src="/images/home.png" alt="" />
-          </Link>
-          <span>Início</span>
+            <div className="buttonImages">
+              <img className='homeImg arrow' src="/images/left-arrow.png" alt="" />
+              <Link to= '/'>
+                <img className='homeImg' src="/images/home.png" alt="" />
+              </Link>
+              <img className='homeImg arrow' src="/images/right-arrow.png" alt="" />
+            </div>
+          <span className='homeSpan'>Início</span>
           </li>
           <li onClick={() => setThemes(themes['pricesChangeActive'])}>
           <Link to= '/prices-change'>
