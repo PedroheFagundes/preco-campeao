@@ -4,8 +4,8 @@ import { Switch, Route } from "react-router-dom";
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import SignIn from './pages/SignIn';
-import PricesChange from './pages/PricesChange';
-import SuperDeals from './pages/SuperDeals';
+import Variation from './pages/Variation';
+import Deals from './pages/Deals';
 import Simulation from './pages/Simulation';
 import Profile from './pages/Profile';
 
@@ -15,11 +15,11 @@ export default function () {
       <Route exact path='/'>
         <Home />
       </Route>
-      <Route exact path='/prices-change'>
-        <PricesChange />
+      <Route exact path='/variation'>
+        <Variation />
       </Route>
-      <Route exact path='/super-deals'>
-        <SuperDeals />
+      <Route exact path='/deals'>
+        <Deals />
       </Route>
       <Route exact path='/simulation'>
         <Simulation />

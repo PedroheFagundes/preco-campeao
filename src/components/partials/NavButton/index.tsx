@@ -23,27 +23,47 @@ const NavButton = () => {
               </Link>
               <img className='homeImg arrow' src="/images/right-arrow.png" alt="" />
             </div>
-          <span className='homeSpan'>Início</span>
+            <span className='homeSpan'>Início</span>
           </li>
-          <li onClick={() => setThemes(themes['pricesChangeActive'])}>
-          <Link to= '/prices-change'>
-          <img className='pricesChangeImg' src="/images/prices-change.png" alt=""/>
-          </Link>
+          <li className="variationLi" onClick={() => setThemes(themes['variationActive'])}>
+            <div className="buttonImages">
+              <img className='variationImg arrow' src="/images/left-arrow.png" alt="" />
+              <Link to= '/variation'>
+                <img className='variationImg' src="/images/variation.png" alt=""/>
+              </Link>
+              <img className='variationImg arrow' src="/images/right-arrow.png" alt="" />
+            </div>
+            <span className='variationSpan'>Variação</span>
           </li>
-          <li onClick={() => setThemes(themes['superDealsActive'])}>
-          <Link to= '/super-deals'>
-          <img className='superDealsImg' src="/images/super-deals.png" alt=""/>
-          </Link>
+            <li className="dealsLi" onClick={() => setThemes(themes['dealsActive'])}>
+            <div className="buttonImages">
+              <img className='dealsImg arrow' src="/images/left-arrow.png" alt="" />
+              <Link to= '/deals'>
+                <img className='dealsImg' src="/images/deals.png" alt=""/>
+              </Link>
+              <img className='dealsImg arrow' src="/images/right-arrow.png" alt="" />
+            </div>
+            <span className='dealsSpan'>Descontão</span>
           </li>
-          <li onClick={() => setThemes(themes['simulationActive'])}>
-          <Link to= '/simulation'>
-          <img className='simulationImg' src="/images/simulation.png" alt=""/>
-          </Link>
+            <li className="simulationLi" onClick={() => setThemes(themes['simulationActive'])}>
+            <div className="buttonImages">
+              <img className='simulationImg arrow' src="/images/left-arrow.png" alt="" />
+              <Link to= '/simulation'>
+                <img className='simulationImg' src="/images/simulation.png" alt=""/>
+              </Link>
+              <img className='simulationImg arrow' src="/images/right-arrow.png" alt="" />
+            </div>
+            <span className='simulationSpan'>Simulação</span>
           </li>
-          <li onClick={() => setThemes(themes['profileActive'])}>
-          <Link to= '/profile'>
-          <img className='profileImg' src="/images/profile.png" alt=""/>
-          </Link>
+          <li className="profileLi" onClick={() => setThemes(themes['profileActive'])}>
+            <div className="buttonImages">
+              <img className='profileImg arrow' src="/images/left-arrow.png" alt="" />
+              <Link to= '/profile'>
+                <img className='profileImg' src="/images/profile.png" alt=""/>
+              </Link>
+              <img className='profileImg arrow' src="/images/right-arrow.png" alt="" />
+            </div>
+            <span className='profileSpan'>Perfil</span>
           </li>
         </ul>
       </NavButtonArea>  

@@ -10,14 +10,14 @@ export const NavButtonArea = styled.div`
     height: ${({ theme }) => theme.homeHeight}px;
   }
 
-  .pricesChangeImg {
-    opacity: ${({ theme }) => theme.pricesChangeOpacity}%;
-    height: ${({ theme }) => theme.pricesChangeHeight}px;
+  .variationImg {
+    opacity: ${({ theme }) => theme.variationOpacity}%;
+    height: ${({ theme }) => theme.variationHeight}px;
   }
 
-  .superDealsImg {
-    opacity: ${({ theme }) => theme.superDealsOpacity}%;
-    height: ${({ theme }) => theme.superDealsHeight}px;
+  .dealsImg {
+    opacity: ${({ theme }) => theme.dealsOpacity}%;
+    height: ${({ theme }) => theme.dealsHeight}px;
   }
 
   .simulationImg {
@@ -51,6 +51,22 @@ export const NavButtonArea = styled.div`
     display: ${({ theme }) => theme.homeDisplay};
   }
 
+  .variationImg.arrow {
+    display: ${({ theme }) => theme.variationDisplay};
+  }
+
+  .dealsImg.arrow {
+    display: ${({ theme }) => theme.dealsDisplay};
+  }
+
+  .simulationImg.arrow {
+    display: ${({ theme }) => theme.simulationDisplay};
+  }
+
+  .profileImg.arrow {
+    display: ${({ theme }) => theme.profileDisplay};
+  }
+
   ul, li {
     height: var(--navBarHeight);
     margin: 0;
@@ -78,12 +94,24 @@ export const NavButtonArea = styled.div`
       text-shadow: 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
     }
 
-    .homeLi {
-      justify-content: ${({ theme }) => theme.homeLiJustify};
-    }
-
     .homeSpan {
       display: ${({ theme }) => theme.homeDisplay};
+    }
+
+    .variationSpan {
+      display: ${({ theme }) => theme.variationDisplay};
+    }
+
+    .dealsSpan {
+      display: ${({ theme }) => theme.dealsDisplay};
+    }
+
+    .simulationSpan {
+      display: ${({ theme }) => theme.simulationDisplay};
+    }
+
+    .profileSpan {
+      display: ${({ theme }) => theme.profileDisplay};
     }
 
     a {
@@ -95,6 +123,22 @@ export const NavButtonArea = styled.div`
 
   .homeLi {
     justify-content: ${({ theme }) => theme.homeLiJustify};
+  }
+
+  .variationLi {
+    justify-content: ${({ theme }) => theme.variationLiJustify};
+  }
+
+  .dealsLi {
+    justify-content: ${({ theme }) => theme.dealsLiJustify};
+  }
+
+  .simulationLi {
+    justify-content: ${({ theme }) => theme.simulationLiJustify};
+  }
+
+  .profileLi {
+    justify-content: ${({ theme }) => theme.profileLiJustify};
   }
 
   li:first-child {
