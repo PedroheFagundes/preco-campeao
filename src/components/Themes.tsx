@@ -22,7 +22,10 @@ export const themes = {
     variationLiJustify: 'center',
     dealsLiJustify: 'center',
     simulationLiJustify: 'center',
-    profileLiJustify: 'center'
+    profileLiJustify: 'center',
+
+    homeLeftMargin: 26,
+    profileRightMargin: 0
     
   },
   'variationActive': {
@@ -48,7 +51,10 @@ export const themes = {
     variationLiJustify: 'flex-end',
     dealsLiJustify: 'center',
     simulationLiJustify: 'center',
-    profileLiJustify: 'center'
+    profileLiJustify: 'center',
+
+    homeLeftMargin: 0,
+    profileRightMargin: 0
   },
   'dealsActive': {
     homeOpacity: 70,
@@ -74,6 +80,10 @@ export const themes = {
     dealsLiJustify: 'flex-end',
     simulationLiJustify: 'center',
     profileLiJustify: 'center'
+    ,
+
+    homeLeftMargin: 0,
+    profileRightMargin: 0
   },
   'simulationActive': {
     homeOpacity: 70,
@@ -98,7 +108,10 @@ export const themes = {
     variationLiJustify: 'center',
     dealsLiJustify: 'center',
     simulationLiJustify: 'flex-end',
-    profileLiJustify: 'center'
+    profileLiJustify: 'center',
+
+    homeLeftMargin: 0,
+    profileRightMargin: 0
   },
   'profileActive': {
     homeOpacity: 70,
@@ -123,6 +136,9 @@ export const themes = {
     variationLiJustify: 'center',
     dealsLiJustify: 'center',
     simulationLiJustify: 'center',
-    profileLiJustify: 'flex-end'
+    profileLiJustify: 'flex-end',
+
+    homeLeftMargin: 0,
+    profileRightMargin: 26
   }
 };

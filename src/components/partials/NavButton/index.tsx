@@ -17,7 +17,6 @@ const NavButton = () => {
         <ul className="noSelect">
           <li className="homeLi" onClick={() => setThemes(themes['homeActive'])}>
             <div className="buttonImages">
-              <img className='homeImg arrow' src="/images/left-arrow.png" alt="" />
               <Link to= '/'>
                 <img className='homeImg' src="/images/home.png" alt="" />
               </Link>
@@ -61,7 +60,6 @@ const NavButton = () => {
               <Link to= '/profile'>
                 <img className='profileImg' src="/images/profile.png" alt=""/>
               </Link>
-              <img className='profileImg arrow' src="/images/right-arrow.png" alt="" />
             </div>
             <span className='profileSpan'>Perfil</span>
           </li>

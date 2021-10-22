@@ -8,6 +8,7 @@ export const NavButtonArea = styled.div`
   .homeImg {
     opacity: ${({ theme }) => theme.homeOpacity}%;
     height: ${({ theme }) => theme.homeHeight}px;
+    margin-left: ${({ theme }) => theme.homeLeftMargin}px;
   }
 
   .variationImg {
@@ -28,6 +29,7 @@ export const NavButtonArea = styled.div`
   .profileImg {
     opacity: ${({ theme }) => theme.profileOpacity}%;
     height: ${({ theme }) => theme.profileHeight}px;
+    margin-right: ${({ theme }) => theme.profileRightMargin}px;
   }
   
   a {
