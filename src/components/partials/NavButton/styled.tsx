@@ -80,7 +80,7 @@ export const NavButtonArea = styled.div`
   }
 
   ul {
-    background-color: #60718c;
+    background-color: #3f4a5c;
     box-shadow: inset 0px 5px 5px #839bbf;
   }
 
@@ -88,7 +88,7 @@ export const NavButtonArea = styled.div`
     display: flex;
     flex-direction: column;
     border-right: 1px solid #839bbf;
-    border-left: 1px solid #3d4859;
+    border-left: 1px solid #1b2737;
     flex: 1;
 
     span {
@@ -129,6 +129,7 @@ export const NavButtonArea = styled.div`
 
   .variationLi {
     justify-content: ${({ theme }) => theme.variationLiJustify};
+    background-color: #51779b;
   }
 
   .dealsLi {
