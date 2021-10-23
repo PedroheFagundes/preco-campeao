@@ -126,23 +126,31 @@ export const NavButtonArea = styled.div`
   .homeLi {
     justify-content: ${({ theme }) => theme.homeLiJustify};
     background-color: ${({ theme }) => theme.homeBgColor};
-    box-shadow: inset 0px 5px 5px #839bbf;
+    box-shadow: ${({ theme }) => theme.homeBoxShadow};
   }
 
   .variationLi {
     justify-content: ${({ theme }) => theme.variationLiJustify};
+    background-color: ${({ theme }) => theme.variationBgColor};
+    box-shadow: ${({ theme }) => theme.variationBoxShadow};
   }
 
   .dealsLi {
     justify-content: ${({ theme }) => theme.dealsLiJustify};
+    background-color: ${({ theme }) => theme.dealsBgColor};
+    box-shadow: ${({ theme }) => theme.dealsBoxShadow};
   }
 
   .simulationLi {
     justify-content: ${({ theme }) => theme.simulationLiJustify};
+    background-color: ${({ theme }) => theme.simulationBgColor};
+    box-shadow: ${({ theme }) => theme.simulationBoxShadow};
   }
 
   .profileLi {
     justify-content: ${({ theme }) => theme.profileLiJustify};
+    background-color: ${({ theme }) => theme.profileBgColor};
+    box-shadow: ${({ theme }) => theme.profileBoxShadow};
   }
 
   li:first-child {

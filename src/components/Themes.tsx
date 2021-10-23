@@ -28,7 +28,16 @@ export const themes = {
     profileRightMargin: 0,
 
     homeBgColor: '#51779b',
-    
+    variationBgColor: 'transparent',
+    dealsBgColor: 'transparent',
+    simulationBgColor: 'transparent',
+    profileBgColor: 'transparent',
+
+    homeBoxShadow: 'inset 0px 5px 5px #839bbf',
+    variationBoxShadow: 'none',
+    dealsBoxShadow: 'none',
+    simulationBoxShadow: 'none',
+    profileBoxShadow: 'none',
   },
   'variationActive': {
     homeOpacity: 70,
@@ -58,7 +67,17 @@ export const themes = {
     homeLeftMargin: 0,
     profileRightMargin: 0,
 
-    homeBgColor: '#3f4a5c',
+    homeBgColor: 'transparent',
+    variationBgColor: '#51779b',
+    dealsBgColor: 'transparent',
+    simulationBgColor: 'transparent',
+    profileBgColor: 'transparent',
+
+    homeBoxShadow: 'none',
+    variationBoxShadow: 'inset 0px 5px 5px #839bbf',
+    dealsBoxShadow: 'none',
+    simulationBoxShadow: 'none',
+    profileBoxShadow: 'none',
 
   },
   'dealsActive': {
@@ -84,13 +103,22 @@ export const themes = {
     variationLiJustify: 'center',
     dealsLiJustify: 'flex-end',
     simulationLiJustify: 'center',
-    profileLiJustify: 'center'
-    ,
+    profileLiJustify: 'center',
 
     homeLeftMargin: 0,
     profileRightMargin: 0,
 
-    homeBgColor: '#3f4a5c',
+    homeBgColor: 'transparent',
+    variationBgColor: 'transparent',
+    dealsBgColor: '#51779b',
+    simulationBgColor: 'transparent',
+    profileBgColor: 'transparent',
+
+    homeBoxShadow: 'none',
+    variationBoxShadow: 'none',
+    dealsBoxShadow: 'inset 0px 5px 5px #839bbf',
+    simulationBoxShadow: 'none',
+    profileBoxShadow: 'none',
   },
   'simulationActive': {
     homeOpacity: 70,
@@ -120,7 +148,17 @@ export const themes = {
     homeLeftMargin: 0,
     profileRightMargin: 0,
 
-    homeBgColor: '#3f4a5c',
+    homeBgColor: 'transparent',
+    variationBgColor: 'transparent',
+    dealsBgColor: 'transparent',
+    simulationBgColor: '#51779b',
+    profileBgColor: 'transparent',
+
+    homeBoxShadow: 'none',
+    variationBoxShadow: 'none',
+    dealsBoxShadow: 'none',
+    simulationBoxShadow: 'inset 0px 5px 5px #839bbf',
+    profileBoxShadow: 'none',
   },
   'profileActive': {
     homeOpacity: 70,
@@ -150,6 +188,16 @@ export const themes = {
     homeLeftMargin: 0,
     profileRightMargin: 26,
 
-    homeBgColor: '#3f4a5c',
+    homeBgColor: 'transparent',
+    variationBgColor: 'transparent',
+    dealsBgColor: 'transparent',
+    simulationBgColor: 'transparent',
+    profileBgColor: '#51779b',
+
+    homeBoxShadow: 'none',
+    variationBoxShadow: 'none',
+    dealsBoxShadow: 'none',
+    simulationBoxShadow: 'none',
+    profileBoxShadow: 'inset 0px 5px 5px #839bbf',
   }
 };
