@@ -25,7 +25,9 @@ export const themes = {
     profileLiJustify: 'center',
 
     homeLeftMargin: 26,
-    profileRightMargin: 0
+    profileRightMargin: 0,
+
+    homeBgColor: '#51779b',
     
   },
   'variationActive': {
@@ -54,7 +56,10 @@ export const themes = {
     profileLiJustify: 'center',
 
     homeLeftMargin: 0,
-    profileRightMargin: 0
+    profileRightMargin: 0,
+
+    homeBgColor: '#3f4a5c',
+
   },
   'dealsActive': {
     homeOpacity: 70,
@@ -83,7 +88,9 @@ export const themes = {
     ,
 
     homeLeftMargin: 0,
-    profileRightMargin: 0
+    profileRightMargin: 0,
+
+    homeBgColor: '#3f4a5c',
   },
   'simulationActive': {
     homeOpacity: 70,
@@ -111,7 +118,9 @@ export const themes = {
     profileLiJustify: 'center',
 
     homeLeftMargin: 0,
-    profileRightMargin: 0
+    profileRightMargin: 0,
+
+    homeBgColor: '#3f4a5c',
   },
   'profileActive': {
     homeOpacity: 70,
@@ -139,6 +148,8 @@ export const themes = {
     profileLiJustify: 'flex-end',
 
     homeLeftMargin: 0,
-    profileRightMargin: 26
+    profileRightMargin: 26,
+
+    homeBgColor: '#3f4a5c',
   }
 };

@@ -125,12 +125,12 @@ export const NavButtonArea = styled.div`
 
   .homeLi {
     justify-content: ${({ theme }) => theme.homeLiJustify};
+    background-color: ${({ theme }) => theme.homeBgColor};
+    box-shadow: inset 0px 5px 5px #839bbf;
   }
 
   .variationLi {
     justify-content: ${({ theme }) => theme.variationLiJustify};
-    background-color: #51779b;
-    box-shadow: inset 0px 5px 5px #839bbf;
   }
 
   .dealsLi {
