@@ -1,10 +1,12 @@
 import React from "react";
+import { SimulationArea } from "./styled";
 
 const Page = () => {
   return (
-    <div>
-      Página Simulação
-    </div>
+    <SimulationArea>
+      <img src="/images/logo.png" alt=""/>
+      <span>Simulação<br />EM BREVE</span>
+    </SimulationArea>
   );
 }
 

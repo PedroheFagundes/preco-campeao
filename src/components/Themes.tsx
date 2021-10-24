@@ -1,4 +1,4 @@
-export const themes = {
+export const navBarTheme = {
   'homeActive': {
     homeOpacity: 100,
     variationOpacity: 70,
@@ -199,5 +199,14 @@ export const themes = {
     dealsBoxShadow: 'none',
     simulationBoxShadow: 'none',
     profileBoxShadow: 'inset 0px 5px 5px #839bbf',
+  }
+};
+
+export const homeDisplayTheme = {
+  'isActive': {
+    displayHomeProducts: 'flex',
+  },
+  'isInactive': {
+    displayHomeProducts: 'none',
   }
 };

@@ -1,10 +1,11 @@
-import React from "react";
+import { VariationArea } from "./styled";
 
 const Page = () => {
   return (
-    <div>
-      Página Mudança de Preços
-    </div>
+    <VariationArea>
+      <img src="/images/logo.png" alt=""/>
+      <span>Variação<br />EM BREVE</span>
+    </VariationArea>
   );
 }
 

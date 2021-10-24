@@ -6,4 +6,11 @@ export const HomeArea = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  .productInfoShortArea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;

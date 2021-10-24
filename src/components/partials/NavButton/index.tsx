@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { themes } from "../../Themes";
+import { navBarTheme } from "../../Themes";
 import{ NavButtonArea } from './styled';
 
 
@@ -9,13 +9,13 @@ import{ NavButtonArea } from './styled';
 
 const NavButton = () => {
 
-  const [theme, setThemes] = useState (themes['homeActive']);
+  const [theme, setThemes] = useState (navBarTheme['homeActive']);
 
   return(
     <ThemeProvider theme={theme}>
       <NavButtonArea>
         <ul className="noSelect">
-          <li className="homeLi" onClick={() => setThemes(themes['homeActive'])}>
+          <li className="homeLi" onClick={() => setThemes(navBarTheme['homeActive'])}>
             <div className="buttonImages">
               <Link to= '/'>
                 <img className='homeImg' src="/images/home.png" alt="" />
@@ -24,7 +24,7 @@ const NavButton = () => {
             </div>
             <span className='homeSpan'>Início</span>
           </li>
-          <li className="variationLi" onClick={() => setThemes(themes['variationActive'])}>
+          <li className="variationLi" onClick={() => setThemes(navBarTheme['variationActive'])}>
             <div className="buttonImages">
               <img className='variationImg arrow' src="/images/left-arrow.png" alt="" />
               <Link to= '/variation'>
@@ -34,7 +34,7 @@ const NavButton = () => {
             </div>
             <span className='variationSpan'>Variação</span>
           </li>
-            <li className="dealsLi" onClick={() => setThemes(themes['dealsActive'])}>
+            <li className="dealsLi" onClick={() => setThemes(navBarTheme['dealsActive'])}>
             <div className="buttonImages">
               <img className='dealsImg arrow' src="/images/left-arrow.png" alt="" />
               <Link to= '/deals'>
@@ -44,7 +44,7 @@ const NavButton = () => {
             </div>
             <span className='dealsSpan'>Descontão</span>
           </li>
-            <li className="simulationLi" onClick={() => setThemes(themes['simulationActive'])}>
+            <li className="simulationLi" onClick={() => setThemes(navBarTheme['simulationActive'])}>
             <div className="buttonImages">
               <img className='simulationImg arrow' src="/images/left-arrow.png" alt="" />
               <Link to= '/simulation'>
@@ -54,7 +54,7 @@ const NavButton = () => {
             </div>
             <span className='simulationSpan'>Simulação</span>
           </li>
-          <li className="profileLi" onClick={() => setThemes(themes['profileActive'])}>
+          <li className="profileLi" onClick={() => setThemes(navBarTheme['profileActive'])}>
             <div className="buttonImages">
               <img className='profileImg arrow' src="/images/left-arrow.png" alt="" />
               <Link to= '/profile'>
