@@ -9,7 +9,7 @@ import Deals from './pages/Deals';
 import Simulation from './pages/Simulation';
 import Profile from './pages/Profile';
 
-export default function () {
+ const App = function () {
   return (
     <Switch>
       <Route exact path='/'>
@@ -36,3 +36,5 @@ export default function () {
     </Switch>
   );
 }
+
+export default App;

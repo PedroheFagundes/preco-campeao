@@ -11,7 +11,7 @@ export const ProductInfoShortArea = styled.div`
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   
   div{
     flex: 1;

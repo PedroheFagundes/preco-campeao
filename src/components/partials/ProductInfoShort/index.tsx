@@ -1,5 +1,5 @@
 import{ ProductInfoShortArea } from './styled';
-import { products } from '../../../productsJSON';
+import products from '../../../productsJSON';
 
 const ProductInfoShort = () => {
 

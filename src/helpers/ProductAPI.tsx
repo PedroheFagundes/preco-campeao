@@ -6,5 +6,4 @@ const ProductAPI = {
   }
 
 };
-
 export default () => ProductAPI;

@@ -201,12 +201,3 @@ export const navBarTheme = {
     profileBoxShadow: 'inset 0px 5px 5px #839bbf',
   }
 };
-
-export const homeDisplayTheme = {
-  'isActive': {
-    displayHomeProducts: 'flex',
-  },
-  'isInactive': {
-    displayHomeProducts: 'none',
-  }
-};
