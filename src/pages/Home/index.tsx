@@ -12,6 +12,7 @@ const Page = () => {
         <ProductInfoShort />
         <ProductInfoShort />
         <ProductInfoShort />
+        <ProductInfoShort />
       </div>
     </HomeArea>
   );

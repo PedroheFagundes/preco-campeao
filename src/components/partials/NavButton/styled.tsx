@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const NavButtonArea = styled.div`
 
+  position: absolute;
+  width: 100%;
+
   img {
     margin-bottom: -5px;
   }
