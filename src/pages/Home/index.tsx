@@ -22,11 +22,14 @@ const Page = () => {
         {products.filter((val) => {
           if (searchTerm == "") {
             return val;
-          } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+          } else if (
+              val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+              val.info.toLowerCase().includes(searchTerm.toLowerCase())) {
             return val;
           }
         }).map((val, key) => {
 
+          // let cheapPrice = 
           let priceFormated = val.price.split(',');
 
           return (

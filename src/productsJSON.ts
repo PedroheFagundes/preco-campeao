@@ -4,7 +4,10 @@ const products = [
     name: "Leite Macuco",
     info: "1 Litro",
     price: "2,99",
-    place: "Big Blue",
+    price1: [
+      {"Big Blue" : "2,99"},
+      {"Atacadão" : "1,99"},
+    ],
     image: "leitemacuco-integral"
   },
   {
