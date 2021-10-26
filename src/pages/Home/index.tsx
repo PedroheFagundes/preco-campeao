@@ -1,4 +1,3 @@
-import SearchBar from "../../components/partials/SearchBar";
 import{ HomeArea } from './styled';
 import products from "../../productsJSON";
 import { useState } from "react";
@@ -20,17 +19,22 @@ const Page = () => {
       </div>
       <div className="productInfoShortArea">
         {products.filter((val) => {
-          if (searchTerm == "") {
+          if (searchTerm === "") {
             return val;
           } else if (
               val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+              val.category[0].toLowerCase().includes(searchTerm.toLowerCase()) ||
+              val.category[1].toLowerCase().includes(searchTerm.toLowerCase()) ||
               val.info.toLowerCase().includes(searchTerm.toLowerCase())) {
             return val;
           }
         }).map((val, key) => {
 
-          // let cheapPrice = 
-          let priceFormated = val.price.split(',');
+          const cheapPrice = Object.fromEntries(
+            Object.entries(val.price1).sort(([,a],[,b]) => a-b)
+          );
+                  
+          let priceFormated = Object.entries(cheapPrice)[0][1].toString(10).split('.');
 
           return (
             <div className="noSelect productsInfoShort" key={key}>
