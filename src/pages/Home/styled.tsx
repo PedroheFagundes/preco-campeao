@@ -142,7 +142,6 @@ export const HomeArea = styled.div`
     hr {
       width: 90%;
       border-top: 1px solid #00404A;
-      border-radius: 1px;
     }
   }
 `;
