@@ -131,17 +131,25 @@ export const HomeArea = styled.div`
     }
   }
   .moreInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     color: #fff;
   }
 
   .productsInfoLong {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     color:#00404A;
 
     hr {
+      background-color: #00404A;
+      height: 1px;
+      border: 0;
       width: 90%;
-      border-top: 2px solid #00404A;
     }
   }
 `;

@@ -65,6 +65,7 @@ const Page = () => {
                     parseInt(eventID) === val.id
                     ? <div className="productsInfoLong">
                         <hr />
+                        Mais infos
                       </div>
                     : null
                   }
