@@ -5,6 +5,7 @@ import { useState } from "react";
 const Page = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
+  const [eventID, setEventID] = useState('');
 
   return (
     <HomeArea>
@@ -35,18 +36,33 @@ const Page = () => {
           );
                   
           let priceFormated = Object.entries(cheapPrice)[0][1].toString(10).split('.');
-
+          
           return (
-            <div className="noSelect productsInfoShort" key={key}>
-              <img src={`/images/products/${val.image}.png`} alt=""/>
-              <div>
-                <span>{val.name}</span>
-                <span>{val.info}</span>
+            <div
+              className="template"
+              id={`${val.id}`}
+              key={key}
+              onClick={(e) => {
+                setEventID(e.currentTarget.id)
+              }}
+            >
+              <div className="noSelect productsInfoShort" >
+                <img src={`/images/products/${val.image}.png`} alt=""/>
+                <div>
+                  <span>{val.name}</span>
+                  <span>{val.info}</span>
+                </div>
+                <span className="price">
+                  <span>R$</span>
+                  <span>{priceFormated[0]}</span>
+                  <span>,{priceFormated[1]}</span>
+                </span>     
               </div>
-              <span className="price"><span>R$</span><span>{priceFormated[0]}</span><span>,{priceFormated[1]}</span></span>
+                {parseInt(eventID) == val.id ? <div className="moreInfo">{val.id}</div> : null}
             </div>
           )
-        })}
+        },
+      )}
       </div>
     </HomeArea>
   );

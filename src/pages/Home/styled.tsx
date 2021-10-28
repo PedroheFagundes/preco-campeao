@@ -15,17 +15,31 @@ export const HomeArea = styled.div`
     align-items: center;
   }
 
-  .productsInfoShort {
+  .template {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00404a;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 2px #333;
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  .productsInfoShort {
+    width: 100%;
     height: 70px;
     background-color: #fff;
-    box-shadow: 0px 2px 2px #333;
     border-radius: 7px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    margin-bottom: 15px;
     
     div{
       flex: 1;
