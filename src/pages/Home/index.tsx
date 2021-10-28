@@ -5,7 +5,8 @@ import { useState } from "react";
 const Page = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [eventID, setEventID] = useState('');
+  const [showMoreInfo, setShowMoreInfo] = useState(false);
+  const [eventID, setEventID] = useState('1');
 
   return (
     <HomeArea>
@@ -44,6 +45,7 @@ const Page = () => {
               key={key}
               onClick={(e) => {
                 setEventID(e.currentTarget.id)
+                setShowMoreInfo(!showMoreInfo)
               }}
             >
               <div className="noSelect productsInfoShort" >
@@ -58,7 +60,7 @@ const Page = () => {
                   <span>,{priceFormated[1]}</span>
                 </span>     
               </div>
-                {parseInt(eventID) == val.id ? <div className="moreInfo">{val.id}</div> : null}
+                {parseInt(eventID) === val.id ? <div className="moreInfo">{val.name}</div> : null}
             </div>
           )
         },
