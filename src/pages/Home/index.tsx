@@ -1,6 +1,6 @@
-import{ HomeArea } from './styled';
-import products from "../../productsJSON";
 import { useState } from "react";
+import products from "../../productsJSON";
+import { HomeArea } from './styled';
 
 const Page = () => {
 
@@ -48,23 +48,35 @@ const Page = () => {
                 setShowMoreInfo(!showMoreInfo)
               }}
             >
-              <div className="noSelect productsInfoShort" >
-                <img src={`/images/products/${val.image}.png`} alt=""/>
-                <div>
-                  <span>{val.name}</span>
-                  <span>{val.info}</span>
+              <div className="template-inner">
+                <div className="noSelect productsInfoShort" >
+                  <img src={`/images/products/${val.image}.png`} alt=""/>
+                  <div>
+                    <span>{val.name}</span>
+                    <span>{val.info}</span>
+                      </div>
+                  <span className="price">
+                    <span>R$</span>
+                    <span>{priceFormated[0]}</span>
+                    <span>,{priceFormated[1]}</span>
+                  </span>     
                 </div>
-                <span className="price">
-                  <span>R$</span>
-                  <span>{priceFormated[0]}</span>
-                  <span>,{priceFormated[1]}</span>
-                </span>     
+                  {
+                    parseInt(eventID) === val.id
+                    ? <div className="productsInfoLong">fundo branco</div>
+                    : null
+                  }
               </div>
-                {parseInt(eventID) === val.id ? <div className="moreInfo">{val.name}</div> : null}
+              {
+                    parseInt(eventID) === val.id
+                    ? <div className="moreInfo">teste</div>
+                    : null
+                  }
             </div>
           )
         },
       )}
+      
       </div>
     </HomeArea>
   );

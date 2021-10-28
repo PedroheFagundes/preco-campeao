@@ -31,6 +31,13 @@ export const HomeArea = styled.div`
     }
   }
 
+  .template-inner {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 7px;
+    margin: 0;
+  }
+
   .productsInfoShort {
     width: 100%;
     height: 70px;
@@ -124,6 +131,12 @@ export const HomeArea = styled.div`
     }
   }
   .moreInfo{
+    width: 100%;
     color: #fff;
+  }
+
+  .productsInfoLong {
+    width: 100%;
+    color:#00404A;
   }
 `;
