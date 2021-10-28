@@ -63,7 +63,9 @@ const Page = () => {
                 </div>
                   {
                     parseInt(eventID) === val.id
-                    ? <div className="productsInfoLong">fundo branco</div>
+                    ? <div className="productsInfoLong">
+                        <hr />
+                      </div>
                     : null
                   }
               </div>

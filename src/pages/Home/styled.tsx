@@ -138,5 +138,11 @@ export const HomeArea = styled.div`
   .productsInfoLong {
     width: 100%;
     color:#00404A;
+
+    hr {
+      width: 90%;
+      border: 1px solid #00404A;
+      border-radius: 40%;
+    }
   }
 `;
