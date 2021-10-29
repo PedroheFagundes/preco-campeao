@@ -98,7 +98,7 @@ export const HomeArea = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     input {
       padding-left: 10px;
@@ -136,6 +136,20 @@ export const HomeArea = styled.div`
     align-items: center;
     width: 100%;
     color: #fff;
+
+    div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      margin: 7px 0px;
+
+      img {
+        border-radius: 50px;
+        max-height: 40px;
+        max-width: 40px;
+      }
+    }
   }
 
   .productsInfoLong {
@@ -183,6 +197,7 @@ export const HomeArea = styled.div`
       border: 0;
       width: 90%;
       margin-bottom: 10px;
+      margin-top 3px;
     }
   }
 `;

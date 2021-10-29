@@ -76,14 +76,24 @@ const Page = () => {
                             <span>29/10</span>
                           </div>
                         </div>
-                        
                       </div>
                     : null
                   }
               </div>
               {
                     parseInt(eventID) === val.id
-                    ? <div className="moreInfo">Preços em outros mercado</div>
+                    ? <div className="moreInfo">
+                        <div>
+                          <img src={"/images/markets/bigblue-logo.png"} alt=""/>
+                          <span>SERRA AZUL</span>
+                          <span>R$2,19</span>
+                        </div>
+                        <div>
+                          <img src={"/images/markets/bigblue-logo.png"} alt=""/>
+                          <span>SERRA AZUL</span>
+                          <span>R$2,19</span>
+                        </div>
+                      </div>
                     : null
                   }
             </div>
