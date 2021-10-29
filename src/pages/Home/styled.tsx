@@ -7,6 +7,7 @@ export const HomeArea = styled.div`
   align-items: center;
   justify-content: flex-start;
   overflow: auto;
+  font-family: 'Contrail One', sans-serif;
 
   .productInfoShortArea{
     width: 100%;
@@ -67,7 +68,6 @@ export const HomeArea = styled.div`
 
     span {
       height: 55px;
-      font-family: 'Contrail One', sans-serif;
       color: #00404a;
 
       span:first-child,
@@ -144,12 +144,45 @@ export const HomeArea = styled.div`
     align-items: center;
     width: 100%;
     color:#00404A;
+    margin-bottom: 10px;
+
+    div {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+
+      div {
+        display: flex;
+        font-size: 40px;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          border-radius: 7px;
+          max-height: 60px;
+          max-width: 60px;
+        }
+      }
+    }
+
+    .expireDate span {
+      line-height: 100%;
+      font-size: 40px;
+      color: #4ACE57;
+    }
+    
+    .expireDate span:first-child {
+      margin-bottom: 5px;
+      font-size: 19px;
+      color: #00404A;
+    }
 
     hr {
       background-color: #00404A;
       height: 1px;
       border: 0;
       width: 90%;
+      margin-bottom: 10px;
     }
   }
 `;

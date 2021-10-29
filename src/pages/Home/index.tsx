@@ -65,14 +65,25 @@ const Page = () => {
                     parseInt(eventID) === val.id
                     ? <div className="productsInfoLong">
                         <hr />
-                        Mais infos
+                        <div>
+                          <div className="market">
+                            <img src={"/images/markets/bigblue-logo.png"} alt=""/>
+                            <span>BIG BLUE</span>
+                          </div>
+                          <div className="expireDate">
+                            <span>promoção até</span>
+                            <span>QUINTA</span>
+                            <span>29/10</span>
+                          </div>
+                        </div>
+                        
                       </div>
                     : null
                   }
               </div>
               {
                     parseInt(eventID) === val.id
-                    ? <div className="moreInfo">teste</div>
+                    ? <div className="moreInfo">Preços em outros mercado</div>
                     : null
                   }
             </div>
