@@ -23,7 +23,7 @@ export const HomeArea = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #00404a;
-    border-radius: 7px;
+    border-radius: 9px;
     margin-bottom: 15px;
     box-shadow: 0px 2px 2px #333;
 
@@ -35,7 +35,7 @@ export const HomeArea = styled.div`
   .template-inner {
     width: 100%;
     background-color: #fff;
-    border-radius: 7px;
+    border-radius: 9px;
     margin: 0;
   }
 
@@ -43,7 +43,7 @@ export const HomeArea = styled.div`
     width: 100%;
     height: 70px;
     background-color: #fff;
-    border-radius: 7px;
+    border-radius: 9px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +86,7 @@ export const HomeArea = styled.div`
     }
     
     img {
-      border-radius: 7px;
+      border-radius: 9px;
       max-height: 60px;
       margin: 0px 5px;
     }
@@ -105,7 +105,7 @@ export const HomeArea = styled.div`
       height: 38px;
       width: 90%;
       margin: 15px 0px;
-      border-radius: 7px;
+      border-radius: 9px;
       border: none;
 
       &:focus{
@@ -158,7 +158,7 @@ export const HomeArea = styled.div`
         align-items: center;
 
         img {
-          border-radius: 7px;
+          border-radius: 9px;
           max-height: 60px;
           max-width: 60px;
         }
