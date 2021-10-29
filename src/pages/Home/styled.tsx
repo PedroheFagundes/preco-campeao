@@ -141,11 +141,14 @@ export const HomeArea = styled.div`
       display: flex;
       justify-content: space-around;
       align-items: center;
-      width: 100%;
-      margin: 7px 0px;
+      width: 95%;
+      margin-top: 10px;
+      margin-bottom: 4px; 
+      font-size: 25px;
+      color: #c4c4c4;
 
       img {
-        border-radius: 50px;
+        border-radius: 20%;
         max-height: 40px;
         max-width: 40px;
       }
@@ -196,8 +199,8 @@ export const HomeArea = styled.div`
       height: 1px;
       border: 0;
       width: 90%;
-      margin-bottom: 10px;
-      margin-top 3px;
+      margin-bottom: 5px;
+      margin-top 0px;
     }
   }
 `;

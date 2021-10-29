@@ -81,21 +81,23 @@ const Page = () => {
                   }
               </div>
               {
-                    parseInt(eventID) === val.id
-                    ? <div className="moreInfo">
-                        <div>
-                          <img src={"/images/markets/bigblue-logo.png"} alt=""/>
-                          <span>SERRA AZUL</span>
-                          <span>R$2,19</span>
-                        </div>
-                        <div>
-                          <img src={"/images/markets/bigblue-logo.png"} alt=""/>
-                          <span>SERRA AZUL</span>
-                          <span>R$2,19</span>
-                        </div>
-                      </div>
-                    : null
-                  }
+                parseInt(eventID) === val.id
+                ? <div className="moreInfo">
+                    <div>
+                      <img src={"/images/markets/atacadao-logo.png"} alt=""/>
+                      <span>Atacadão</span>
+                      <span>30/10</span>
+                      <span>R$2,19</span>
+                    </div>
+                    <div>
+                      <img src={"/images/markets/serraazul-logo.png"} alt=""/>
+                      <span>Serra Azul</span>
+                      <span>30/10</span>
+                      <span>R$2,19</span>
+                    </div>
+                  </div>
+                : null
+              }
             </div>
           )
         },
