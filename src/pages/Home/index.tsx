@@ -50,7 +50,7 @@ const Page = () => {
             >
               <div className="template-inner">
                 <div className="noSelect productsInfoShort" >
-                  <img src={`/images/products/${val.image}.png`} alt=""/>
+                  <img src={`/images/products/${val.image}`} alt=""/>
                   <div>
                     <span>{val.name}</span>
                     <span>{val.info}</span>
@@ -93,7 +93,7 @@ const Page = () => {
                       <img src={"/images/markets/serraazul-logo.png"} alt=""/>
                       <span>Serra Azul</span>
                       <span>30/10</span>
-                      <span>R$2,19</span>
+                      <span>R$2,39</span>
                     </div>
                   </div>
                 : null

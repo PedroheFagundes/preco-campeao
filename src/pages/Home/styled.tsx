@@ -6,7 +6,6 @@ export const HomeArea = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  overflow: auto;
   font-family: 'Contrail One', sans-serif;
 
   .productInfoShortArea{
@@ -14,6 +13,8 @@ export const HomeArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
+
   }
 
   .template {
@@ -139,9 +140,9 @@ export const HomeArea = styled.div`
 
     div {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      width: 95%;
+      width: 90%;
       margin-top: 10px;
       margin-bottom: 4px; 
       font-size: 25px;

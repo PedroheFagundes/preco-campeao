@@ -10,7 +10,7 @@ const products = [
     category: [
       "Bebida", "Laticíneo"
     ],
-    image: "leitemacuco-integral"
+    image: "leitemacuco-integral.png"
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const products = [
     category: [
       "Bebida", "Refrigerante"
     ],
-    image: "cocacola-2litros"
+    image: "cocacola-2litros.png"
   },
   {
     id: 3,
@@ -36,7 +36,20 @@ const products = [
     category: [
       "Bebida", ""
     ],
-    image: "cafe3coracoes-extraforte-500g"
+    image: "cafe3coracoes-extraforte-500g.png"
+  },
+  {
+    id: 4,
+    name: "Peito de Frango",
+    info: "1kg",
+    price1: {
+      "Big Blue": 7.39,
+      "Atacadão": 8.39,
+    },
+    category: [
+      "frango", "carne"
+    ],
+    image: "peito-frango.jpg"
   }
 ]
 
