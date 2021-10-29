@@ -14,7 +14,6 @@ export const HomeArea = styled.div`
     flex-direction: column;
     align-items: center;
     overflow: auto;
-
   }
 
   .template {
@@ -99,7 +98,7 @@ export const HomeArea = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     input {
       padding-left: 10px;

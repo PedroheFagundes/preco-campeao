@@ -6,7 +6,7 @@ const Page = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [showMoreInfo, setShowMoreInfo] = useState(false);
-  const [eventID, setEventID] = useState('1');
+  const [eventID, setEventID] = useState('0');
 
   return (
     <HomeArea>
