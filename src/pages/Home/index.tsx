@@ -6,7 +6,7 @@ const Page = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [showMoreInfo, setShowMoreInfo] = useState(false);
-  const [eventID, setEventID] = useState('0');
+  const [eventID, setEventID] = useState('1');
 
   return (
     <HomeArea>
@@ -37,6 +37,17 @@ const Page = () => {
           );
                   
           let priceFormated = Object.entries(cheapPrice)[0][1].toString(10).split('.');
+          let marketFormated = Object.entries(cheapPrice)[0][0].toString();
+          let marketLogo;
+          if (marketFormated === 'Atacadão') {
+            marketLogo = 'atacadao';
+          } else
+          if (marketFormated === 'Big Blue') {
+            marketLogo = 'bigblue';
+          } else
+          if (marketFormated === 'Serra Azul') {
+            marketLogo = 'serraazul';
+          }
           
           return (
             <div
@@ -67,8 +78,8 @@ const Page = () => {
                         <hr />
                         <div>
                           <div className="market">
-                            <img src={"/images/markets/bigblue-logo.png"} alt=""/>
-                            <span>BIG BLUE</span>
+                            <img src={`/images/markets/${marketLogo}-logo.png`} alt=""/>
+                            <span>{marketFormated}</span>
                           </div>
                           <div className="expireDate">
                             <span>promoção até</span>

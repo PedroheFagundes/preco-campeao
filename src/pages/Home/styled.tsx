@@ -63,6 +63,7 @@ export const HomeArea = styled.div`
 
       span:last-child {
         font-size: 20px;
+        color: #1d5c66;
       }
     }
 

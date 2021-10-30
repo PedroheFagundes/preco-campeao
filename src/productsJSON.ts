@@ -18,7 +18,7 @@ const products = [
     info: "2 Litros",
     price1: {
       "Big Blue": 2.29,
-      "Atacadão": 1.29,
+      "Atacadão": 3.29,
     },
     category: [
       "Bebida", "Refrigerante"
