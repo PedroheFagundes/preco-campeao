@@ -10,7 +10,8 @@ const products = [
     category: [
       "Bebida", "Laticíneo"
     ],
-    image: "leitemacuco-integral.png"
+    image: "leitemacuco-integral.png",
+    expireDate: "13/11"
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ const products = [
     category: [
       "Bebida", "Refrigerante"
     ],
-    image: "cocacola-2litros.png"
+    image: "cocacola-2litros.png",
+    expireDate: "31/10"
   },
   {
     id: 3,
@@ -36,7 +38,8 @@ const products = [
     category: [
       "Bebida", ""
     ],
-    image: "cafe3coracoes-extraforte-500g.png"
+    image: "cafe3coracoes-extraforte-500g.png",
+    expireDate: "25/12"
   },
   {
     id: 4,
@@ -49,7 +52,8 @@ const products = [
     category: [
       "frango", "carne"
     ],
-    image: "peito-frango.jpg"
+    image: "peito-frango.jpg",
+    expireDate: "31/08"
   }
 ]
 

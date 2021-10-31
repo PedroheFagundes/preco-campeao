@@ -84,7 +84,7 @@ const Page = () => {
                           <div className="expireDate">
                             <span>promoção até</span>
                             <span>QUINTA</span>
-                            <span>29/10</span>
+                            <span>{val.expireDate}</span>
                           </div>
                         </div>
                       </div>
