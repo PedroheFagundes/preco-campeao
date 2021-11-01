@@ -3,10 +3,10 @@ const products = [
     id: 1,
     name: "Leite Macuco",
     info: "1 Litro",
-    price1: {
-      "Big Blue": 2.19,
-      "Atacadão": 1.19,
-    },
+    price: [
+      [3.19, "Big Blue", "11-13-2021"],
+      [7.19, "Atacadão", "12-31-2021"],
+    ],
     category: [
       "Bebida", "Laticíneo"
     ],
@@ -17,10 +17,10 @@ const products = [
     id: 2,
     name: "Coca-cola",
     info: "2 Litros",
-    price1: {
-      "Big Blue": 2.29,
-      "Atacadão": 3.29,
-    },
+    price: [
+      [4.19, "Serra Azul", "11-13-2021"],
+      [7.19, "Atacadão", "12-31-2021"],
+    ],
     category: [
       "Bebida", "Refrigerante"
     ],
@@ -31,10 +31,10 @@ const products = [
     id: 3,
     name: "Café 3 Corações",
     info: "Extra Forte 500g",
-    price1: {
-      "Big Blue": 2.39,
-      "Atacadão": 1.39,
-    },
+    price: [
+      [2.19, "Big Blue", "11-13-2021"],
+      [1.19, "Atacadão", "12-31-2021"],
+    ],
     category: [
       "Bebida", ""
     ],
@@ -45,10 +45,10 @@ const products = [
     id: 4,
     name: "Peito de Frango",
     info: "1kg",
-    price1: {
-      "Big Blue": 7.39,
-      "Atacadão": 8.39,
-    },
+    price: [
+      [2.19, "Big Blue", "11-13-2021"],
+      [1.19, "Atacadão", "12-31-2021"],
+    ],
     category: [
       "frango", "carne"
     ],

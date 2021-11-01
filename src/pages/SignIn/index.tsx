@@ -1,20 +1,15 @@
-import React, { useState } from "react";
-import { PageArea } from "./styled";
-import useApi from '../../helpers/ProductAPI';
-import { doLogin } from "../../helpers/AuthHandler";
 
-import { PageContainer, PageTitle, ErrorMessage } from "../../components/MainComponents";
 
 const Page = () => {
-  const api = useApi();
+  /*const api = useApi();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberPassword, setRememberPassword] = useState(false);
   const [disabled, setDisabled] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState('');*/ 
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  /*const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setDisabled(true);
 
@@ -83,7 +78,7 @@ const Page = () => {
         </form>
       </PageArea>
     </PageContainer>
-  );
+  );*/
 }
 
 export default Page;

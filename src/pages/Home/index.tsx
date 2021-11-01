@@ -4,9 +4,27 @@ import { HomeArea } from './styled';
 
 const Page = () => {
 
+  // Variable used to make product filter comparing to productJSON
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Boolean to show and hide moreInfo panel
   const [showMoreInfo, setShowMoreInfo] = useState(false);
+
+  // Define qual produto está com moreInfo está aberto, inicia com o produto 1 aberto
   const [eventID, setEventID] = useState('1');
+
+  //Temporary time test;
+  let time = new Date('10-25-2021');
+
+  let weekDay = time.toLocaleDateString("pt-BR", {weekday: 'long'}).toUpperCase();
+  switch (weekDay) {
+    case 'SEGUNDA-FEIRA':
+      weekDay = 'SEGUNDA';
+      break;
+  
+    default:
+      break;
+  }
 
   return (
     <HomeArea>
@@ -32,12 +50,15 @@ const Page = () => {
           }
         }).map((val, key) => {
 
-          const cheapPrice = Object.fromEntries(
-            Object.entries(val.price1).sort(([,a],[,b]) => a-b)
-          );
+          function Comparator(a: any[], b: any[]) {
+            if (a[0] < b[0]) return -1;
+            if (a[0] > b[0]) return 1;
+            return 0;
+          }
+          let cheapPrice= val.price.sort(Comparator);
                   
-          let priceFormated = Object.entries(cheapPrice)[0][1].toString(10).split('.');
-          let marketFormated = Object.entries(cheapPrice)[0][0].toString();
+          let priceFormated = cheapPrice[0][0].toString().split('.');
+          let marketFormated = cheapPrice[0][1].toString();
           let marketLogo;
           if (marketFormated === 'Atacadão') {
             marketLogo = 'atacadao';
@@ -57,6 +78,7 @@ const Page = () => {
               onClick={(e) => {
                 setEventID(e.currentTarget.id)
                 setShowMoreInfo(!showMoreInfo)
+                console.log(cheapPrice)
               }}
             >
               <div className="template-inner">
@@ -83,7 +105,7 @@ const Page = () => {
                           </div>
                           <div className="expireDate">
                             <span>promoção até</span>
-                            <span>QUINTA</span>
+                            <span>{weekDay}</span>
                             <span>{val.expireDate}</span>
                           </div>
                         </div>

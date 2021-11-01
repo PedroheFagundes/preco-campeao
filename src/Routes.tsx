@@ -1,13 +1,12 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-
+import { Route, Switch } from "react-router-dom";
+import Deals from './pages/Deals';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
-import SignIn from './pages/SignIn';
-import Variation from './pages/Variation';
-import Deals from './pages/Deals';
-import Simulation from './pages/Simulation';
 import Profile from './pages/Profile';
+import Simulation from './pages/Simulation';
+import Variation from './pages/Variation';
+
 
  const App = function () {
   return (
@@ -26,9 +25,6 @@ import Profile from './pages/Profile';
       </Route>
       <Route exact path='/profile'>
         <Profile />
-      </Route>
-      <Route exact path='/signin'>
-        <SignIn />
       </Route>
       <Route>
         <NotFound />
