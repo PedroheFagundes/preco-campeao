@@ -66,25 +66,6 @@ export const HomeArea = styled.div`
         color: #1d5c66;
       }
     }
-
-    span {
-      height: 55px;
-      color: #00404a;
-
-      span:first-child,
-      span:last-child {
-        font-size: 30px;
-      }
-
-      span:last-child {
-        vertical-align: top;
-        margin-right: 10px;
-      }
-
-      span {
-        font-size: 55px;
-      }
-    }
     
     img {
       border-radius: 9px;
@@ -202,6 +183,25 @@ export const HomeArea = styled.div`
       width: 90%;
       margin-bottom: 5px;
       margin-top 0px;
+    }
+  }
+
+  .price {
+    height: 55px;
+    color: #00404a;
+
+    span:first-child,
+    span:last-child {
+      font-size: 30px;
+    }
+
+    span:last-child {
+      vertical-align: top;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 55px;
     }
   }
 `;

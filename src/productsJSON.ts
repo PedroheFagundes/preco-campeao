@@ -4,28 +4,27 @@ const products = [
     name: "Leite Macuco",
     info: "1 Litro",
     price: [
-      [3.19, "Big Blue", "11-13-2021"],
-      [7.19, "Atacadão", "12-31-2021"],
+      [3.19, "Big Blue", "11-10-2021"],
+      [4.69, "Atacadão", "12-30-2021"],
     ],
     category: [
       "Bebida", "Laticíneo"
     ],
     image: "leitemacuco-integral.png",
-    expireDate: "13/11"
   },
   {
     id: 2,
     name: "Coca-cola",
     info: "2 Litros",
     price: [
-      [4.19, "Serra Azul", "11-13-2021"],
-      [7.19, "Atacadão", "12-31-2021"],
+      [9.19, "Serra Azul", "11-13-2021"],
+      [7.19, "Atacadão", "03-26-2021"],
+      [10.19, "Big Blue", "12-31-2021"],
     ],
     category: [
       "Bebida", "Refrigerante"
     ],
     image: "cocacola-2litros.png",
-    expireDate: "31/10"
   },
   {
     id: 3,
@@ -39,7 +38,6 @@ const products = [
       "Bebida", ""
     ],
     image: "cafe3coracoes-extraforte-500g.png",
-    expireDate: "25/12"
   },
   {
     id: 4,
@@ -53,7 +51,6 @@ const products = [
       "frango", "carne"
     ],
     image: "peito-frango.jpg",
-    expireDate: "31/08"
   }
 ]
 
