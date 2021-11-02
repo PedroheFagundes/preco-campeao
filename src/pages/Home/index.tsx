@@ -159,9 +159,13 @@ const Page = () => {
                                 src={`/images/markets/${moreInfoMarketLogo}-logo.png`}
                                 alt=""
                               />
-                              <span>{cheapPrice[1]}</span>
-                              <span>{moreInfoDate}</span>
-                              <span className="moreInfoPrice">
+                              <span className="moreInfoSpan1">
+                                {cheapPrice[1]}
+                              </span>
+                              <span className="moreInfoSpan2">
+                                {moreInfoDate}
+                              </span>
+                              <span className="moreInfoPrice moreInfoSpan3">
                                 <span>R$</span>
                                 <span>{priceFormated[0]}</span>
                                 <span>,{priceFormated[1]}</span>

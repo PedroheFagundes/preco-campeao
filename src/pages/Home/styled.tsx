@@ -121,7 +121,6 @@ export const HomeArea = styled.div`
 
     div {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       width: 90%;
       margin-top: 10px;
@@ -133,6 +132,19 @@ export const HomeArea = styled.div`
         border-radius: 20%;
         max-height: 40px;
         max-width: 40px;
+      }
+
+
+      .moreInfoSpan1 {
+        width 40%;
+        margin-left: 10px;
+      }
+      .moreInfoSpan2 {
+        width 15%;
+      }
+      .moreInfoSpan3 {
+        width 30%;
+        text-align: right;
       }
     }
   }
@@ -202,6 +214,22 @@ export const HomeArea = styled.div`
 
     span {
       font-size: 55px;
+    }
+  }
+
+  .moreInfoPrice {
+
+    span:first-child,
+    span:last-child {
+      font-size: 20px;
+    }
+
+    span:last-child {
+      vertical-align: top;
+    }
+
+    span {
+      font-size: 30px;
     }
   }
 `;
