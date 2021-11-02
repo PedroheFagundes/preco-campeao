@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HomeArea = styled.div`
+
   height: calc(100% - var(--navBarHeight));
   display: flex;
   flex-direction: column;
@@ -164,7 +165,7 @@ export const HomeArea = styled.div`
 
       div {
         display: flex;
-        font-size: 40px;
+        font-size: 26px;
         flex-direction: column;
         align-items: center;
 

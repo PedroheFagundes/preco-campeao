@@ -4,7 +4,7 @@ const products = [
     name: "Leite Macuco",
     info: "1 Litro",
     price: [
-      [3.19, "Big Blue", "11-10-2021"],
+      [3.19, "Pepê & Gabriel", "11-10-2021"],
       [4.69, "Atacadão", "12-30-2021"],
     ],
     category: [
@@ -33,6 +33,7 @@ const products = [
     price: [
       [2.19, "Big Blue", "11-13-2021"],
       [1.19, "Atacadão", "12-31-2021"],
+      [5.19, "Pepê & Gabriel", "02-04-2021"],
     ],
     category: [
       "Bebida", ""
@@ -45,7 +46,6 @@ const products = [
     info: "1kg",
     price: [
       [2.19, "Big Blue", "11-13-2021"],
-      [1.19, "Atacadão", "12-31-2021"],
     ],
     category: [
       "frango", "carne"

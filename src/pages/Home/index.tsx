@@ -21,6 +21,18 @@ const Page = () => {
   // Variable to stock the market name conversion to market logo name
   let marketLogo: string;
 
+  /*const getFontSize = (textLength: number) => {
+    const baseSize = 9;
+    if (textLength >= baseSize) {
+      textLength = baseSize - 2;
+    }
+    const fontSize = baseSize - textLength;
+    return `${fontSize}vw`;
+  };
+
+  const boxes = document.querySelector<HTMLElement>(".box")!;
+  boxes.style.fontSize = getFontSize(boxes.innerHTML.length);*/
+
   return (
     <HomeArea>
       <div className="searchBar">
@@ -88,6 +100,8 @@ const Page = () => {
               marketLogo = "bigblue";
             } else if (marketFormated === "Serra Azul") {
               marketLogo = "serraazul";
+            } else if (marketFormated === "Pepê & Gabriel") {
+              marketLogo = "pepe&gabriel";
             }
 
             return (
@@ -122,7 +136,7 @@ const Page = () => {
                             src={`/images/markets/${marketLogo}-logo.png`}
                             alt=""
                           />
-                          <span>{marketFormated}</span>
+                          <span className="box">{marketFormated}</span>
                         </div>
                         <div className="expireDate">
                           <span>promoção até</span>
@@ -147,6 +161,8 @@ const Page = () => {
                         moreInfoMarketLogo = "bigblue";
                       } else if (cheapPrice[1] === "Serra Azul") {
                         moreInfoMarketLogo = "serraazul";
+                      } else if (cheapPrice[1] === "Pepê & Gabriel") {
+                        moreInfoMarketLogo = "pepe&gabriel";
                       }
 
                       let priceFormated = cheapPrice[0].toString().split(".");
