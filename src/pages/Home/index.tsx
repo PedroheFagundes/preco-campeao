@@ -169,7 +169,9 @@ const Page = () => {
 
                       return (
                         <div className="moreInfo" key={key}>
-                          {key === 0 ? null : (
+                          {key === 0 ? null : new Date(
+                              cheapPrice[2]
+                            ).getTime() > new Date().getTime() ? (
                             <div>
                               <img
                                 src={`/images/markets/${moreInfoMarketLogo}-logo.png`}
@@ -187,7 +189,7 @@ const Page = () => {
                                 <span>,{priceFormated[1]}</span>
                               </span>
                             </div>
-                          )}
+                          ) : null}
                         </div>
                       );
                     })

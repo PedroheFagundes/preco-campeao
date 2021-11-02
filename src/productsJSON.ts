@@ -4,8 +4,8 @@ const products = [
     name: "Leite Macuco",
     info: "1 Litro",
     price: [
-      [3.19, "Pepê & Gabriel", "11-10-2021"],
-      [4.69, "Atacadão", "12-30-2021"],
+      [3.19, "Pepê & Gabriel", "09-10-2021"],
+      [4.69, "Atacadão", "08-30-2021"],
     ],
     category: [
       "Bebida", "Laticíneo"

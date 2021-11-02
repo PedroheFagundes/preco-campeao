@@ -27,6 +27,7 @@ export const HomeArea = styled.div`
     border-radius: 9px;
     margin-bottom: 15px;
     box-shadow: 0px 2px 2px #333;
+    color: #00404a;
 
     * {
       pointer-events: none;
@@ -123,7 +124,7 @@ export const HomeArea = styled.div`
     div {
       display: flex;
       align-items: center;
-      width: 90%;
+      width: 95%;
       margin-top: 10px;
       margin-bottom: 4px; 
       font-size: 25px;
@@ -137,11 +138,12 @@ export const HomeArea = styled.div`
 
 
       .moreInfoSpan1 {
-        width 40%;
-        margin-left: 10px;
+        width 55%;
+        font-size: 22px;
+        margin-left: 5px;
       }
       .moreInfoSpan2 {
-        width 15%;
+        width 20%;
       }
       .moreInfoSpan3 {
         width 30%;
