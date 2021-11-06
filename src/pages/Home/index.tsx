@@ -21,18 +21,6 @@ const Page = () => {
   // Variable to stock the market name conversion to market logo name
   let marketLogo: string;
 
-  /*const getFontSize = (textLength: number) => {
-    const baseSize = 9;
-    if (textLength >= baseSize) {
-      textLength = baseSize - 2;
-    }
-    const fontSize = baseSize - textLength;
-    return `${fontSize}vw`;
-  };
-
-  const boxes = document.querySelector<HTMLElement>(".box")!;
-  boxes.style.fontSize = getFontSize(boxes.innerHTML.length);*/
-
   return (
     <HomeArea>
       <div className="searchBar">
@@ -64,7 +52,18 @@ const Page = () => {
             }
           })
           .map((val, key) => {
+            if (
+              val.price[0][3] === "Expirado" &&
+              val.price[1][3] === "Expirado" &&
+              val.price[2][3] === "Expirado"
+            ) {
+              return null;
+            }
+
             let cheapPrice = val.price.sort(Comparator);
+            while (cheapPrice[0][3] === "Expirado") {
+              cheapPrice.shift();
+            }
 
             let dateFormated = new Date(cheapPrice[0][2])
               .toLocaleDateString("pt-BR")
