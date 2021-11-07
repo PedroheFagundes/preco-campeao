@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const NavButtonArea = styled.div`
-
   position: absolute;
   width: 100%;
 
@@ -35,7 +34,7 @@ export const NavButtonArea = styled.div`
     height: ${({ theme }) => theme.profileHeight}px;
     margin-right: ${({ theme }) => theme.profileRightMargin}px;
   }
-  
+
   a {
     text-decoration: none;
   }
@@ -73,7 +72,8 @@ export const NavButtonArea = styled.div`
     display: ${({ theme }) => theme.profileDisplay};
   }
 
-  ul, li {
+  ul,
+  li {
     height: var(--navBarHeight);
     margin: 0;
     padding: 0;
@@ -97,7 +97,9 @@ export const NavButtonArea = styled.div`
 
     span {
       color: #fff;
-      text-shadow: 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+      margin-bottom: 3px;
+      text-shadow: 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000,
+        -1px 1px 0 #000;
     }
 
     .homeSpan {
