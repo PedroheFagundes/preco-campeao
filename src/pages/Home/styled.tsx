@@ -125,7 +125,7 @@ export const HomeArea = styled.div`
       display: flex;
       align-items: center;
       width: 95%;
-      margin-top: 10px;
+      margin-top: 6px;
       margin-bottom: 4px; 
       font-size: 25px;
       color: #c4c4c4;
@@ -165,9 +165,15 @@ export const HomeArea = styled.div`
       display: flex;
       justify-content: center;
 
+      .market {
+        width: 55%;
+      }
+      .expireDate {
+        width: 45%;
+      }
       div {
         display: flex;
-        font-size: 26px;
+        font-size: 28px;
         flex-direction: column;
         align-items: center;
 

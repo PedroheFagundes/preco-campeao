@@ -6,7 +6,7 @@ const products = [
     price: [
       [3.19, "Pepê & Gabriel", "09-10-2021", new Date().getTime() < new Date("09-10-2021").getTime() ? "Válido" : "Expirado"],
       [4.69, "Atacadão", "11-30-2021", new Date().getTime() < new Date("11-30-2021").getTime() ? "Válido" : "Expirado"],
-      [2.69, "Big Blue", "12-30-2021", new Date().getTime() < new Date("11-30-2021").getTime() ? "Válido" : "Expirado"],
+      [2.69, "Pepê & Gabriel", "12-30-2021", new Date().getTime() < new Date("11-30-2021").getTime() ? "Válido" : "Expirado"],
     ],
     category: [
       "Bebida", "Laticíneo"
