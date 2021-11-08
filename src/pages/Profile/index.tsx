@@ -16,7 +16,10 @@ const Page = () => {
           <hr />
           <span>
             PIX POR LINK{" "}
-            <a href="https://nubank.com.br/pagar/oeti/kYsQQfzO7H">
+            <a
+              href="https://nubank.com.br/pagar/oeti/kYsQQfzO7H"
+              target="_blank"
+            >
               CLIQUE AQUI!
             </a>
           </span>
