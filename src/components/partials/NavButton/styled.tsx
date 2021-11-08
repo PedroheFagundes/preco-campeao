@@ -139,18 +139,21 @@ export const NavButtonArea = styled.div`
     justify-content: ${({ theme }) => theme.variationLiJustify};
     background-color: ${({ theme }) => theme.variationBgColor};
     box-shadow: ${({ theme }) => theme.variationBoxShadow};
+    display: none;
   }
 
   .dealsLi {
     justify-content: ${({ theme }) => theme.dealsLiJustify};
     background-color: ${({ theme }) => theme.dealsBgColor};
     box-shadow: ${({ theme }) => theme.dealsBoxShadow};
+    display: none;
   }
 
   .simulationLi {
     justify-content: ${({ theme }) => theme.simulationLiJustify};
     background-color: ${({ theme }) => theme.simulationBgColor};
     box-shadow: ${({ theme }) => theme.simulationBoxShadow};
+    display: none;
   }
 
   .profileLi {
