@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import products from "../../productsJSON";
 import { HomeArea } from "./styled";
 
@@ -31,7 +32,9 @@ const Page = () => {
             setSearchTerm(event.target.value);
           }}
         />
-        <img src="/images/search.png" alt="" />
+        <Link to="/profile">
+          <img src="/images/share.png" alt="" />
+        </Link>
       </div>
       <div className="productInfoShortArea">
         {products

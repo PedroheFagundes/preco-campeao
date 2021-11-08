@@ -77,17 +77,27 @@ export const HomeArea = styled.div`
   }
 
   .searchBar {
-    width: 100%;
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+
+    img {
+      background-color: #E95F24;
+      height 36px;
+      padding: 4px;
+      border-radius: 8px;
+    }
+  }
+
+
 
     input {
       padding-left: 10px;
       height: 38px;
-      width: 90%;
+      width: 86%;
       margin: 15px 0px;
       border-radius: 9px;
       border: none;
@@ -101,17 +111,6 @@ export const HomeArea = styled.div`
         color: #11414f;
         font-size: 18px;
       }
-    }
-
-    img {
-      height 22px;
-      float: right;
-      margin-left: 77%;
-      margin-top: -45px;
-      position: relative;
-      z-index: 2;
-      opacity: 70%;
-      transform: scaleX(-1);
     }
   }
   .moreInfo{
