@@ -25,7 +25,9 @@ const Page = () => {
           </span>
         </div>
       </div>
-      <div className="areaRedes"></div>
+      <div className="areaRedes">
+        <span>NOS SIGA NO INSTAGRAM</span>
+      </div>
       <div className="areaContato"></div>
     </ProfileArea>
   );

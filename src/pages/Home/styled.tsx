@@ -86,8 +86,9 @@ export const HomeArea = styled.div`
 
     img {
       background-color: #E95F24;
-      height 36px;
-      padding: 4px;
+      height 38px;
+      padding: 6px;
+      padding-top: 7px;
       border-radius: 8px;
     }
   }

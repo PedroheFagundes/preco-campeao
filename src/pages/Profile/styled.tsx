@@ -52,6 +52,10 @@ export const ProfileArea = styled.div`
     width: 90%;
     height: 180px;
     background-color: #fff;
+    padding: 10px 10px;
+    color: #0a4a4a;
+    text-align: center;
+    font-size: 22px;
   }
 
   .areaContato {
