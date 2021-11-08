@@ -78,17 +78,17 @@ export const HomeArea = styled.div`
 
   .searchBar {
     width: 90%;
+    height: 38px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
+    align-items: flex-start;
+    margin: 15px 0px;
 
     img {
       background-color: #E95F24;
       height 38px;
       padding: 6px;
-      padding-top: 7px;
       border-radius: 8px;
     }
   }
@@ -99,8 +99,7 @@ export const HomeArea = styled.div`
       padding-left: 10px;
       height: 38px;
       width: 86%;
-      margin: 15px 0px;
-      border-radius: 9px;
+      border-radius: 8px;
       border: none;
 
       &:focus{
