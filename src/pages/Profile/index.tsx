@@ -6,8 +6,7 @@ const Page = () => {
     <ProfileArea>
       <div className="areaPix">
         <span>
-          QUER CONTRIBUR COM O PROJETO PARA SEMPRE TER AS MELHORES PROMOÇÕES DA
-          CIDADE EM SUAS MÃOS?
+          QUER CONTRIBUR PARA SEMPRE TER AS MELHORES PROMOÇÕES EM SUAS MÃOS?
         </span>
         <div>
           <img src="/images/pix.png" alt="" />
@@ -30,6 +29,7 @@ const Page = () => {
         <div>
           <img src="/images/instagram.png" alt="" />
           <a
+            className="instagram"
             href="https://instagram.com/precocampeao?utm_medium=copy_link"
             target="_blank"
           >
@@ -37,6 +37,7 @@ const Page = () => {
           </a>
         </div>
         <hr />
+        <span>COMPARTILHE AS PROMOÇÕES</span>
         <div className="linkRedes">
           <div>
             <a
@@ -158,7 +159,18 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="areaContato"></div>
+      <div className="areaContato">
+        <span>CRIADO E MANTIDO POR PEDRO FAGUNDES</span>
+        <div>
+          <img src="/images/gmail.png" alt="" />
+          <a href="mailto:" target="_blank">
+            pedrohefagundes@gmail.com
+          </a>
+        </div>
+        <div>
+          <span>@pedrohefagundes</span>
+        </div>
+      </div>
     </ProfileArea>
   );
 };

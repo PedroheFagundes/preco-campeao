@@ -33,6 +33,7 @@ export const ProfileArea = styled.div`
     border-radius: 5px;
     transition: 25ms ease-out;
     padding: 5px 10px;
+    width: 100%;
   }
 
   .resp-sharing-button__icon svg {
@@ -161,15 +162,17 @@ export const ProfileArea = styled.div`
     border-radius: 9px;
     margin: 10px 0px;
   }
+
   .areaPix {
     width: 90%;
     background-color: #e95f24;
     padding: 10px 10px;
     color: #fff;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 
     div {
+      font-size: 22px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -199,12 +202,11 @@ export const ProfileArea = styled.div`
 
   .areaRedes {
     width: 90%;
-    height: 180px;
     background-color: #fff;
     padding: 10px 10px;
     color: #0a4a4a;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 
     div {
       margin: 0;
@@ -213,11 +215,14 @@ export const ProfileArea = styled.div`
       img {
         height: 40px;
       }
-      a {
+      a.instagram {
+        margin-left: 5px;
         text-decoration: none;
+        background-color: #e95f24;
+        border-radius: 5px;
         font-size: 30px;
         padding: 1px 4px;
-        color: #0a4a4a;
+        color: #fff;
       }
     }
     hr {
@@ -227,7 +232,17 @@ export const ProfileArea = styled.div`
 
   .areaContato {
     width: 80%;
-    height: 120px;
     background-color: #0a4a4a;
+    padding: 10px 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+
+    div {
+      margin: 0;
+      img {
+        height: 18px;
+      }
+    }
   }
 `;
