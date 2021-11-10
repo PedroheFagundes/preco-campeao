@@ -181,7 +181,7 @@ const Page = () => {
                           <div className="moreInfo" key={key}>
                             {key === 0 ? null : new Date(
                                 cheapPrice[2]
-                              ).getTime() > new Date().getTime() ? (
+                              ).getTime() >= new Date().setHours(0, 0, 0, 0) ? (
                               <div>
                                 <img
                                   src={`/images/markets/${moreInfoMarketLogo}-logo.png`}

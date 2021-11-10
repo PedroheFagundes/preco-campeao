@@ -43,7 +43,7 @@ const Page = () => {
           <div>
             <a
               className="resp-sharing-button__link"
-              href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsharingbuttons.io"
+              href="https://facebook.com/sharer/sharer.php?u=https://pedrofagundes-preco-campeao.netlify.app/"
               target="_blank"
               rel="noopener"
               aria-label="Facebook"
@@ -62,7 +62,7 @@ const Page = () => {
             </a>
             <a
               className="resp-sharing-button__link"
-              href="https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=http%3A%2F%2Fsharingbuttons.io"
+              href="https://twitter.com/intent/tweet/?text=As%20melhores%20promocoes%20da%20cidade%20em%20suas%20maos.&amp;url=https://pedrofagundes-preco-campeao.netlify.app/"
               target="_blank"
               rel="noopener"
               aria-label="Twitter"
@@ -81,7 +81,7 @@ const Page = () => {
             </a>
             <a
               className="resp-sharing-button__link"
-              href="mailto:?subject=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;body=http%3A%2F%2Fsharingbuttons.io"
+              href="mailto:?subject=As%20melhores%20promocoes%20da%20cidade%20em%20suas%20maos.&amp;body=https://pedrofagundes-preco-campeao.netlify.app/"
               target="_self"
               rel="noopener"
               aria-label="E-Mail"
@@ -102,7 +102,7 @@ const Page = () => {
           <div>
             <a
               className="resp-sharing-button__link"
-              href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fsharingbuttons.io&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io"
+              href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pedrofagundes-preco-campeao.netlify.app/&amp;title=As%20melhores%20promocoes%20da%20cidade%20em%20suas%20maos.&amp;summary=As%20melhores%20promocoes%20da%20cidade%20em%20suas%20maos.&amp;source=https://pedrofagundes-preco-campeao.netlify.app/"
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"
@@ -121,7 +121,7 @@ const Page = () => {
             </a>
             <a
               className="resp-sharing-button__link"
-              href="whatsapp://send?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.%20http%3A%2F%2Fsharingbuttons.io"
+              href="whatsapp://send?text=As%20melhores%20promocoes%20da%20cidade%20em%20suas%20maos.%20https://pedrofagundes-preco-campeao.netlify.app/"
               target="_blank"
               rel="noopener"
               aria-label="WhatsApp"
@@ -140,7 +140,7 @@ const Page = () => {
             </a>
             <a
               className="resp-sharing-button__link"
-              href="https://telegram.me/share/url?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=http%3A%2F%2Fsharingbuttons.io"
+              href="https://telegram.me/share/url?text=As%20melhores%20promocoes%20da%20cidade%20em%20suas%20maos.&amp;url=https://pedrofagundes-preco-campeao.netlify.app/"
               target="_blank"
               rel="noopener"
               aria-label="Telegram"
