@@ -88,6 +88,9 @@ export const NavButtonArea = styled.div`
     box-shadow: inset 0px 5px 5px #839bbf;
   }
 
+  a {
+    flex: 1;
+  }
   li {
     display: flex;
     flex-direction: column;

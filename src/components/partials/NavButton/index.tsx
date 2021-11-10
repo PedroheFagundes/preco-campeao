@@ -11,22 +11,23 @@ const NavButton = () => {
     <ThemeProvider theme={theme}>
       <NavButtonArea>
         <ul className="noSelect">
-          <li
-            className="homeLi"
-            onClick={() => setThemes(navBarTheme["homeActive"])}
-          >
-            <div className="buttonImages">
-              <Link to="/">
+          <Link to="/">
+            <li
+              className="homeLi"
+              onClick={() => setThemes(navBarTheme["homeActive"])}
+            >
+              <div className="buttonImages">
                 <img className="homeImg" src="/images/navbar/home.png" alt="" />
-              </Link>
-              <img
-                className="homeImg arrow"
-                src="/images/navbar/right-arrow.png"
-                alt=""
-              />
-            </div>
-            <span className="homeSpan">Início</span>
-          </li>
+                <img
+                  className="homeImg arrow"
+                  src="/images/navbar/right-arrow.png"
+                  alt=""
+                />
+              </div>
+              <span className="homeSpan">Início</span>
+            </li>
+          </Link>
+
           <li
             className="variationLi"
             onClick={() => setThemes(navBarTheme["variationActive"])}
@@ -102,26 +103,26 @@ const NavButton = () => {
             </div>
             <span className="simulationSpan">Simulação</span>
           </li>
-          <li
-            className="profileLi"
-            onClick={() => setThemes(navBarTheme["profileActive"])}
-          >
-            <div className="buttonImages">
-              <img
-                className="profileImg arrow"
-                src="/images/navbar/left-arrow.png"
-                alt=""
-              />
-              <Link to="/profile">
+          <Link id="toProfile" to="/profile">
+            <li
+              className="profileLi"
+              onClick={() => setThemes(navBarTheme["profileActive"])}
+            >
+              <div className="buttonImages">
+                <img
+                  className="profileImg arrow"
+                  src="/images/navbar/left-arrow.png"
+                  alt=""
+                />
                 <img
                   className="profileImg"
                   src="/images/navbar/profile.png"
                   alt=""
                 />
-              </Link>
-            </div>
-            <span className="profileSpan">Contato</span>
-          </li>
+              </div>
+              <span className="profileSpan">Contato</span>
+            </li>
+          </Link>
         </ul>
       </NavButtonArea>
     </ThemeProvider>
