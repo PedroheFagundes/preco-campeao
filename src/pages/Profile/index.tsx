@@ -6,10 +6,11 @@ const Page = () => {
     <ProfileArea>
       <div className="areaPix">
         <span>
+          {/*AJUDE A MANTER O SITE SEMPRE ATUALIADO*/}
           QUER CONTRIBUR PARA SEMPRE TER AS MELHORES PROMOÇÕES EM SUAS MÃOS?
         </span>
         <div>
-          <img src="/images/pix.png" alt="" />
+          {/*<img src="/images/pix.png" alt="" />*/}
           <span>CHAVE PIX E-MAIL</span>
           <span>pedrohefagundes@gmail.com</span>
           <hr />
@@ -163,12 +164,23 @@ const Page = () => {
         <span>CRIADO E MANTIDO POR PEDRO FAGUNDES</span>
         <div>
           <img src="/images/gmail.png" alt="" />
-          <a href="mailto:" target="_blank">
+          <a
+            className="instagram"
+            href="mailto:pedrohefagundes@gmail.com"
+            target="_blank"
+          >
             pedrohefagundes@gmail.com
           </a>
         </div>
         <div>
-          <span>@pedrohefagundes</span>
+          <img src="/images/instagram.png" alt="" />
+          <a
+            className="instagram"
+            href="https://instagram.com/pedrohefagundes?utm_medium=copy_link"
+            target="_blank"
+          >
+            @pedrohefagundes
+          </a>
         </div>
       </div>
     </ProfileArea>

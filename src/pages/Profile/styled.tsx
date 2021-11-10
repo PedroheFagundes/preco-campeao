@@ -5,7 +5,7 @@ export const ProfileArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-family: "Contrail One", sans-serif;
 
   .linkRedes a div {
@@ -21,7 +21,7 @@ export const ProfileArea = styled.div`
   .resp-sharing-button__link,
   .resp-sharing-button__icon {
     display: inline-block;
-    margin: 2px;
+    margin: 6px 4px;
   }
 
   .resp-sharing-button__link {
@@ -218,11 +218,10 @@ export const ProfileArea = styled.div`
       a.instagram {
         margin-left: 5px;
         text-decoration: none;
-        background-color: #e95f24;
         border-radius: 5px;
         font-size: 30px;
         padding: 1px 4px;
-        color: #fff;
+        color: #0a4a4a;
       }
     }
     hr {
@@ -232,9 +231,9 @@ export const ProfileArea = styled.div`
 
   .areaContato {
     width: 80%;
-    background-color: #0a4a4a;
+    background-color: #fff;
     padding: 10px 10px;
-    color: #fff;
+    color: #0a4a4a;
     text-align: center;
     font-size: 18px;
 
@@ -242,6 +241,20 @@ export const ProfileArea = styled.div`
       margin: 0;
       img {
         height: 18px;
+      }
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      a.instagram {
+        margin-left: 5px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 17px;
+        padding: 1px 4px;
+        color: #0a4a4a;
       }
     }
   }

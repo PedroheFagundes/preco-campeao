@@ -5,6 +5,7 @@ export const Template = styled.div`
   position: fixed;
   height: 100%;
   width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
