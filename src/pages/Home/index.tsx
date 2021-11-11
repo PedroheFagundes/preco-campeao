@@ -156,7 +156,7 @@ const Page = () => {
                       <span className="price">
                         <span>R$</span>
                         <span>{priceFormated[0]}</span>
-                        <span>,{priceFormated[1]}</span>
+                        <span>,{priceFormated[1]}0</span>
                       </span>
                     </div>
                     {parseInt(eventID) === val.id ? (
