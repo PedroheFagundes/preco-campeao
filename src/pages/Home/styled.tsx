@@ -13,6 +13,7 @@ export const HomeArea = styled.div`
     font-size: 17px;
     color: #fff;
     margin-bottom: 5px;
+    text-shadow: 1px 1px 2px black;
   }
 
   .productInfoShortArea{
