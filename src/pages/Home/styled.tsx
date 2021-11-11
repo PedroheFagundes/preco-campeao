@@ -10,7 +10,7 @@ export const HomeArea = styled.div`
   font-family: 'Contrail One', sans-serif;
 
   .selectProductSpan{
-    font-size: 17px;
+    font-size: 18px;
     color: #fff;
     margin-bottom: 5px;
     text-shadow: 1px 1px 2px black;

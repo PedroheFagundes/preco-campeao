@@ -13,7 +13,7 @@ const Page = () => {
   const [showMoreInfo, setShowMoreInfo] = useState(false);
 
   // Define qual produto está com moreInfo está aberto, inicia com o produto 1 aberto
-  const [eventID, setEventID] = useState("0");
+  const [eventID, setEventID] = useState("-1");
 
   // Prepare the array of arrays to be sorted
   function Comparator(a: any[], b: any[]) {
@@ -44,7 +44,7 @@ const Page = () => {
             <img src="/images/share.png" alt="" />
           </Link>
         </div>
-        {eventID === "0" ? (
+        {eventID === "-1" ? (
           <span className="selectProductSpan">
             Selecione algum produto para mais informações
           </span>
