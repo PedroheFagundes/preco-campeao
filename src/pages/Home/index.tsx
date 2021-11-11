@@ -13,7 +13,7 @@ const Page = () => {
   const [showMoreInfo, setShowMoreInfo] = useState(false);
 
   // Define qual produto está com moreInfo está aberto, inicia com o produto 1 aberto
-  const [eventID, setEventID] = useState("1");
+  const [eventID, setEventID] = useState("0");
 
   // Prepare the array of arrays to be sorted
   function Comparator(a: any[], b: any[]) {
@@ -138,7 +138,11 @@ const Page = () => {
                   id={`${val.id}`}
                   key={key}
                   onClick={(e) => {
-                    setEventID(e.currentTarget.id);
+                    if (eventID === e.currentTarget.id) {
+                      setEventID("0");
+                    } else {
+                      setEventID(e.currentTarget.id);
+                    }
                     setShowMoreInfo(!showMoreInfo);
                   }}
                 >
