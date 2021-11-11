@@ -5,14 +5,16 @@ export const Template = styled.div`
   position: fixed;
   height: 100%;
   width: 100%;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 
 export const PageContainer = styled.div`
-  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
 `;
 

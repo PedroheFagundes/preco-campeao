@@ -90,7 +90,7 @@ export const HomeArea = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 15px 0px 10px 0px;
+    margin: 15px 0px;
 
     img {
       background-color: #E95F24;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const DealsArea = styled.div`
-  height: 100%;
+  height: calc(100% - var(--navBarHeight));
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +14,7 @@ export const DealsArea = styled.div`
 
   span {
     text-align: center;
-    font-family: 'Contrail One', sans-serif;
+    font-family: "Contrail One", sans-serif;
     margin-top: 30px;
     font-size: 50px;
     color: #860909;

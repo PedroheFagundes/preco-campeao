@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SimulationArea = styled.div`
-  height: 100%;
+  height: calc(100% - var(--navBarHeight));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@ export const SimulationArea = styled.div`
 
   span {
     text-align: center;
-    font-family: 'Contrail One', sans-serif;
+    font-family: "Contrail One", sans-serif;
     margin-top: 30px;
     font-size: 50px;
     color: #860909;
