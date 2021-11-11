@@ -51,12 +51,7 @@ const Page = () => {
                 return val;
               } else if (
                 val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                val.category[0]
-                  .toLowerCase()
-                  .includes(searchTerm.toLowerCase()) ||
-                val.category[1]
-                  .toLowerCase()
-                  .includes(searchTerm.toLowerCase()) ||
+                val.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 val.info.toLowerCase().includes(searchTerm.toLowerCase())
               ) {
                 return val;

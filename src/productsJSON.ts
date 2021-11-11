@@ -15,9 +15,7 @@ const products = [
       [3.19, "Serra Azul", "01-15-2021", new Date().setHours(0,0,0,0) <= new Date("01-15-2021").getTime() ? "Válido" : "Expirado"],
       [4.69, "Tio Dongo", "01-10-2021", new Date().setHours(0,0,0,0) <= new Date("01-10-2021").getTime() ? "Válido" : "Expirado"],
     ],
-    category: [
-      "Bebida", "Laticíneo"
-    ],
+    category: "Bebida Laticíneo",
     image: "leitemacuco-integral.png",
   },
   {
@@ -36,9 +34,7 @@ const products = [
       [3.19, "Serra Azul", "01-15-2021", new Date().setHours(0,0,0,0) <= new Date("01-15-2021").getTime() ? "Válido" : "Expirado"],
       [4.69, "Tio Dongo", "01-10-2021", new Date().setHours(0,0,0,0) <= new Date("01-10-2021").getTime() ? "Válido" : "Expirado"],
     ],
-    category: [
-      "Bebida", "Refrigerante"
-    ],
+    category: "Bebida Refrigerante",
     image: "cocacola-2litros.png",
   },
   {
@@ -57,9 +53,7 @@ const products = [
       [3.19, "Serra Azul", "01-15-2021", new Date().setHours(0,0,0,0) <= new Date("01-15-2021").getTime() ? "Válido" : "Expirado"],
       [4.69, "Tio Dongo", "01-10-2021", new Date().setHours(0,0,0,0) <= new Date("01-10-2021").getTime() ? "Válido" : "Expirado"],
     ],
-    category: [
-      "Bebida", ""
-    ],
+    category: "Bebida",
     image: "cafe3coracoes-extraforte-500g.png",
   },
   {
@@ -78,9 +72,7 @@ const products = [
       [3.19, "Serra Azul", "01-15-2021", new Date().setHours(0,0,0,0) <= new Date("01-15-2021").getTime() ? "Válido" : "Expirado"],
       [4.69, "Tio Dongo", "01-10-2021", new Date().setHours(0,0,0,0) <= new Date("01-10-2021").getTime() ? "Válido" : "Expirado"],
     ],
-    category: [
-      "frango", "carne"
-    ],
+    category: "frango carne",
     image: "peito-frango.jpg",
   }
 ]
