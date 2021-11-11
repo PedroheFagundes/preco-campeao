@@ -77,7 +77,7 @@ const products = [
   },
   {
     id: 5,
-    name: "Mistura Pão Francês",
+    name: "Mistura Pão",
     info: "Veramix 25kg",
     price: [
       [74.90, "Atacadão", "11-14-2021", new Date().setHours(0,0,0,0) <= new Date("11-14-2021").getTime() ? "Válido" : "Expirado"],
@@ -91,7 +91,7 @@ const products = [
       [0.00, "Serra Azul", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.00, "Tio Dongo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
     ],
-    category: "massa",
+    category: "massa francês",
     image: "mistura-pao-frances-veramix.png",
   }
 ]

@@ -144,6 +144,7 @@ const Page = () => {
                       setEventID(e.currentTarget.id);
                     }
                     setShowMoreInfo(!showMoreInfo);
+                    console.log(priceFormated[1]);
                   }}
                 >
                   <div className="template-inner">
@@ -156,7 +157,12 @@ const Page = () => {
                       <span className="price">
                         <span>R$</span>
                         <span>{priceFormated[0]}</span>
-                        <span>,{priceFormated[1]}0</span>
+                        <span>
+                          ,
+                          {priceFormated[1].length === 1
+                            ? priceFormated[1] + 0
+                            : priceFormated[1]}
+                        </span>
                       </span>
                     </div>
                     {parseInt(eventID) === val.id ? (
