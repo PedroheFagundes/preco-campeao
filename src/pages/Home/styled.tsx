@@ -9,6 +9,12 @@ export const HomeArea = styled.div`
   justify-content: flex-start;
   font-family: 'Contrail One', sans-serif;
 
+  .selectProductSpan{
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+
   .productInfoShortArea{
     width: 100%;
     display: flex;
@@ -83,7 +89,7 @@ export const HomeArea = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 15px 0px;
+    margin: 15px 0px 10px 0px;
 
     img {
       background-color: #E95F24;
@@ -92,8 +98,6 @@ export const HomeArea = styled.div`
       border-radius: 8px;
     }
   }
-
-
 
     input {
       padding-left: 10px;

@@ -44,6 +44,9 @@ const Page = () => {
             <img src="/images/share.png" alt="" />
           </Link>
         </div>
+        <span className="selectProductSpan">
+          Selecione algum produto para mais informações
+        </span>
         <div className="productInfoShortArea">
           {products
             .filter((val) => {
