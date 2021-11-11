@@ -66,7 +66,14 @@ const Page = () => {
               if (
                 val.price[0][3] === "Expirado" &&
                 val.price[1][3] === "Expirado" &&
-                val.price[2][3] === "Expirado"
+                val.price[2][3] === "Expirado" &&
+                val.price[3][3] === "Expirado" &&
+                val.price[4][3] === "Expirado" &&
+                val.price[5][3] === "Expirado" &&
+                val.price[6][3] === "Expirado" &&
+                val.price[7][3] === "Expirado" &&
+                val.price[8][3] === "Expirado" &&
+                val.price[9][3] === "Expirado"
               ) {
                 return null;
               }
@@ -108,12 +115,23 @@ const Page = () => {
                 marketLogo = "atacadao";
               } else if (marketFormated === "Big Blue") {
                 marketLogo = "bigblue";
-              } else if (marketFormated === "Serra Azul") {
-                marketLogo = "serraazul";
+              } else if (marketFormated === "Bramil") {
+                marketLogo = "bramil";
+              } else if (marketFormated === "Casa Friburgo") {
+                marketLogo = "casafriburgo";
+              } else if (marketFormated === "Cavalo Preto") {
+                marketLogo = "cavalopreto";
+              } else if (marketFormated === "Gama") {
+                marketLogo = "gama";
               } else if (marketFormated === "Pepê & Gabriel") {
                 marketLogo = "pepe&gabriel";
+              } else if (marketFormated === "R&E Mercado") {
+                marketLogo = "r&emercado";
+              } else if (marketFormated === "Serra Azul") {
+                marketLogo = "serraazul";
+              } else if (marketFormated === "Tio Dongo") {
+                marketLogo = "tiodongo";
               }
-
               return (
                 <div
                   className="template"
@@ -169,10 +187,22 @@ const Page = () => {
                           moreInfoMarketLogo = "atacadao";
                         } else if (cheapPrice[1] === "Big Blue") {
                           moreInfoMarketLogo = "bigblue";
-                        } else if (cheapPrice[1] === "Serra Azul") {
-                          moreInfoMarketLogo = "serraazul";
+                        } else if (cheapPrice[1] === "Bramil") {
+                          moreInfoMarketLogo = "bramil";
+                        } else if (cheapPrice[1] === "Casa Friburgo") {
+                          moreInfoMarketLogo = "casafriburgo";
+                        } else if (cheapPrice[1] === "Cavalo Preto") {
+                          moreInfoMarketLogo = "cavalopreto";
+                        } else if (cheapPrice[1] === "Gama") {
+                          moreInfoMarketLogo = "gama";
                         } else if (cheapPrice[1] === "Pepê & Gabriel") {
                           moreInfoMarketLogo = "pepe&gabriel";
+                        } else if (cheapPrice[1] === "R&E Mercado") {
+                          moreInfoMarketLogo = "r&emercado";
+                        } else if (cheapPrice[1] === "Serra Azul") {
+                          moreInfoMarketLogo = "serraazul";
+                        } else if (cheapPrice[1] === "Tio Dongo") {
+                          moreInfoMarketLogo = "tiodongo";
                         }
 
                         let priceFormated = cheapPrice[0].toString().split(".");
