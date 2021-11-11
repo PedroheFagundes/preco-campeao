@@ -44,9 +44,11 @@ const Page = () => {
             <img src="/images/share.png" alt="" />
           </Link>
         </div>
-        <span className="selectProductSpan">
-          Selecione algum produto para mais informações
-        </span>
+        {eventID === "0" ? (
+          <span className="selectProductSpan">
+            Selecione algum produto para mais informações
+          </span>
+        ) : null}
         <div className="productInfoShortArea">
           {products
             .filter((val) => {
