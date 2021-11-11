@@ -219,9 +219,10 @@ const Page = () => {
                                 <span className="moreInfoSpan1">
                                   {cheapPrice[1]}
                                 </span>
-                                <span className="moreInfoSpan2">
-                                  {moreInfoDate}
-                                </span>
+                                <div className="moreInfoSpan2">
+                                  <span>até dia</span>
+                                  <span>{moreInfoDate}</span>
+                                </div>
                                 <span className="moreInfoPrice moreInfoSpan3">
                                   <span>R$</span>
                                   <span>{priceFormated[0]}</span>

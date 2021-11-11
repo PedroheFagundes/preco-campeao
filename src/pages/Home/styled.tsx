@@ -142,7 +142,17 @@ export const HomeArea = styled.div`
         margin-left: 5px;
       }
       .moreInfoSpan2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width 20%;
+        margin: 0;
+        padding: 0;
+        span:first-child {
+          font-size: 9px;
+          letter-spacing: 2px;
+        }
       }
       .moreInfoSpan3 {
         width 30%;
