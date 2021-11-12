@@ -1,36 +1,34 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Deals from './pages/Deals';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import Profile from './pages/Profile';
-import Simulation from './pages/Simulation';
-import Variation from './pages/Variation';
+import Deals from "./pages/Deals";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import Simulation from "./pages/Simulation";
+import Variation from "./pages/Variation";
 
-
- const App = function () {
+const App = function () {
   return (
     <Switch>
-      <Route exact path='/'>
+      <Route exact path="/">
         <Home />
       </Route>
-      <Route exact path='/variation'>
+      <Route exact path="/variation">
         <Variation />
       </Route>
-      <Route exact path='/deals'>
+      <Route exact path="/deals">
         <Deals />
       </Route>
-      <Route exact path='/simulation'>
+      <Route exact path="/simulation">
         <Simulation />
       </Route>
-      <Route exact path='/profile'>
+      <Route exact path="/profile">
         <Profile />
       </Route>
       <Route>
-        <NotFound />
+        <Home />
       </Route>
     </Switch>
   );
-}
+};
 
 export default App;
