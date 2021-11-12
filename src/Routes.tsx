@@ -24,7 +24,6 @@ const App = function () {
       <Route exact path="/profile">
         <Profile />
       </Route>
-      <Redirect to="/" />
       <Route>
         <Redirect to="/" />
         <Home />
