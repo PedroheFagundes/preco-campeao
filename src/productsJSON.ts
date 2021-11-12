@@ -96,7 +96,7 @@ const products = [
   },
   {
     id: 6,
-    name: "Mistura para Pão",
+    name: "Mistura par Pão",
     info: "Veramix 25kg",
     price: [
       [74.90, "Atacadão", "11-14-2021", new Date().setHours(0,0,0,0) <= new Date("11-14-2021").getTime() ? "Válido" : "Expirado"],
