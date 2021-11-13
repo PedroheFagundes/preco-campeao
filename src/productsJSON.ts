@@ -188,6 +188,25 @@ const products = [
     ],
     category: "",
     image: "molho-tomate-fugini.png",
+  },
+  {
+    id: 11,
+    name: "Arroz",
+    info: "Ouro Branco 5kg",
+    price: [
+      [17.59, "Atacadão", "11-14-2021", new Date().setHours(0,0,0,0) <= new Date("11-14-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Big Blue", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Bramil", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Casa Friburgo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Cavalo Preto", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Gama", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Pepê & Gabriel", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "R&E Mercado", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Serra Azul", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Tio Dongo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+    ],
+    category: "agulhinha",
+    image: "arroz-ouro-branco-5kg.png",
   }
 ]
 
