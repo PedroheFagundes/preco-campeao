@@ -144,7 +144,6 @@ const Page = () => {
                       setEventID(e.currentTarget.id);
                     }
                     setShowMoreInfo(!showMoreInfo);
-                    console.log(priceFormated[1]);
                   }}
                 >
                   <div className="template-inner">
