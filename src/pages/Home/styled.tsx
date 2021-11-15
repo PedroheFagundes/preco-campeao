@@ -9,13 +9,6 @@ export const HomeArea = styled.div`
   justify-content: flex-start;
   font-family: 'Contrail One', sans-serif;
 
-  .selectProductSpan{
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 2px black;
-  }
-
   .productInfoShortArea{
     width: 100%;
     display: flex;
@@ -253,6 +246,22 @@ export const HomeArea = styled.div`
 
     span {
       font-size: 30px;
+    }
+  }
+
+  .endMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width 300px;
+    }
+    span {
+      text-align: center;
+      font-size: 35px;
+      color: #fff;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 2px black;
     }
   }
 `;

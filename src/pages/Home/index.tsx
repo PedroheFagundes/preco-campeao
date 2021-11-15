@@ -13,7 +13,7 @@ const Page = () => {
   const [showMoreInfo, setShowMoreInfo] = useState(false);
 
   // Define qual produto está com moreInfo está aberto, inicia com o produto 1 aberto
-  const [eventID, setEventID] = useState("-1");
+  const [eventID, setEventID] = useState("0");
 
   // Prepare the array of arrays to be sorted
   function Comparator(a: any[], b: any[]) {
@@ -44,11 +44,6 @@ const Page = () => {
             <img src="/images/share.png" alt="" />
           </Link>
         </div>
-        {eventID === "-1" ? (
-          <span className="selectProductSpan">
-            Selecione algum produto para mais informações
-          </span>
-        ) : null}
         <div className="productInfoShortArea">
           {products
             .filter((val) => {
@@ -236,7 +231,12 @@ const Page = () => {
                                 <span className="moreInfoPrice moreInfoSpan3">
                                   <span>R$</span>
                                   <span>{priceFormated[0]}</span>
-                                  <span>,{priceFormated[1]}</span>
+                                  <span>
+                                    ,
+                                    {priceFormated[1].length === 1
+                                      ? priceFormated[1] + 0
+                                      : priceFormated[1]}
+                                  </span>
                                 </span>
                               </div>
                             ) : null}
@@ -247,6 +247,14 @@ const Page = () => {
                 </div>
               );
             })}
+          <div className="endMessage">
+            <img src="/images/logo.png" alt="" />
+            <span>
+              MAIS PRODUTOS
+              <br />
+              EM BREVE
+            </span>
+          </div>
         </div>
       </HomeArea>
     </ThemeProvider>
