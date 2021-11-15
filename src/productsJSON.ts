@@ -156,8 +156,8 @@ const products = [
     name: "Batata Palha",
     info: "Yoki 240g",
     price: [
-      [8.50, "Atacadão", "11-14-2021", new Date().setHours(0,0,0,0) <= new Date("11-14-2021").getTime() ? "Válido" : "Expirado"],
-      [0.09, "Big Blue", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [8.50, "Atacadão", "11-15-2021", new Date().setHours(0,0,0,0) <= new Date("11-15-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Big Blue", "11-15-2021", new Date().setHours(0,0,0,0) <= new Date("11-15-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Bramil", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Casa Friburgo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Cavalo Preto", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
@@ -175,8 +175,8 @@ const products = [
     name: "Molho Tomate",
     info: "Fugini 2kg",
     price: [
-      [7.79, "Atacadão", "11-14-2021", new Date().setHours(0,0,0,0) <= new Date("11-14-2021").getTime() ? "Válido" : "Expirado"],
-      [0.09, "Big Blue", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [7.79, "Atacadão", "11-15-2021", new Date().setHours(0,0,0,0) <= new Date("11-15-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Big Blue", "11-15-2021", new Date().setHours(0,0,0,0) <= new Date("11-15-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Bramil", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Casa Friburgo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Cavalo Preto", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
@@ -194,8 +194,8 @@ const products = [
     name: "Arroz",
     info: "Ouro Branco 5kg",
     price: [
-      [17.59, "Atacadão", "11-14-2021", new Date().setHours(0,0,0,0) <= new Date("11-14-2021").getTime() ? "Válido" : "Expirado"],
-      [0.09, "Big Blue", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [17.59, "Atacadão", "11-15-2021", new Date().setHours(0,0,0,0) <= new Date("11-15-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Big Blue", "11-15-2021", new Date().setHours(0,0,0,0) <= new Date("11-15-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Bramil", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Casa Friburgo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Cavalo Preto", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],

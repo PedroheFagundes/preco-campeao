@@ -159,6 +159,11 @@ const Page = () => {
                         </span>
                       </span>
                     </div>
+                    {parseInt(eventID) === val.id ? null : (
+                      <div className="down-arrow">
+                        <img src={"/images/navbar/down-arrow.png"} alt="" />
+                      </div>
+                    )}
                     {parseInt(eventID) === val.id ? (
                       <div className="productsInfoLong">
                         <hr />
@@ -175,6 +180,9 @@ const Page = () => {
                             <span>{weekDay}</span>
                             <span>{dateFormated}</span>
                           </div>
+                        </div>
+                        <div className="down-arrow">
+                          <img src={"/images/navbar/up-arrow.png"} alt="" />
                         </div>
                       </div>
                     ) : null}

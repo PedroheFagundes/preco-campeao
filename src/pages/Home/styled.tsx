@@ -165,7 +165,6 @@ export const HomeArea = styled.div`
     align-items: center;
     width: 100%;
     color:#00404A;
-    margin-bottom: 10px;
 
     div {
       width: 90%;
@@ -262,6 +261,18 @@ export const HomeArea = styled.div`
       color: #fff;
       margin-bottom: 5px;
       text-shadow: 1px 1px 2px black;
+    }
+  }
+
+  .down-arrow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    img {
+      width: 20px;
+      height: 6px;
+      opacity: 30%;
     }
   }
 `;
