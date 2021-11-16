@@ -43,7 +43,7 @@ const Page = () => {
           <div>
             <a
               className="resp-sharing-button__link"
-              href="https://facebook.com/sharer/sharer.php?u=https://pedrofagundes-preco-campeao.netlify.app/"
+              href="https://facebook.com/sharer/sharer.php?u=https://precocampeao.com/"
               target="_blank"
               rel="noopener"
               aria-label="Facebook"
@@ -62,7 +62,7 @@ const Page = () => {
             </a>
             <a
               className="resp-sharing-button__link"
-              href="https://twitter.com/intent/tweet/?text=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;url=https://pedrofagundes-preco-campeao.netlify.app/"
+              href="https://twitter.com/intent/tweet/?text=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;url=https://precocampeao.com/"
               target="_blank"
               rel="noopener"
               aria-label="Twitter"
@@ -81,7 +81,7 @@ const Page = () => {
             </a>
             <a
               className="resp-sharing-button__link"
-              href="mailto:?subject=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;body=https://pedrofagundes-preco-campeao.netlify.app/"
+              href="mailto:?subject=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;body=https://precocampeao.com/"
               target="_self"
               rel="noopener"
               aria-label="E-Mail"
@@ -102,7 +102,7 @@ const Page = () => {
           <div>
             <a
               className="resp-sharing-button__link"
-              href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pedrofagundes-preco-campeao.netlify.app/&amp;title=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;summary=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;source=https://pedrofagundes-preco-campeao.netlify.app/"
+              href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://precocampeao.com/&amp;title=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;summary=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;source=https://precocampeao.com/"
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"
@@ -121,7 +121,7 @@ const Page = () => {
             </a>
             <a
               className="resp-sharing-button__link"
-              href="whatsapp://send?text=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.%20https://pedrofagundes-preco-campeao.netlify.app/"
+              href="whatsapp://send?text=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.%20https://precocampeao.com/"
               target="_blank"
               rel="noopener"
               aria-label="WhatsApp"
@@ -140,7 +140,7 @@ const Page = () => {
             </a>
             <a
               className="resp-sharing-button__link"
-              href="https://telegram.me/share/url?text=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;url=https://pedrofagundes-preco-campeao.netlify.app/"
+              href="https://telegram.me/share/url?text=As%20melhores%20promo%C3%A7%C3%B5es%20da%20cidade%20em%20suas%20m%C3%A3os.&amp;url=https://precocampeao.com/"
               target="_blank"
               rel="noopener"
               aria-label="Telegram"
