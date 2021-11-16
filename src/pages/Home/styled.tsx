@@ -56,7 +56,7 @@ export const HomeArea = styled.div`
       display: flex;
       flex-direction: column;
       align-itens: center;
-      height: 50px;
+      height: aut0;
 
       span {
         font-size: 28px;;
