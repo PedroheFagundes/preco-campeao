@@ -73,7 +73,7 @@ const products = [
       [0.09, "Tio Dongo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
     ],
     category: "osso carne",
-    image: "peito-frango.jpg",
+    image: "peito-frango.png",
   },
   {
     id: 5,
