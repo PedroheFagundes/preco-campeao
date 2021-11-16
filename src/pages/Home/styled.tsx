@@ -219,12 +219,13 @@ export const HomeArea = styled.div`
 
     span:first-child,
     span:last-child {
-      font-size: 30px;
+      font-size: 25px;
     }
 
     span:last-child {
       vertical-align: top;
       margin-right: 10px;
+      font-size: 30px;
     }
 
     span {
