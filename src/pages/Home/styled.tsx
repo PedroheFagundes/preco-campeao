@@ -234,7 +234,7 @@ export const HomeArea = styled.div`
   }
 
   .moreInfoPrice {
-
+    
     span:first-child,
     span:last-child {
       font-size: 20px;

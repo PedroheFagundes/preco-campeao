@@ -19,6 +19,7 @@ const Page = () => {
             <a
               href="https://nubank.com.br/pagar/oeti/kYsQQfzO7H"
               target="_blank"
+              rel="noreferrer"
             >
               CLIQUE AQUI!
             </a>
@@ -33,6 +34,7 @@ const Page = () => {
             className="instagram"
             href="https://instagram.com/precocampeao?utm_medium=copy_link"
             target="_blank"
+            rel="noreferrer"
           >
             @precocampeao
           </a>
@@ -45,7 +47,7 @@ const Page = () => {
               className="resp-sharing-button__link"
               href="https://facebook.com/sharer/sharer.php?u=https://precocampeao.com/"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
               aria-label="Facebook"
             >
               <div className="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--medium">
