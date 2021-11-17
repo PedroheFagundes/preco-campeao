@@ -55,6 +55,8 @@ const Page = () => {
                 val.info.toLowerCase().includes(searchTerm.toLowerCase())
               ) {
                 return val;
+              } else {
+                return null;
               }
             })
             .map((val, key) => {
