@@ -59,7 +59,7 @@ const products = [
   {
     id: 4,
     name: "Peito de Frango",
-    info: "1kg",
+    info: "Com Osso 1kg",
     price: [
       [0.09, "Atacadão", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Big Blue", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
@@ -72,7 +72,7 @@ const products = [
       [0.09, "Serra Azul", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
       [0.09, "Tio Dongo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
     ],
-    category: "osso carne",
+    category: "carne",
     image: "peito-frango.png",
   },
   {
@@ -473,6 +473,25 @@ const products = [
     ],
     category: "enlatada",
     image: "sardinha-coqueiro-125g.png",
+  },
+  {
+    id: 25,
+    name: "Milho Verde",
+    info: "Quero 170g",
+    price: [
+      [0.09, "Atacadão", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Big Blue", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Bramil", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [2.69, "Casa Friburgo", "11-17-2021", new Date().setHours(0,0,0,0) <= new Date("11-17-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Cavalo Preto", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Gama", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Pepê & Gabriel", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "R&E Mercado", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Serra Azul", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+      [0.09, "Tio Dongo", "01-01-2021", new Date().setHours(0,0,0,0) <= new Date("01-01-2021").getTime() ? "Válido" : "Expirado"],
+    ],
+    category: "",
+    image: "milho-verde-quero-170g.png",
   },
 ]
 
