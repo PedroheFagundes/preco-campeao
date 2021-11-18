@@ -7,6 +7,7 @@ export const ProfileArea = styled.div`
   align-items: center;
   justify-content: space-evenly;
   font-family: "Contrail One", sans-serif;
+  overflow: auto;
 
   .linkRedes a div {
     font-size: 15px;
