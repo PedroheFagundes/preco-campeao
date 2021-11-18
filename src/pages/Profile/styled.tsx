@@ -5,7 +5,6 @@ export const ProfileArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
   font-family: "Contrail One", sans-serif;
   overflow: auto;
 
@@ -168,6 +167,7 @@ export const ProfileArea = styled.div`
     width: 90%;
     background-color: #e95f24;
     padding: 10px 10px;
+    margin-top: 20px;
     color: #fff;
     text-align: center;
     font-size: 18px;
