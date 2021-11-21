@@ -24,10 +24,10 @@ const Page = () => {
   // Variable to stock the market name conversion to market logo name
   let marketLogo: string;
 
-  //Variable that sets which NavBar page is open and set the theme
+  // Variable that sets which NavBar page is open and set the theme
   const [theme, setThemes] = useState(navBarTheme["homeActive"]);
 
-  //Reads all products from productsJSON and filters it while user is typing
+  // Reads all products from productsJSON and filters it while user is typing
   const productFilter = products.filter((val) => {
     if (searchTerm === "") {
       return val;
@@ -44,8 +44,10 @@ const Page = () => {
 
   const todayDate = new Date().setHours(0, 0, 0, 0);
 
-  //All the logic behind showing products
+  // All the logic behind showing products
   const productShow = productFilter.map((val, key) => {
+    // If there is not any sale of a product, it doesn't even show the white card that contains the product
+    // This if statement can be upgraded
     if (
       new Date(val.price[0][2]).setHours(0, 0, 0, 0) < todayDate &&
       new Date(val.price[1][2]).setHours(0, 0, 0, 0) < todayDate &&
@@ -60,19 +62,27 @@ const Page = () => {
     ) {
       return null;
     }
-
+    // Sort the val array ordered by cheapiest price
     let cheapPrice = val.price.sort(Comparator);
+    // While the cheapiest price product has a expired date, removes it from the array
     while (new Date(cheapPrice[0][2]).setHours(0, 0, 0, 0) < todayDate) {
       cheapPrice.shift();
     }
 
+    // Format the date to dd/mm
     let dateFormated = new Date(cheapPrice[0][2])
       .toLocaleDateString("pt-BR")
       .substring(0, 5);
+
+    // Split the price in to integer and the decimal part
     let priceFormated = cheapPrice[0][0].toString().split(".");
+
+    // Format the weekday to Brazil type
     let weekDay = new Date(cheapPrice[0][2])
       .toLocaleDateString("pt-BR", { weekday: "long" })
       .toUpperCase();
+
+    // Format the weekday to a better fit type
     switch (weekDay) {
       case "SEGUNDA-FEIRA":
         weekDay = "SEGUNDA";
@@ -94,6 +104,8 @@ const Page = () => {
     }
 
     let marketFormated = cheapPrice[0][1].toString();
+
+    // Associate the market logo to the market name
     if (marketFormated === "Atacadão") {
       marketLogo = "atacadao";
     } else if (marketFormated === "Big Blue") {
@@ -116,6 +128,35 @@ const Page = () => {
       marketLogo = "tiodongo";
     }
 
+    // Shows down arrow if the product is 'closed' and hide it i the product is 'open
+    const toggleDownArrow =
+      parseInt(eventID) === val.id ? null : (
+        <div className="down-arrow">
+          <img src={"/images/navbar/down-arrow.png"} alt="" />
+        </div>
+      );
+
+    // Shows the product 'closed'
+    const productsClosed = (
+      <div className="noSelect productsClosedInfo">
+        <img src={`/images/products/${val.image}.png`} alt="" />
+        <div>
+          <span>{val.name}</span>
+          <span>{val.info}</span>
+        </div>
+        <span className="price">
+          <span>R$</span>
+          <span>{priceFormated[0]}</span>
+          <span>
+            ,
+            {priceFormated[1].length === 1
+              ? priceFormated[1] + 0
+              : priceFormated[1]}
+          </span>
+        </span>
+      </div>
+    );
+
     return (
       <div
         className="template"
@@ -131,28 +172,8 @@ const Page = () => {
         }}
       >
         <div className="template-inner">
-          <div className="noSelect productsInfoShort">
-            <img src={`/images/products/${val.image}`} alt="" />
-            <div>
-              <span>{val.name}</span>
-              <span>{val.info}</span>
-            </div>
-            <span className="price">
-              <span>R$</span>
-              <span>{priceFormated[0]}</span>
-              <span>
-                ,
-                {priceFormated[1].length === 1
-                  ? priceFormated[1] + 0
-                  : priceFormated[1]}
-              </span>
-            </span>
-          </div>
-          {parseInt(eventID) === val.id ? null : (
-            <div className="down-arrow">
-              <img src={"/images/navbar/down-arrow.png"} alt="" />
-            </div>
-          )}
+          {productsClosed}
+          {toggleDownArrow}
           {parseInt(eventID) === val.id ? (
             <div className="productsInfoLong">
               <hr />
@@ -257,7 +278,7 @@ const Page = () => {
             <img src="/images/share.png" alt="" />
           </Link>
         </div>
-        <div className="productInfoShortArea">
+        <div className="productShowArea">
           {productShow}
           <div className="endMessage">
             <img src="/images/logo.png" alt="" />

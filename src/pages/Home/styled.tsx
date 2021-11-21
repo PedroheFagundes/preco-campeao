@@ -9,7 +9,7 @@ export const HomeArea = styled.div`
   justify-content: flex-start;
   font-family: 'Contrail One', sans-serif;
 
-  .productInfoShortArea{
+  .productShowArea{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@ export const HomeArea = styled.div`
     margin: 0;
   }
 
-  .productsInfoShort {
+  .productsClosedInfo {
     width: 100%;
     height: 70px;
     background-color: #fff;

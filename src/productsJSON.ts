@@ -16,7 +16,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "Bebida Laticíneo",
-    image: "leitemacuco-integral.png",
+    image: "leitemacuco-integral",
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "Bebida Refrigerante",
-    image: "cocacola-2litros.png",
+    image: "cocacola-2litros",
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "Bebida",
-    image: "cafe3coracoes-extraforte-500g.png",
+    image: "cafe3coracoes-extraforte-500g",
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "carne",
-    image: "peito-frango.png",
+    image: "peito-frango",
   },
   {
     id: 5,
@@ -92,7 +92,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "batata-palha-yoki-100g.png",
+    image: "batata-palha-yoki-100g",
   },
   {
     id: 6,
@@ -111,7 +111,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "massa francês",
-    image: "mistura-pao-frances-veramix.png",
+    image: "mistura-pao-frances-veramix",
   },
   {
     id: 7,
@@ -130,7 +130,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "roupas bombona limpeza",
-    image: "amaciante-roupa-ype.png",
+    image: "amaciante-roupa-ype",
   },
   {
     id: 8,
@@ -149,7 +149,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "limpeza",
-    image: "detergente-po-urca.png",
+    image: "detergente-po-urca",
   },
   {
     id: 9,
@@ -168,7 +168,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "batata-palha-yoki-240g.png",
+    image: "batata-palha-yoki-240g",
   },
   {
     id: 10,
@@ -187,7 +187,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "molho-tomate-fugini.png",
+    image: "molho-tomate-fugini",
   },
   {
     id: 11,
@@ -206,7 +206,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "agulhinha",
-    image: "arroz-ouro-branco-5kg.png",
+    image: "arroz-ouro-branco-5kg",
   },
   {
     id: 12,
@@ -225,7 +225,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "agulhinha, branco",
-    image: "arroz-meu-biju-5kg.png",
+    image: "arroz-meu-biju-5kg",
   },
   {
     id: 13,
@@ -244,7 +244,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "preto",
-    image: "feijao-prato-bom-1kg.png",
+    image: "feijao-prato-bom-1kg",
   },
   {
     id: 14,
@@ -263,7 +263,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "ervilha-partida-kicaldo-500g.png",
+    image: "ervilha-partida-kicaldo-500g",
   },
   {
     id: 15,
@@ -282,7 +282,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "milho-pipoca-yoki-500g.png",
+    image: "milho-pipoca-yoki-500g",
   },
   {
     id: 16,
@@ -301,7 +301,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "torrada",
-    image: "farinha-mandioca-granfino-1kg.png",
+    image: "farinha-mandioca-granfino-1kg",
   },
   {
     id: 17,
@@ -320,7 +320,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "lasanha-pifpaf-600g.png",
+    image: "lasanha-pifpaf-600g",
   },
   {
     id: 18,
@@ -339,7 +339,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "composto lácteo",
-    image: "leite-ninho-380g.png",
+    image: "leite-ninho-380g",
   },
   {
     id: 19,
@@ -358,7 +358,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "carne bovino bovina",
-    image: "lagarto-plano-kg.png",
+    image: "lagarto-plano-kg",
   },
   {
     id: 20,
@@ -377,7 +377,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "preto",
-    image: "feijao-anchieta-1kg.png",
+    image: "feijao-anchieta-1kg",
   },
   {
     id: 21,
@@ -396,7 +396,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "leite-condensado-piracanjuba-395g.png",
+    image: "leite-condensado-piracanjuba-395g",
   },
   {
     id: 22,
@@ -415,7 +415,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "preto",
-    image: "feijao-pereira-1kg.png",
+    image: "feijao-pereira-1kg",
   },
   {
     id: 23,
@@ -434,7 +434,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "sem fermento",
-    image: "farinha-trigo-sem-fermento-dona-benta.png",
+    image: "farinha-trigo-sem-fermento-dona-benta",
   },
   {
     id: 24,
@@ -453,7 +453,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "molho-tomate-pomarola-520g.png",
+    image: "molho-tomate-pomarola-520g",
   },
   {
     id: 25,
@@ -472,7 +472,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "enlatada",
-    image: "sardinha-coqueiro-125g.png",
+    image: "sardinha-coqueiro-125g",
   },
   {
     id: 26,
@@ -491,7 +491,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "milho-verde-quero-170g.png",
+    image: "milho-verde-quero-170g",
   },
   {
     id: 27,
@@ -510,7 +510,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "achocolatado bebida",
-    image: "nescauzinho-200ml.png",
+    image: "nescauzinho-200ml",
   },
   {
     id: 28,
@@ -529,7 +529,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "biscoito-passatempo-140g.png",
+    image: "biscoito-passatempo-140g",
   },
   {
     id: 29,
@@ -548,7 +548,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "feijao-vermelho-pereira-1kg.png",
+    image: "feijao-vermelho-pereira-1kg",
   },
   {
     id: 30,
@@ -567,7 +567,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "alho-picado-garlic-foods-2kg.png",
+    image: "alho-picado-garlic-foods-2kg",
   },
   {
     id: 31,
@@ -586,7 +586,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "pessego-calda-schramm-450g.png",
+    image: "pessego-calda-schramm-450g",
   },
   {
     id: 32,
@@ -605,7 +605,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "pao-forma-panco.png",
+    image: "pao-forma-panco",
   },
   {
     id: 33,
@@ -624,7 +624,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "aveia-flocos-finos-yoki-500g.png",
+    image: "aveia-flocos-finos-yoki-500g",
   },
   {
     id: 34,
@@ -643,7 +643,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "café",
-    image: "filtro-papel-brigitta-102.png",
+    image: "filtro-papel-brigitta-102",
   },
   {
     id: 35,
@@ -662,7 +662,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "rosquinha-mabel-350g.png",
+    image: "rosquinha-mabel-350g",
   },
   {
     id: 36,
@@ -681,7 +681,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "",
-    image: "farofa-caseira-bom-gosto-400g.png",
+    image: "farofa-caseira-bom-gosto-400g",
   },
   {
     id: 37,
@@ -700,7 +700,7 @@ const products = [
       [0.09, "Tio Dongo", "2021/01/01"],
     ],
     category: "barra",
-    image: "chocolate-arcor-80g.png",
+    image: "chocolate-arcor-80g",
   },
 ]
 
