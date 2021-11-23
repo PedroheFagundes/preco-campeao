@@ -158,10 +158,12 @@ const Page = () => {
     );
 
     return (
+      // Template contains all product cards
       <div
         className="template"
         id={`${val.id}`}
         key={key}
+        // Open/close the product card
         onClick={(e) => {
           if (eventID === e.currentTarget.id) {
             setEventID("0");
