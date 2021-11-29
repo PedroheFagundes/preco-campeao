@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
+import Data from "./pages/Data";
 import Deals from "./pages/Deals";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
@@ -23,6 +24,9 @@ const App = function () {
       </Route>
       <Route exact path="/profile">
         <Profile />
+      </Route>
+      <Route exact path="/data">
+        <Data />
       </Route>
       <Route>
         <Redirect to="/" />
