@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const DataArea = styled.div`
   height: calc(100% - var(--navBarHeight));
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;

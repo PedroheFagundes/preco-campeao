@@ -81,11 +81,16 @@ app.put("/products/:product_id", async (req, res) => {
       UPDATE
           products
       SET
-          product_info = $1
+          product_name = $2,
+          product_info = $3,
+          product_category = $4,
+          product_image = $5
+
+
       WHERE
-          product_id = $2
+          product_id = $1
     `,
-      [product_info, product_id]
+      [product_id, product_name, product_info, product_category, product_image]
     );
 
     res.json("Produto atualizado!");
@@ -114,7 +119,10 @@ app.delete("/products/:product_id", async (req, res) => {
   }
 });
 
+//Estabilishing the port
+const PORT = process.env.PORT || 5000;
+
 // Create a server running on chosen PORT
-app.listen(5000, () => {
-  console.log("server has start on PORT 5000");
+app.listen(PORT, () => {
+  console.log(`server has start on PORT ${PORT}`);
 });
