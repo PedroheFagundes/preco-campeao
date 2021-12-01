@@ -28,11 +28,14 @@ const EditProduct = ({ product }) => {
         product_image,
       };
 
-      await fetch(`http://localhost:5000/products/${product.product_id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-      });
+      await fetch(
+        `https://preco-campeao.herokuapp.com/products/${product.product_id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        }
+      );
       window.location = "/data";
     } catch (err) {
       console.error(err.message);

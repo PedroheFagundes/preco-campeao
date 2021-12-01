@@ -6,9 +6,12 @@ const ListProducts = () => {
 
   const deleteProduct = async (product_id) => {
     try {
-      await fetch(`http://localhost:5000/products/${product_id}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://preco-campeao.herokuapp.com/products/${product_id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       setProducts(
         products.filter((product) => product.product_id !== product_id)
@@ -20,7 +23,9 @@ const ListProducts = () => {
 
   const getProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/products");
+      const response = await fetch(
+        "https://preco-campeao.herokuapp.com/products"
+      );
       const jsonData = await response.json();
 
       setProducts(jsonData);

@@ -15,7 +15,7 @@ const InputProduct = () => {
         product_category,
         product_image,
       };
-      await fetch("http://localhost:5000/products", {
+      await fetch("https://preco-campeao.herokuapp.com/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
