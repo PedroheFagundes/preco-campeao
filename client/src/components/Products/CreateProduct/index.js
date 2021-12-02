@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CreateProductArea } from "./styled";
 
 const InputProduct = () => {
   const [product_name, setProduct_name] = useState("");
@@ -26,15 +27,17 @@ const InputProduct = () => {
   };
 
   return (
-    <>
-      <h1>Lista de Produtos</h1>
+    <CreateProductArea>
+      <h3>Criar Produto</h3>
       <form onSubmit={onSubmitForm}>
-        <p>Nome do Produto</p>
-        <input
-          type="text"
-          value={product_name}
-          onChange={(e) => setProduct_name(e.target.value)}
-        />
+        <div className="inputField">
+          <p>Nome do Produto</p>
+          <input
+            type="text"
+            value={product_name}
+            onChange={(e) => setProduct_name(e.target.value)}
+          />
+        </div>
         <p>Informação do Produto</p>
         <input
           type="text"
@@ -54,9 +57,9 @@ const InputProduct = () => {
           onChange={(e) => setProduct_image(e.target.value)}
         />
         <br />
-        <button>Criar Produto</button>
+        <button className="create">Criar Produto</button>
       </form>
-    </>
+    </CreateProductArea>
   );
 };
 

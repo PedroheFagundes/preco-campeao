@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { EditProductArea } from "./styled";
+import { EditProductModalArea } from "./styled";
 
-const EditProduct = ({ product }) => {
+const EditProductModal = ({ product }) => {
   const [modal, setModal] = useState(false);
   const [product_name, setProduct_name] = useState(product.product_name);
   const [product_info, setProduct_info] = useState(product.product_info);
@@ -36,14 +36,14 @@ const EditProduct = ({ product }) => {
           body: JSON.stringify(body),
         }
       );
-      window.location = "/data";
+      setModal(false);
     } catch (err) {
       console.error(err.message);
     }
   };
 
   return (
-    <EditProductArea>
+    <EditProductModalArea>
       <button onClick={() => setModal(true)} id="myBtn">
         Editar
       </button>
@@ -85,8 +85,8 @@ const EditProduct = ({ product }) => {
           </div>
         </div>
       ) : null}
-    </EditProductArea>
+    </EditProductModalArea>
   );
 };
 
-export default EditProduct;
+export default EditProductModal;

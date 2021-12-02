@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import EditProduct from "../EditProduct";
+import { useEffect, useState } from "react";
 
-const ListProducts = () => {
+const DeleteProduct = () => {
   const [products, setProducts] = useState([]);
 
   const deleteProduct = async (product_id) => {
@@ -48,7 +47,6 @@ const ListProducts = () => {
             <th>Info</th>
             <th>Categoria</th>
             <th>Imagem</th>
-            <th>Editar</th>
             <th> Deletar</th>
           </tr>
         </thead>
@@ -59,9 +57,6 @@ const ListProducts = () => {
               <td>{product.product_info}</td>
               <td>{product.product_category}</td>
               <td>{product.product_image}</td>
-              <td>
-                <EditProduct product={product} />
-              </td>
               <td>
                 <button onClick={() => deleteProduct(product.product_id)}>
                   Deletar
@@ -75,4 +70,4 @@ const ListProducts = () => {
   );
 };
 
-export default ListProducts;
+export default DeleteProduct;

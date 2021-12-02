@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { navBarTheme } from "../../Themes";
+import { navBarTheme } from "../Themes";
 import { NavButtonArea } from "./styled";
 
 const NavButton = () => {

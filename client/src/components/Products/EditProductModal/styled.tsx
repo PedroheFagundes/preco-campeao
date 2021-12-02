@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const EditProductArea = styled.div`
+export const EditProductModalArea = styled.div`
   /* The Modal (background) */
   .modal {
     position: fixed; /* Stay in place */

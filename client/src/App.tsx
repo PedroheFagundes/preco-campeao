@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
 import { Template } from "./components/MainComponents";
-import Footer from "./components/partials/Footer";
 import Routes from "./Routes";
 
 const Page = () => {
