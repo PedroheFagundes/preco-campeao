@@ -50,42 +50,55 @@ const EditProductModal = ({ product }) => {
       {modal === true ? (
         <div id="myModal" className="modal">
           <div className="modal-content">
-            <h2>Editar Produtos</h2>
-            <p>Nome do Produto</p>
-            <input
-              type="text"
-              value={product_name}
-              onChange={(e) => setProduct_name(e.target.value)}
-            />
-            <p>Informação do Produto</p>
-            <input
-              type="text"
-              value={product_info}
-              onChange={(e) => setProduct_info(e.target.value)}
-            />
-            <p>Categorias do Produto</p>
-            <input
-              type="text"
-              value={product_category}
-              onChange={(e) => setProduct_category(e.target.value)}
-            />
-            <p>Imagem do Produto</p>
-            <input
-              type="text"
-              value={product_image}
-              onChange={(e) => setProduct_image(e.target.value)}
-            />
-            <hr />
-            <button onClick={(e) => updateProduct(e)} className="edit">
-              Editar
-            </button>
-            <button onClick={closeModal} className="close">
-              Fechar
-            </button>
+            <div className="upperBottomLine">
+              <div className="inputField">
+                <p>Nome do Produto</p>
+                <input
+                  type="text"
+                  value={product_name}
+                  onChange={(e) => setProduct_name(e.target.value)}
+                />
+              </div>
+              <div className="inputField">
+                <p>Informação do Produto</p>
+                <input
+                  type="text"
+                  value={product_info}
+                  onChange={(e) => setProduct_info(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="upperBottomLine">
+              <div className="inputField">
+                <p>Categorias do Produto</p>
+                <input
+                  type="text"
+                  value={product_category}
+                  onChange={(e) => setProduct_category(e.target.value)}
+                />
+              </div>
+              <div className="inputField">
+                <p>Imagem do Produto</p>
+                <input
+                  type="text"
+                  value={product_image}
+                  onChange={(e) => setProduct_image(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="buttons">
+              <button onClick={(e) => updateProduct(e)} className="edit">
+                Editar
+              </button>
+              <button onClick={closeModal} className="close">
+                Fechar
+              </button>
+            </div>
           </div>
         </div>
-      ) : null}
-    </EditProductModalArea>
+      ) : null
+      }
+    </EditProductModalArea >
   );
 };
 

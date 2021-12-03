@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { DeleteProductArea } from "./styled";
 
 const DeleteProduct = () => {
   const [products, setProducts] = useState([]);
@@ -56,8 +57,8 @@ const DeleteProduct = () => {
   }, []);
 
   return (
-    <>
-      <h1>Lista de Produtos</h1>
+    <DeleteProductArea>
+      <h3>Deletar Produto</h3>
       <input
         type="text"
         placeholder="Pesquisar Produto"
@@ -72,7 +73,6 @@ const DeleteProduct = () => {
             <th>Info</th>
             <th>Categoria</th>
             <th>Imagem</th>
-            <th> Deletar</th>
           </tr>
         </thead>
         <tbody>
@@ -91,7 +91,7 @@ const DeleteProduct = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </DeleteProductArea>
   );
 };
 
