@@ -13,6 +13,7 @@ export const CreateProductArea = styled.div`
     margin: 5px;
   }
   button {
+    width: 200px;
     padding: 5px 8px;
     margin-left: 10px;
     border-radius: 5px;
@@ -25,6 +26,7 @@ export const CreateProductArea = styled.div`
   form {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .upperBottomLine {
