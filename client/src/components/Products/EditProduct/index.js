@@ -1,8 +1,26 @@
 import { useEffect, useState } from "react";
 import EditProductModal from "../EditProductModal";
+import { EditProductArea } from "./styled";
 
 const EditProduct = () => {
   const [products, setProducts] = useState([]);
+  // Variable used to make product filter comparing to productJSON
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Reads all products from productsJSON and filters it while user is typing
+  const productFilter = products.filter((val) => {
+    if (searchTerm === "") {
+      return val;
+    } else if (
+      val.product_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      val.product_category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      val.product_info.toLowerCase().includes(searchTerm.toLowerCase())
+    ) {
+      return val;
+    } else {
+      return null;
+    }
+  });
 
   const getProducts = async () => {
     try {
@@ -22,8 +40,15 @@ const EditProduct = () => {
   });
 
   return (
-    <>
-      <h3>Lista de Produtos</h3>
+    <EditProductArea>
+      <h3>Editar Produto</h3>
+      <input
+        type="text"
+        placeholder="Pesquisar Produto"
+        onChange={(event) => {
+          setSearchTerm(event.target.value);
+        }}
+      />
       <table>
         <thead>
           <tr>
@@ -31,11 +56,10 @@ const EditProduct = () => {
             <th>Info</th>
             <th>Categoria</th>
             <th>Imagem</th>
-            <th>Editar</th>
           </tr>
         </thead>
         <tbody>
-          {products.map((product) => (
+          {productFilter.map((product) => (
             <tr key={product.product_id}>
               <td>{product.product_name}</td>
               <td>{product.product_info}</td>
@@ -48,7 +72,7 @@ const EditProduct = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </EditProductArea>
   );
 };
 

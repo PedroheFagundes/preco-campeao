@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CreateProductArea } from "./styled";
 
 const InputProduct = () => {
+  const [message, setMessage] = useState(false);
   const [product_name, setProduct_name] = useState("");
   const [product_info, setProduct_info] = useState("");
   const [product_category, setProduct_category] = useState("");
@@ -21,6 +22,7 @@ const InputProduct = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
+      setMessage(true);
     } catch (err) {
       console.error(err.message);
     }
@@ -68,6 +70,9 @@ const InputProduct = () => {
         </div>
         <br />
         <button className="create">Criar Produto</button>
+        {message ?
+          <span>Produto criado com sucesso!</span>
+          : null}
       </form>
     </CreateProductArea>
   );
