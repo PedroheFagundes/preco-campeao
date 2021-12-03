@@ -30,32 +30,42 @@ const InputProduct = () => {
     <CreateProductArea>
       <h3>Criar Produto</h3>
       <form onSubmit={onSubmitForm}>
-        <div className="inputField">
-          <p>Nome do Produto</p>
-          <input
-            type="text"
-            value={product_name}
-            onChange={(e) => setProduct_name(e.target.value)}
-          />
+        <div className="upperBottomLine">
+          <div className="inputField">
+            <p>Nome do Produto</p>
+            <input
+              type="text"
+              value={product_name}
+              onChange={(e) => setProduct_name(e.target.value)}
+            />
+          </div>
+          <div className="inputField">
+            <p>Informação do Produto</p>
+            <input
+              type="text"
+              value={product_info}
+              onChange={(e) => setProduct_info(e.target.value)}
+            />
+          </div>
         </div>
-        <p>Informação do Produto</p>
-        <input
-          type="text"
-          value={product_info}
-          onChange={(e) => setProduct_info(e.target.value)}
-        />
-        <p>Categoria do Produto</p>
-        <input
-          type="text"
-          value={product_category}
-          onChange={(e) => setProduct_category(e.target.value)}
-        />
-        <p>Imagem do Produto</p>
-        <input
-          type="text"
-          value={product_image}
-          onChange={(e) => setProduct_image(e.target.value)}
-        />
+        <div className="upperBottomLine">
+          <div className="inputField">
+            <p>Categoria do Produto</p>
+            <input
+              type="text"
+              value={product_category}
+              onChange={(e) => setProduct_category(e.target.value)}
+            />
+          </div>
+          <div className="inputField">
+            <p>Imagem do Produto</p>
+            <input
+              type="text"
+              value={product_image}
+              onChange={(e) => setProduct_image(e.target.value)}
+            />
+          </div>
+        </div>
         <br />
         <button className="create">Criar Produto</button>
       </form>

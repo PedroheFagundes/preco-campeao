@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CreateProductArea = styled.div`
-  height: calc(100% - var(--navBarHeight));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,5 +24,34 @@ export const CreateProductArea = styled.div`
 
   form {
     display: flex;
+    flex-direction: column;
+  }
+
+  .upperBottomLine {
+    display: flex;
+    margin: 0;
+    width: 850px;
+  }
+
+  .inputField {
+    display: flex;
+    background-color: #ddd;
+    padding: 3px 5px;
+    border-radius: 3px;
+    justify-content: space-between;
+    width: 50%;
+    display: flex;
+    margin: 5px 15px;
+    font-weight: bold;
+    align-items: center;
+
+    input {
+      margin-left: 5px;
+      height: 20px;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 `;
