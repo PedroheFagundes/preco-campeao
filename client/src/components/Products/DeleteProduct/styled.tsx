@@ -19,7 +19,7 @@ export const DeleteProductArea = styled.div`
     margin-left: 10px;
     border-radius: 5px;
     font-weight: bold;
-    background-color: #f2ea4d;
+    background-color: #db674a;
   }
 
   input {
