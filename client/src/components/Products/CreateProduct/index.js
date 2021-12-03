@@ -38,6 +38,7 @@ const InputProduct = () => {
             <input
               type="text"
               value={product_name}
+              maxLength="17"
               onChange={(e) => setProduct_name(e.target.value)}
             />
           </div>
@@ -46,6 +47,7 @@ const InputProduct = () => {
             <input
               type="text"
               value={product_info}
+              maxLength="24"
               onChange={(e) => setProduct_info(e.target.value)}
             />
           </div>

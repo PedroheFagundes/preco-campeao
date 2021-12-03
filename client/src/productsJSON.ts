@@ -4,7 +4,7 @@ const products = [
     name: "Leite Macuco",
     info: "1 Litro",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [3.15, "Casa Friburgo", "2021/11/17"],
@@ -23,7 +23,7 @@ const products = [
     name: "Coca-cola",
     info: "2 Litros",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/10/10"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -42,7 +42,7 @@ const products = [
     name: "Café 3 Corações",
     info: "Extra Forte 500g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -61,7 +61,7 @@ const products = [
     name: "Peito de Frango",
     info: "Com Osso 1kg",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -327,7 +327,7 @@ const products = [
     name: "Leite Ninho",
     info: "Forti+ 380g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -346,7 +346,7 @@ const products = [
     name: "Lagarto Plano",
     info: "kg",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -365,7 +365,7 @@ const products = [
     name: "Feijão Anchieta",
     info: "1kg",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -384,7 +384,7 @@ const products = [
     name: "Leite Condensado",
     info: "Piracanjuba 395g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -403,7 +403,7 @@ const products = [
     name: "Feijão Pereira",
     info: "1kg",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [5.99, "Casa Friburgo", "2021/11/17"],
@@ -422,7 +422,7 @@ const products = [
     name: "Farinha Trigo 1kg",
     info: "S/ Fermento D. Benta",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [4.59, "Casa Friburgo", "2021/11/17"],
@@ -441,7 +441,7 @@ const products = [
     name: "Molho Tomate",
     info: "Pomarola 520g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [2.99, "Casa Friburgo", "2021/11/17"],
@@ -460,7 +460,7 @@ const products = [
     name: "Sardinha 125g",
     info: "Coqueiro",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [4.99, "Casa Friburgo", "2021/11/17"],
@@ -479,7 +479,7 @@ const products = [
     name: "Milho Verde",
     info: "Quero 170g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [2.69, "Casa Friburgo", "2021/11/17"],
@@ -498,7 +498,7 @@ const products = [
     name: "Nescauzinho",
     info: "Bebida Láctea 200ml",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -517,7 +517,7 @@ const products = [
     name: "Biscoito 140g",
     info: "Passatempo Chocolate",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -536,7 +536,7 @@ const products = [
     name: "Feijão Vermelho",
     info: "Pereira 1kg",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -593,7 +593,7 @@ const products = [
     name: "Pão de Forma",
     info: "Panco Premium 500g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -612,7 +612,7 @@ const products = [
     name: "Aveia em Flocos",
     info: "Finos Yoki 500g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -631,7 +631,7 @@ const products = [
     name: "Filtro de Papel",
     info: "Brigitta 102",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -650,7 +650,7 @@ const products = [
     name: "Rosquinha Mabel",
     info: "Sabores 350g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -669,7 +669,7 @@ const products = [
     name: "Farofa Caseira",
     info: "Bom Gosto 400g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],
@@ -688,7 +688,7 @@ const products = [
     name: "Chocolate Arcor",
     info: "Sabores 80g",
     price: [
-      [0.09, "Atacadão", "2021/01/01"],
+      [0.09, "Atacadão", "2021/12/21"],
       [0.09, "Big Blue", "2021/01/01"],
       [0.09, "Bramil", "2021/01/01"],
       [0.09, "Casa Friburgo", "2021/01/01"],

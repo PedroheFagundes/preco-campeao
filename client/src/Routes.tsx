@@ -1,9 +1,9 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import Data from "./pages/Data";
 import Deals from "./pages/Deals";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
+import Data from "./pages/Registration";
 import Simulation from "./pages/Simulation";
 import Variation from "./pages/Variation";
 
