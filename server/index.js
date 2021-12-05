@@ -207,21 +207,21 @@ app.put("/itemsnovafriburgo/:item_id", async (req, res) => {
   }
 });
 
-// Delete a product
-app.delete("/itemsnovafriburgo/:product_id", async (req, res) => {
+// Delete a item
+app.delete("/itemsnovafriburgo/:item_id", async (req, res) => {
   try {
-    const { product_id } = req.params;
-    const deleteProduct = await pool.query(
+    const { item_id } = req.params;
+    const deleteItem = await pool.query(
       `
       DELETE FROM
-          products
+          itemsnovafriburgo
       WHERE
-          product_id = $1
+          item_id = $1
     `,
-      [product_id]
+      [item_id]
     );
 
-    res.json("Produto deletado!");
+    res.json("Item deletado!");
   } catch (err) {
     console.error(err.message);
   }
