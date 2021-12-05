@@ -10,7 +10,7 @@ app.use(express.json());
 
 // ROUTES //
 // Create a product
-app.post("/products", async (req, res) => {
+app.post("/ ", async (req, res) => {
   try {
     const { product_name, product_info, product_category, product_image } =
       req.body;
@@ -85,8 +85,6 @@ app.put("/products/:product_id", async (req, res) => {
           product_info = $3,
           product_category = $4,
           product_image = $5
-
-
       WHERE
           product_id = $1
     `,
@@ -119,31 +117,32 @@ app.delete("/products/:product_id", async (req, res) => {
   }
 });
 
-// Create a product
-app.post("/products", async (req, res) => {
+
+// Create an item
+app.post("/itemsnovafriburgo", async (req, res) => {
   try {
-    const { product_name, product_info, product_category, product_image } =
+    const { market_name, product_name, item_price, item_start_date, item_expire_date } =
       req.body;
-    const newProduct = await pool.query(
+    const newItem = await pool.query(
       `
       INSERT INTO 
-          products (product_name, product_info, product_category, product_image)
+        itemsnovafriburgo (market_name, product_name, item_price, item_start_date, item_expire_date)
       VALUES
-          ($1, $2, $3, $4)
+          ($1, $2, $3, $4, $5)
       RETURNING
           *
       `,
-      [product_name, product_info, product_category, product_image]
+      [market_name, product_name, item_price, item_start_date, item_expire_date]
     );
 
-    res.json(newProduct.rows[0]);
+    res.json(newItem.rows[0]);
   } catch (err) {
     console.error(err.message);
   }
 });
 
 // Get all products
-app.get("/products", async (req, res) => {
+app.get("/itemsnovafriburgo", async (req, res) => {
   try {
     const allProducts = await pool.query(`
       SELECT
@@ -158,7 +157,7 @@ app.get("/products", async (req, res) => {
 });
 
 // Get a specific product
-app.get("/products/:product_name", async (req, res) => {
+app.get("/itemsnovafriburgo/:product_name", async (req, res) => {
   try {
     const { product_name } = req.params;
     const product = await pool.query(
@@ -180,7 +179,7 @@ app.get("/products/:product_name", async (req, res) => {
 });
 
 // Update a product
-app.put("/products/:product_id", async (req, res) => {
+app.put("/itemsnovafriburgo/:product_id", async (req, res) => {
   try {
     const { product_id } = req.params;
     const { product_name, product_info, product_category, product_image } =
@@ -195,8 +194,6 @@ app.put("/products/:product_id", async (req, res) => {
           product_info = $3,
           product_category = $4,
           product_image = $5
-
-
       WHERE
           product_id = $1
     `,
@@ -210,7 +207,7 @@ app.put("/products/:product_id", async (req, res) => {
 });
 
 // Delete a product
-app.delete("/products/:product_id", async (req, res) => {
+app.delete("/itemsnovafriburgo/:product_id", async (req, res) => {
   try {
     const { product_id } = req.params;
     const deleteProduct = await pool.query(
