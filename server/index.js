@@ -126,7 +126,7 @@ app.post("/itemsnovafriburgo", async (req, res) => {
     const newItem = await pool.query(
       `
       INSERT INTO 
-        itemsnovafriburgo (market_name, product_name, item_price, item_start_date, item_expire_date)
+          itemsnovafriburgo (market_name, product_name, item_price, item_start_date, item_expire_date)
       VALUES
           ($1, $2, $3, $4, $5)
       RETURNING
@@ -148,7 +148,7 @@ app.get("/itemsnovafriburgo", async (req, res) => {
       SELECT
           *
       FROM
-      itemsnovafriburgo
+          itemsnovafriburgo
     `);
     res.json(allItems.rows);
   } catch (err) {
@@ -156,7 +156,7 @@ app.get("/itemsnovafriburgo", async (req, res) => {
   }
 });
 
-// Get a specific product
+// Get a specific item
 app.get("/itemsnovafriburgo/:product_name", async (req, res) => {
   try {
     const { product_name } = req.params;
@@ -165,7 +165,7 @@ app.get("/itemsnovafriburgo/:product_name", async (req, res) => {
       SELECT
           *
       FROM
-          products
+          itemsnovafriburgo
       WHERE
           product_name = $1
     `,
