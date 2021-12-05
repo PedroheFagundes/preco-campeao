@@ -141,16 +141,16 @@ app.post("/itemsnovafriburgo", async (req, res) => {
   }
 });
 
-// Get all products
+// Get all items
 app.get("/itemsnovafriburgo", async (req, res) => {
   try {
-    const allProducts = await pool.query(`
+    const allItems = await pool.query(`
       SELECT
           *
       FROM
-          products
+      itemsnovafriburgo
     `);
-    res.json(allProducts.rows);
+    res.json(allItems.rows);
   } catch (err) {
     console.error(err.message);
   }
