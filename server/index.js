@@ -160,7 +160,7 @@ app.get("/itemsnovafriburgo", async (req, res) => {
 app.get("/itemsnovafriburgo/:product_name", async (req, res) => {
   try {
     const { product_name } = req.params;
-    const product = await pool.query(
+    const item = await pool.query(
       `
       SELECT
           *
@@ -172,35 +172,36 @@ app.get("/itemsnovafriburgo/:product_name", async (req, res) => {
       [product_name]
     );
 
-    res.json(product.rows);
+    res.json(item.rows);
   } catch (err) {
     console.error(err.message);
   }
 });
 
-// Update a product
-app.put("/itemsnovafriburgo/:product_id", async (req, res) => {
+// Update a item
+app.put("/itemsnovafriburgo/:item_id", async (req, res) => {
   try {
-    const { product_id } = req.params;
-    const { product_name, product_info, product_category, product_image } =
+    const { item_id } = req.params;
+    const { market_name, product_name, item_price, item_start_date, item_expire_date } =
       req.body;
 
-    const updateProduct = await pool.query(
+    const updateItem = await pool.query(
       `
       UPDATE
-          products
+          itemsnovafriburgo
       SET
-          product_name = $2,
-          product_info = $3,
-          product_category = $4,
-          product_image = $5
+          market_name = $2,
+          product_name = $3,
+          item_price = $4,
+          item_start_date = $5,
+          item_expire_date = $6
       WHERE
-          product_id = $1
+          item_id = $1
     `,
-      [product_id, product_name, product_info, product_category, product_image]
+      [item_id, market_name, product_name, item_price, item_start_date, item_expire_date]
     );
 
-    res.json("Produto atualizado!");
+    res.json("Item atualizado!");
   } catch (err) {
     console.error(err.message);
   }
