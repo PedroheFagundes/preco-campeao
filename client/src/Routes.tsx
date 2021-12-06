@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import Deals from "./pages/Deals";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import Data from "./pages/Registration";
+import Registration from "./pages/Registration";
 import Simulation from "./pages/Simulation";
 import Variation from "./pages/Variation";
 
@@ -25,8 +25,8 @@ const App = function () {
       <Route exact path="/profile">
         <Profile />
       </Route>
-      <Route exact path="/data">
-        <Data />
+      <Route exact path="/registration">
+        <Registration />
       </Route>
       <Route>
         <Redirect to="/" />

@@ -126,7 +126,7 @@ app.post("/itemsnovafriburgo", async (req, res) => {
     const newItem = await pool.query(
       `
       INSERT INTO 
-          itemsnovafriburgo (market_name, product_name, item_price, item_start_date, item_expire_date)
+          items_nova_friburgo (market_name, product_name, item_price, item_start_date, item_expire_date)
       VALUES
           ($1, $2, $3, $4, $5)
       RETURNING
@@ -148,7 +148,7 @@ app.get("/itemsnovafriburgo", async (req, res) => {
       SELECT
           *
       FROM
-          itemsnovafriburgo
+          items_nova_friburgo
     `);
     res.json(allItems.rows);
   } catch (err) {
@@ -165,7 +165,7 @@ app.get("/itemsnovafriburgo/:product_name", async (req, res) => {
       SELECT
           *
       FROM
-          itemsnovafriburgo
+          items_nova_friburgo
       WHERE
           product_name = $1
     `,
@@ -188,7 +188,7 @@ app.put("/itemsnovafriburgo/:item_id", async (req, res) => {
     const updateItem = await pool.query(
       `
       UPDATE
-          itemsnovafriburgo
+          items_nova_friburgo
       SET
           market_name = $2,
           product_name = $3,
@@ -214,7 +214,7 @@ app.delete("/itemsnovafriburgo/:item_id", async (req, res) => {
     const deleteItem = await pool.query(
       `
       DELETE FROM
-          itemsnovafriburgo
+          items_nova_friburgo
       WHERE
           item_id = $1
     `,

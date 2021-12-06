@@ -1,15 +1,18 @@
 import React, { useState } from "react";
+import InputItem from "../../components/Items/CreateItem";
+import DeleteItem from "../../components/Items/DeleteItem";
+import EditItem from "../../components/Items/EditItem";
 import InputProduct from "../../components/Products/CreateProduct";
 import DeleteProduct from "../../components/Products/DeleteProduct";
 import EditProduct from "../../components/Products/EditProduct";
-import { DataArea } from "./styled";
+import { RegistrationArea } from "./styled";
 
 const Page = () => {
   const [choice, setChoice] = useState("");
   const [password, setPassword] = useState("");
 
   return (
-    <DataArea>
+    <RegistrationArea>
       {password === "5x$vsRi&fL48_K9vnkT&f39G@93A1jdfs" ? (
         <>
           <div className="choiceButtonsArea">
@@ -36,16 +39,16 @@ const Page = () => {
               <span>Item do Mercado</span>
               <button
                 className="create"
-                onClick={() => setChoice("createProduct")}
+                onClick={() => setChoice("createItem")}
               >
                 Criar Item
               </button>
-              <button className="edit" onClick={() => setChoice("editProduct")}>
+              <button className="edit" onClick={() => setChoice("editItem")}>
                 Editar Item
               </button>
               <button
                 className="delete"
-                onClick={() => setChoice("deleteProduct")}
+                onClick={() => setChoice("deleteItem")}
               >
                 Deletar Item
               </button>
@@ -59,6 +62,12 @@ const Page = () => {
                 return <EditProduct />;
               case "deleteProduct":
                 return <DeleteProduct />;
+                case "createItem":
+                return <InputItem />;
+              case "editItem":
+                return <EditItem />;
+              case "deleteItem":
+                return <DeleteItem />;
               default:
                 return null;
             }
@@ -71,7 +80,7 @@ const Page = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       )}
-    </DataArea>
+    </RegistrationArea>
   );
 };
 

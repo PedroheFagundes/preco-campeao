@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DataArea = styled.div`
+export const RegistrationArea = styled.div`
   height: calc(100% - var(--navBarHeight));
   display: flex;
   flex-direction: column;
