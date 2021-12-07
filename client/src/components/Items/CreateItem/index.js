@@ -56,6 +56,24 @@ const InputProduct = () => {
       <form onSubmit={onSubmitForm}>
         <div className="upperBottomLine">
           <div className="inputField">
+            <p>Nome do Produto</p>
+            <input
+              type="text"
+              value={product_name}
+              maxLength="17"
+              onChange={(e) => setProduct_name(e.target.value)}
+            />
+          </div>
+          <div className="inputField">
+            {
+              allProductNames.includes(product_name)
+                ? <span className="registered">Produto já cadastrado! :)</span>
+                : <span className="notRegistered">Produto não cadastrado. É preciso cadastrar!</span>
+            }
+          </div>
+        </div>
+        <div className="upperBottomLine">
+          <div className="inputField">
             <p>Nome do Mercado</p>
             <input
               type="text"
@@ -64,20 +82,6 @@ const InputProduct = () => {
             />
           </div>
           <div className="inputField">
-            <p>Nome do Produto</p>
-            <input
-              type="text"
-              value={product_name}
-              maxLength="17"
-              onChange={(e) => setProduct_name(e.target.value)}
-            />
-            <hr />
-          </div>
-          <br />
-          {allProductNames.includes(product_name) ? "Produto já cadastrado" : "Produto não cadastrado. É preciso cadastrar!"}
-        </div>
-        <div className="upperBottomLine">
-          <div className="inputField">
             <p>Preço do Produto</p>
             <input
               type="number"
@@ -85,6 +89,8 @@ const InputProduct = () => {
               onChange={(e) => setItem_price(e.target.value)}
             />
           </div>
+        </div>
+        <div className="upperBottomLine">
           <div className="inputField">
             <p>Início da Promoção</p>
             <input
@@ -93,14 +99,14 @@ const InputProduct = () => {
               onChange={(e) => setItem_start_date(e.target.value)}
             />
           </div>
-        </div>
-        <div className="inputField">
-          <p>Fim da Promoção</p>
-          <input
-            type="date"
-            value={item_expire_date}
-            onChange={(e) => setItem_expire_date(e.target.value)}
-          />
+          <div className="inputField">
+            <p>Fim da Promoção</p>
+            <input
+              type="date"
+              value={item_expire_date}
+              onChange={(e) => setItem_expire_date(e.target.value)}
+            />
+          </div>
         </div>
         <br />
         <button className="create">Criar Produto</button>

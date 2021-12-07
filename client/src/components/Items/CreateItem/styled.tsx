@@ -56,4 +56,12 @@ export const CreateItemArea = styled.div`
       margin: 0;
     }
   }
+
+  .registered {
+    color: #48bc40;
+  }
+
+  .notRegistered {
+    color: #db674a;
+  }
 `;

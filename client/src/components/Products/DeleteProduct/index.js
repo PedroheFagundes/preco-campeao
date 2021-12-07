@@ -4,10 +4,10 @@ import { DeleteProductArea } from "./styled";
 const DeleteProduct = () => {
   const [products, setProducts] = useState([]);
 
-  // Variable used to make product filter comparing to productJSON
+  // Variable used to make product filter
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Reads all products from productsJSON and filters it while user is typing
+  // Reads all products and filters it while user is typing
   const productFilter = products.filter((val) => {
     if (searchTerm === "") {
       return val;
