@@ -66,34 +66,33 @@ const EditItemModal = ({ item }) => {
               </div>
             </div>
             <div className="inputField">
-              <p>Informação do Produto</p>
+              <p>Informação do Mercado</p>
               <input
                 type="text"
-                value={product_info}
-                maxLength="24"
-                onChange={(e) => setProduct_info(e.target.value)}
+                value={market_name}
+                onChange={(e) => setMarket_name(e.target.value)}
               />
             </div>
             <div className="upperBottomLine">
               <div className="inputField">
-                <p>Categorias do Produto</p>
+                <p>Preço do Item</p>
                 <input
                   type="text"
-                  value={product_category}
-                  onChange={(e) => setProduct_category(e.target.value)}
+                  value={item_price}
+                  onChange={(e) => setItem_price(e.target.value)}
                 />
               </div>
               <div className="inputField">
-                <p>Imagem do Produto</p>
+                <p>Início da Promoção</p>
                 <input
                   type="text"
-                  value={product_image}
-                  onChange={(e) => setProduct_image(e.target.value)}
+                  value={item_start_date}
+                  onChange={(e) => setItem_start_date(e.target.value)}
                 />
               </div>
             </div>
             <div className="buttons">
-              <button onClick={(e) => updateProduct(e)} className="edit">
+              <button onClick={(e) => updateItem(e)} className="edit">
                 Editar
               </button>
               <button onClick={closeModal} className="close">
@@ -108,4 +107,4 @@ const EditItemModal = ({ item }) => {
   );
 };
 
-export default EditProductModal;
+export default EditItemModal;
