@@ -10,7 +10,7 @@ app.use(express.json());
 
 // ROUTES //
 // Create a product
-app.post("/ ", async (req, res) => {
+app.post("/products", async (req, res) => {
   try {
     const { product_name, product_info, product_category, product_image } =
       req.body;

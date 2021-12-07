@@ -9,7 +9,7 @@ import { RegistrationArea } from "./styled";
 
 const Page = () => {
   const [choice, setChoice] = useState("");
-  const [password, setPassword] = useState("5x$vsRi&fL48_K9vnkT&f39G@93A1jdfs");
+  const [password, setPassword] = useState("");
 
   return (
     <RegistrationArea>

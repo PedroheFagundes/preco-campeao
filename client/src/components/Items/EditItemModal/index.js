@@ -1,35 +1,39 @@
 import React, { useState } from "react";
 import { EditItemModalArea } from "./styled";
 
-const EditProductModal = ({ product }) => {
+const EditItemModal = ({ item }) => {
   const [modal, setModal] = useState(false);
-  const [product_name, setProduct_name] = useState(product.product_name);
-  const [product_info, setProduct_info] = useState(product.product_info);
-  const [product_category, setProduct_category] = useState(
-    product.product_category
+  const [market_name, setMarket_name] = useState(item.market_name);
+  const [product_name, setProduct_name] = useState(item.product_name);
+  const [item_price, setItem_price] = useState(item.item_price);
+  const [item_start_date, setItem_start_date] = useState(
+    item.item_start_date
+  ); const [item_expire_date, setItem_expire_date] = useState(
+    item.item_expire_date
   );
-  const [product_image, setProduct_image] = useState(product.product_image);
 
   const closeModal = () => {
     setModal(false);
-    setProduct_name(product.product_name);
-    setProduct_info(product.product_info);
-    setProduct_category(product.product_category);
-    setProduct_image(product.product_image);
+    setMarket_name(item.market_name);
+    setProduct_name(item.product_name);
+    setItem_price(item.item_price);
+    setItem_start_date(item.item_start_date);
+    setItem_expire_date(item.item_expire_date);
   };
 
-  const updateProduct = async (e) => {
+  const updateItem = async (e) => {
     e.preventDefault();
     try {
       const body = {
+        market_name,
         product_name,
-        product_info,
-        product_category,
-        product_image,
+        item_price,
+        item_start_date,
+        item_expire_date,
       };
 
       await fetch(
-        `https://preco-campeao.herokuapp.com/products/${product.product_id}`,
+        `https://preco-campeao.herokuapp.com/itemsnovafriburgo/${item.item_id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -60,15 +64,15 @@ const EditProductModal = ({ product }) => {
                   onChange={(e) => setProduct_name(e.target.value)}
                 />
               </div>
-              <div className="inputField">
-                <p>Informação do Produto</p>
-                <input
-                  type="text"
-                  value={product_info}
-                  maxLength="24"
-                  onChange={(e) => setProduct_info(e.target.value)}
-                />
-              </div>
+            </div>
+            <div className="inputField">
+              <p>Informação do Produto</p>
+              <input
+                type="text"
+                value={product_info}
+                maxLength="24"
+                onChange={(e) => setProduct_info(e.target.value)}
+              />
             </div>
             <div className="upperBottomLine">
               <div className="inputField">
