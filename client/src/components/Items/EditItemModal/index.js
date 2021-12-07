@@ -65,29 +65,39 @@ const EditItemModal = ({ item }) => {
                 />
               </div>
             </div>
-            <div className="inputField">
-              <p>Informação do Mercado</p>
-              <input
-                type="text"
-                value={market_name}
-                onChange={(e) => setMarket_name(e.target.value)}
-              />
-            </div>
             <div className="upperBottomLine">
+              <div className="inputField">
+                <p>Nome do Mercado</p>
+                <input
+                  type="text"
+                  value={market_name}
+                  onChange={(e) => setMarket_name(e.target.value)}
+                />
+              </div>
               <div className="inputField">
                 <p>Preço do Item</p>
                 <input
-                  type="text"
+                  type="number"
                   value={item_price}
                   onChange={(e) => setItem_price(e.target.value)}
                 />
               </div>
+            </div>
+            <div className="upperBottomLine">
               <div className="inputField">
                 <p>Início da Promoção</p>
                 <input
-                  type="text"
-                  value={item_start_date}
+                  type="date"
+                  value={new Date(item_start_date).toISOString().substring(0, 10)}
                   onChange={(e) => setItem_start_date(e.target.value)}
+                />
+              </div>
+              <div className="inputField">
+                <p>Fim da Promoção</p>
+                <input
+                  type="date"
+                  value={new Date(item_expire_date).toISOString().substring(0, 10)}
+                  onChange={(e) => setItem_expire_date(e.target.value)}
                 />
               </div>
             </div>

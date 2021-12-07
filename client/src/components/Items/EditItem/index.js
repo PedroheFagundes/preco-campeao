@@ -75,7 +75,7 @@ const EditProduct = () => {
               <td>{formatSqlDate(item.item_start_date)}</td>
               <td>{formatSqlDate(item.item_expire_date)}</td>
               <td>
-                <EditItemModal product={item} />
+                <EditItemModal item={item} />
               </td>
             </tr>
           ))}
