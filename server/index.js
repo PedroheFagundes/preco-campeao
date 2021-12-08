@@ -240,7 +240,7 @@ app.get("/activeitems", async (req, res) => {
       WHERE
       item_expire_date >= CAST(now() AS Date)
     `);
-    res.json(allProducts.rows);
+    res.json(activeItems.rows);
   } catch (err) {
     console.error(err.message);
   }
