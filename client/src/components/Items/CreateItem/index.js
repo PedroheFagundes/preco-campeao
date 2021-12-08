@@ -85,6 +85,7 @@ const InputProduct = () => {
             <p>Preço do Produto</p>
             <input
               type="number"
+              step="0.01"
               value={item_price}
               onChange={(e) => setItem_price(e.target.value)}
             />

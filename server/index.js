@@ -227,6 +227,25 @@ app.delete("/itemsnovafriburgo/:item_id", async (req, res) => {
   }
 });
 
+// Get active items
+app.get("/activeitems", async (req, res) => {
+  try {
+    const activeItems = await pool.query(`
+      SELECT
+          *
+      FROM
+          items_nova_friburgo inf
+          JOIN products p ON
+          inf.product_name = p.product_name
+      WHERE
+      item_expire_date >= CAST(now() AS Date)
+    `);
+    res.json(allProducts.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
 //Estabilishing the port
 const PORT = process.env.PORT || 5000;
 
