@@ -6,8 +6,7 @@ import { HomeArea } from "./styled";
 
 const Page = () => {
   const [products, setProducts] = useState([]);
-
-  // Variable used to make product filter
+  // Variable used to make product filter comparing to productJSON
   const [searchTerm, setSearchTerm] = useState("");
 
   // Boolean to show and hide moreInfo panel
@@ -16,6 +15,12 @@ const Page = () => {
   // Defines which product is open showing moreInfo, Product "0" means none of the products are open
   const [eventID, setEventID] = useState("0");
 
+  // Prepare the array of arrays to be sorted
+  function Comparator(a: any[], b: any[]) {
+    if (a[0] < b[0]) return -1;
+    if (a[0] > b[0]) return 1;
+    return 0;
+  }
   // Variable to stock the market name conversion to market logo name
   let marketLogo: string;
 
@@ -54,21 +59,50 @@ const Page = () => {
     getProducts();
   },[]);
 
+  const todayDate = new Date().setHours(0, 0, 0, 0);
 
   // All the logic behind showing products
   const productShow = productFilter.map((val: any, key) => {
-    
-    let startDate = new Date(val.item_start_date).toLocaleDateString("pt-BR")
-    .substring(0, 5);
-    
-    console.log("here:", startDate);
 
-/*     // Format the date to dd/mm
+
+
+/*   
+
+DESNECESSÁRIO AGORACOM O BACK END
+  
+// If there is not any sale of a product, it doesn't even show the white card that contains the product
+    // This if statement can be upgraded
+    if (
+      new Date(val.price[0][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[1][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[2][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[3][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[4][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[5][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[6][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[7][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[8][2]).setHours(0, 0, 0, 0) < todayDate &&
+      new Date(val.price[9][2]).setHours(0, 0, 0, 0) < todayDate
+    ) {
+      return null;
+    } */
+
+    console.log("here");
+
+
+    /* 
+    // Sort the val array ordered by cheapiest price
+    let cheapPrice = val.price.sort(Comparator);
+    // While the cheapiest price product has a expired date, removes it from the array
+    while (new Date(cheapPrice[0][2]).setHours(0, 0, 0, 0) < todayDate) {
+      cheapPrice.shift();
+    }
+
+    // Format the date to dd/mm
     let dateFormated = new Date(cheapPrice[0][2])
-    .toLocaleDateString("pt-BR")
-    .substring(0, 5); */
-    
-    /*
+      .toLocaleDateString("pt-BR")
+      .substring(0, 5);
+
     // Split the price in to integer and the decimal part
     let priceFormated = cheapPrice[0][0].toString().split(".");
 

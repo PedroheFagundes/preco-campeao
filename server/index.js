@@ -238,7 +238,9 @@ app.get("/activeitems", async (req, res) => {
           JOIN products p ON
           inf.product_name = p.product_name
       WHERE
-      item_expire_date >= CAST(now() AS Date)
+          item_expire_date >= CAST(now() AS Date)
+      ORDER BY
+	        inf.product_name, inf.item_price
     `);
     res.json(activeItems.rows);
   } catch (err) {
