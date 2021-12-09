@@ -16,8 +16,6 @@ const Page = () => {
   // Defines which product is open showing moreInfo, Product "0" means none of the products are open
   const [eventID, setEventID] = useState("0");
 
-  // Variable to stock the market name conversion to market logo name
-  let marketLogo: string;
 
   // Variable that sets which NavBar page is open and set the theme
   const [theme, setThemes] = useState(navBarTheme["homeActive"]);
@@ -52,80 +50,46 @@ const Page = () => {
 
   useEffect(() => {
     getProducts();
-  },[]);
+  }, []);
 
 
   // All the logic behind showing products
   const productShow = productFilter.map((val: any, key) => {
-    
-    let startDate = new Date(val.item_start_date).toLocaleDateString("pt-BR")
-    .substring(0, 5);
-    
-    console.log("here:", startDate);
 
-/*     // Format the date to dd/mm
-    let dateFormated = new Date(cheapPrice[0][2])
-    .toLocaleDateString("pt-BR")
-    .substring(0, 5); */
-    
-    /*
     // Split the price in to integer and the decimal part
-    let priceFormated = cheapPrice[0][0].toString().split(".");
+    let priceFormated = val.item_price.toString().split(".");
 
+    let startDate = new Date(val.item_start_date).toUTCString().substring(5, 16);
     // Format the weekday to Brazil type
-    let weekDay = new Date(cheapPrice[0][2])
+    let weekStartDay = new Date(startDate)
       .toLocaleDateString("pt-BR", { weekday: "long" })
       .toUpperCase();
-
-    // Format the weekday to a better fit type
-    switch (weekDay) {
-      case "SEGUNDA-FEIRA":
-        weekDay = "SEGUNDA";
-        break;
-      case "TERÇA-FEIRA":
-        weekDay = "TERÇA";
-        break;
-      case "QUARTA-FEIRA":
-        weekDay = "QUARTA";
-        break;
-      case "QUINTA-FEIRA":
-        weekDay = "QUINTA";
-        break;
-      case "SEXTA-FEIRA":
-        weekDay = "SEXTA";
-        break;
-      default:
-        break;
+    if (weekStartDay.includes("-FEIRA")) {
+      weekStartDay = weekStartDay.slice(0, -6);
     }
 
-    let marketFormated = cheapPrice[0][1].toString();
+    startDate = new Date(startDate).toLocaleString("pt-BR").substring(0, 5);
 
-    // Associate the market logo to the market name
-    if (marketFormated === "Atacadão") {
-      marketLogo = "atacadao";
-    } else if (marketFormated === "Big Blue") {
-      marketLogo = "bigblue";
-    } else if (marketFormated === "Bramil") {
-      marketLogo = "bramil";
-    } else if (marketFormated === "Casa Friburgo") {
-      marketLogo = "casafriburgo";
-    } else if (marketFormated === "Cavalo Preto") {
-      marketLogo = "cavalopreto";
-    } else if (marketFormated === "Gama") {
-      marketLogo = "gama";
-    } else if (marketFormated === "Pepê & Gabriel") {
-      marketLogo = "pepe&gabriel";
-    } else if (marketFormated === "R&E Mercado") {
-      marketLogo = "r&emercado";
-    } else if (marketFormated === "Serra Azul") {
-      marketLogo = "serraazul";
-    } else if (marketFormated === "Tio Dongo") {
-      marketLogo = "tiodongo";
+    let expireDate = new Date(val.item_expire_date).toUTCString().substring(5, 16);
+    // Format the weekday to Brazil type
+    let weekExpireDay = new Date(expireDate)
+      .toLocaleDateString("pt-BR", { weekday: "long" })
+      .toUpperCase();
+    if (weekExpireDay.includes("-FEIRA")) {
+      weekExpireDay = weekExpireDay.slice(0, -6);
     }
+
+    expireDate = new Date(expireDate).toLocaleString("pt-BR").substring(0, 5);
+
+    let marketLogo: string = val.market_name
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .replace(/\s+/g, "")
+      .toLowerCase();
 
     // Shows down arrow if the product is 'closed' and hide it i the product is 'open
     const toggleDownArrow =
-      parseInt(eventID) === val.id ? null : (
+      parseInt(eventID) === val.item_id ? null : (
         <div className="down-arrow">
           <img src={"/images/navbar/down-arrow.png"} alt="" />
         </div>
@@ -134,29 +98,26 @@ const Page = () => {
     // Shows the product 'closed'
     const productsClosed = (
       <div className="noSelect productsClosedInfo">
-        <img src={`/images/products/${val.image}.png`} alt="" />
+        <img src={`/images/products/${val.product_image}.png`} alt="" />
         <div>
-          <span>{val.name}</span>
-          <span>{val.info}</span>
+          <span>{val.product_name}</span>
+          <span>{val.product_info}</span>
         </div>
         <span className="price">
           <span>R$</span>
           <span>{priceFormated[0]}</span>
-          <span>
-            ,
-            {priceFormated[1].length === 1
-              ? priceFormated[1] + 0
-              : priceFormated[1]}
-          </span>
+          <span>,{priceFormated[1]}</span>
         </span>
       </div>
     );
+
+    console.log("here: ", priceFormated[0], ",", priceFormated[1]);
 
     return (
       // Template contains all product cards
       <div
         className="template"
-        id={`${val.id}`}
+        id={`${val.item_id}`}
         key={key}
         // Open/close the product card
         onClick={(e) => {
@@ -190,71 +151,72 @@ const Page = () => {
               </div>
             </div>
           ) : null}
+
         </div>
-        {parseInt(eventID) === val.id
+        {/* {parseInt(eventID) === val.id
           ? cheapPrice.map((cheapPrice, key) => {
-              let moreInfoDate = new Date(cheapPrice[2])
-                .toLocaleDateString("pt-BR")
-                .substring(0, 5);
+            let moreInfoDate = new Date(cheapPrice[2])
+              .toLocaleDateString("pt-BR")
+              .substring(0, 5);
 
-              let moreInfoMarketLogo: string = "";
+            let moreInfoMarketLogo: string = "";
 
-              if (cheapPrice[1] === "Atacadão") {
-                moreInfoMarketLogo = "atacadao";
-              } else if (cheapPrice[1] === "Big Blue") {
-                moreInfoMarketLogo = "bigblue";
-              } else if (cheapPrice[1] === "Bramil") {
-                moreInfoMarketLogo = "bramil";
-              } else if (cheapPrice[1] === "Casa Friburgo") {
-                moreInfoMarketLogo = "casafriburgo";
-              } else if (cheapPrice[1] === "Cavalo Preto") {
-                moreInfoMarketLogo = "cavalopreto";
-              } else if (cheapPrice[1] === "Gama") {
-                moreInfoMarketLogo = "gama";
-              } else if (cheapPrice[1] === "Pepê & Gabriel") {
-                moreInfoMarketLogo = "pepe&gabriel";
-              } else if (cheapPrice[1] === "R&E Mercado") {
-                moreInfoMarketLogo = "r&emercado";
-              } else if (cheapPrice[1] === "Serra Azul") {
-                moreInfoMarketLogo = "serraazul";
-              } else if (cheapPrice[1] === "Tio Dongo") {
-                moreInfoMarketLogo = "tiodongo";
-              }
+            if (cheapPrice[1] === "Atacadão") {
+              moreInfoMarketLogo = "atacadao";
+            } else if (cheapPrice[1] === "Big Blue") {
+              moreInfoMarketLogo = "bigblue";
+            } else if (cheapPrice[1] === "Bramil") {
+              moreInfoMarketLogo = "bramil";
+            } else if (cheapPrice[1] === "Casa Friburgo") {
+              moreInfoMarketLogo = "casafriburgo";
+            } else if (cheapPrice[1] === "Cavalo Preto") {
+              moreInfoMarketLogo = "cavalopreto";
+            } else if (cheapPrice[1] === "Gama") {
+              moreInfoMarketLogo = "gama";
+            } else if (cheapPrice[1] === "Pepê & Gabriel") {
+              moreInfoMarketLogo = "pepe&gabriel";
+            } else if (cheapPrice[1] === "R&E Mercado") {
+              moreInfoMarketLogo = "r&emercado";
+            } else if (cheapPrice[1] === "Serra Azul") {
+              moreInfoMarketLogo = "serraazul";
+            } else if (cheapPrice[1] === "Tio Dongo") {
+              moreInfoMarketLogo = "tiodongo";
+            }
 
-              let priceFormated = cheapPrice[0].toString().split(".");
+            let priceFormated = cheapPrice[0].toString().split(".");
 
-              return (
-                <div className="moreInfo" key={key}>
-                  {key === 0 ? null : new Date(cheapPrice[2]).getTime() >=
-                    new Date().setHours(0, 0, 0, 0) ? (
-                    <div>
-                      <img
-                        src={`/images/markets/${moreInfoMarketLogo}-logo.png`}
-                        alt=""
-                      />
-                      <span className="moreInfoSpan1">{cheapPrice[1]}</span>
-                      <div className="moreInfoSpan2">
-                        <span>até dia</span>
-                        <span>{moreInfoDate}</span>
-                      </div>
-                      <span className="moreInfoPrice moreInfoSpan3">
-                        <span>R$</span>
-                        <span>{priceFormated[0]}</span>
-                        <span>
-                          ,
-                          {priceFormated[1].length === 1
-                            ? priceFormated[1] + 0
-                            : priceFormated[1]}
-                        </span>
-                      </span>
+            return (
+              <div className="moreInfo" key={key}>
+                {key === 0 ? null : new Date(cheapPrice[2]).getTime() >=
+                  new Date().setHours(0, 0, 0, 0) ? (
+                  <div>
+                    <img
+                      src={`/images/markets/${moreInfoMarketLogo}-logo.png`}
+                      alt=""
+                    />
+                    <span className="moreInfoSpan1">{cheapPrice[1]}</span>
+                    <div className="moreInfoSpan2">
+                      <span>até dia</span>
+                      <span>{moreInfoDate}</span>
                     </div>
-                  ) : null}
-                </div>
-              );
-            })
-          : null}
+                    <span className="moreInfoPrice moreInfoSpan3">
+                      <span>R$</span>
+                      <span>{priceFormated[0]}</span>
+                      <span>
+                        ,
+                        {priceFormated[1].length === 1
+                          ? priceFormated[1] + 0
+                          : priceFormated[1]}
+                      </span>
+                    </span>
+                  </div>
+                ) : null}
+              </div>
+            );
+          })
+          : null} */}
       </div>
-    ); */
+    );
   });
 
   return (

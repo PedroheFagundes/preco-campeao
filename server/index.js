@@ -239,6 +239,7 @@ app.get("/activeitems", async (req, res) => {
           inf.product_name = p.product_name
       WHERE
           item_expire_date >= CAST(now() AS Date)
+          and item_start_date <= CAST(now() AS Date)
       ORDER BY
 	        inf.product_name, inf.item_price
     `);
