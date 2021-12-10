@@ -16,7 +16,6 @@ const Page = () => {
   // Defines which product is open showing moreInfo, Product "0" means none of the products are open
   const [eventID, setEventID] = useState("0");
 
-
   // Variable that sets which NavBar page is open and set the theme
   const [theme, setThemes] = useState(navBarTheme["homeActive"]);
 
@@ -52,14 +51,30 @@ const Page = () => {
     getProducts();
   }, []);
 
-
   // All the logic behind showing products
-  const productShow = productFilter.map((val: any, key) => {
+  const productShow = productFilter.map((val: any, key: number, items: any) => {
+    let previousItem = items[key - 1];
+    const currentItem = items[key];
+    let nextItem = items[key + 1];
+
+    if (previousItem === undefined) {
+      previousItem = {};
+    }
+
+    if (nextItem === undefined) {
+      nextItem = {};
+    }
+
+    console.log(previousItem);
+    console.log(currentItem);
+    console.log(nextItem, "fim");
 
     // Split the price in to integer and the decimal part
     let priceFormated = val.item_price.toString().split(".");
 
-    let startDate = new Date(val.item_start_date).toUTCString().substring(5, 16);
+    let startDate = new Date(val.item_start_date)
+      .toUTCString()
+      .substring(5, 16);
     // Format the weekday to Brazil type
     let weekStartDay = new Date(startDate)
       .toLocaleDateString("pt-BR", { weekday: "long" })
@@ -70,7 +85,9 @@ const Page = () => {
 
     startDate = new Date(startDate).toLocaleString("pt-BR").substring(0, 5);
 
-    let expireDate = new Date(val.item_expire_date).toUTCString().substring(5, 16);
+    let expireDate = new Date(val.item_expire_date)
+      .toUTCString()
+      .substring(5, 16);
     // Format the weekday to Brazil type
     let weekExpireDay = new Date(expireDate)
       .toLocaleDateString("pt-BR", { weekday: "long" })
@@ -82,6 +99,12 @@ const Page = () => {
     expireDate = new Date(expireDate).toLocaleString("pt-BR").substring(0, 5);
 
     let marketLogo: string = val.market_name
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .replace(/\s+/g, "")
+      .toLowerCase();
+
+    let nextItemMarketLogo: string = nextItem.market_name
       .normalize("NFD")
       .replace(/\p{Diacritic}/gu, "")
       .replace(/\s+/g, "")
@@ -111,8 +134,6 @@ const Page = () => {
       </div>
     );
 
-    console.log("here: ", priceFormated[0], ",", priceFormated[1]);
-
     return (
       // Template contains all product cards
       <div
@@ -132,18 +153,18 @@ const Page = () => {
         <div className="template-inner">
           {productsClosed}
           {toggleDownArrow}
-          {parseInt(eventID) === val.id ? (
+          {parseInt(eventID) === val.item_id ? (
             <div className="productsInfoLong">
               <hr />
               <div>
                 <div className="market">
                   <img src={`/images/markets/${marketLogo}-logo.png`} alt="" />
-                  <span className="box">{marketFormated}</span>
+                  <span className="box">{val.market_name}</span>
                 </div>
                 <div className="expireDate">
                   <span>promoção até</span>
-                  <span>{weekDay}</span>
-                  <span>{dateFormated}</span>
+                  <span>{weekExpireDay}</span>
+                  <span>{expireDate}</span>
                 </div>
               </div>
               <div className="down-arrow">
@@ -151,70 +172,25 @@ const Page = () => {
               </div>
             </div>
           ) : null}
-
         </div>
-        {/* {parseInt(eventID) === val.id
-          ? cheapPrice.map((cheapPrice, key) => {
-            let moreInfoDate = new Date(cheapPrice[2])
-              .toLocaleDateString("pt-BR")
-              .substring(0, 5);
+        {nextItem.product_id === currentItem.product_id ? (
 
-            let moreInfoMarketLogo: string = "";
-
-            if (cheapPrice[1] === "Atacadão") {
-              moreInfoMarketLogo = "atacadao";
-            } else if (cheapPrice[1] === "Big Blue") {
-              moreInfoMarketLogo = "bigblue";
-            } else if (cheapPrice[1] === "Bramil") {
-              moreInfoMarketLogo = "bramil";
-            } else if (cheapPrice[1] === "Casa Friburgo") {
-              moreInfoMarketLogo = "casafriburgo";
-            } else if (cheapPrice[1] === "Cavalo Preto") {
-              moreInfoMarketLogo = "cavalopreto";
-            } else if (cheapPrice[1] === "Gama") {
-              moreInfoMarketLogo = "gama";
-            } else if (cheapPrice[1] === "Pepê & Gabriel") {
-              moreInfoMarketLogo = "pepe&gabriel";
-            } else if (cheapPrice[1] === "R&E Mercado") {
-              moreInfoMarketLogo = "r&emercado";
-            } else if (cheapPrice[1] === "Serra Azul") {
-              moreInfoMarketLogo = "serraazul";
-            } else if (cheapPrice[1] === "Tio Dongo") {
-              moreInfoMarketLogo = "tiodongo";
-            }
-
-            let priceFormated = cheapPrice[0].toString().split(".");
-
-            return (
-              <div className="moreInfo" key={key}>
-                {key === 0 ? null : new Date(cheapPrice[2]).getTime() >=
-                  new Date().setHours(0, 0, 0, 0) ? (
-                  <div>
-                    <img
-                      src={`/images/markets/${moreInfoMarketLogo}-logo.png`}
-                      alt=""
-                    />
-                    <span className="moreInfoSpan1">{cheapPrice[1]}</span>
-                    <div className="moreInfoSpan2">
-                      <span>até dia</span>
-                      <span>{moreInfoDate}</span>
-                    </div>
-                    <span className="moreInfoPrice moreInfoSpan3">
-                      <span>R$</span>
-                      <span>{priceFormated[0]}</span>
-                      <span>
-                        ,
-                        {priceFormated[1].length === 1
-                          ? priceFormated[1] + 0
-                          : priceFormated[1]}
-                      </span>
-                    </span>
-                  </div>
-                ) : null}
+          <div className="moreInfo" key={nextItem.key}>
+            <div>
+              <img src={`/images/markets/${nextItemMarketLogo}-logo.png`} alt="" />
+              <span className="moreInfoSpan1">{nextItem.market_name}</span>
+              <div className="moreInfoSpan2">
+                <span>até dia</span>
+                <span>{expireDate}</span>
               </div>
-            );
-          })
-          : null} */}
+              <span className="moreInfoPrice moreInfoSpan3">
+                <span>R$</span>
+                <span>{priceFormated[0]}</span>
+                <span>,{priceFormated[1]}</span>
+              </span>
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   });
