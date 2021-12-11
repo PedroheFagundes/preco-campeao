@@ -69,12 +69,6 @@ const Page = () => {
     console.log(currentItem);
     console.log(nextItem, "fim");
 
-    let marketLogo: string = val.market_name
-      .normalize("NFD")
-      .replace(/\p{Diacritic}/gu, "")
-      .replace(/\s+/g, "")
-      .toLowerCase();
-
     // Shows down arrow if the product is 'closed' and hide it i the product is 'open
     const toggleDownArrow =
       parseInt(eventID) === val.item_id ? null : (
@@ -93,70 +87,75 @@ const Page = () => {
         </div>
         <span className="price">
           <span>R$</span>
-          <span>{priceFormated[0]}</span>
-          <span>,{priceFormated[1]}</span>
+          <span>{val.reais}</span>
+          <span>,{val.cents}</span>
         </span>
       </div>
     );
 
-    return (
-      // Template contains all product cards
-      <div
-        className="template"
-        id={`${val.item_id}`}
-        key={key}
-        // Open/close the product card
-        onClick={(e) => {
-          if (eventID === e.currentTarget.id) {
-            setEventID("0");
-          } else {
-            setEventID(e.currentTarget.id);
-          }
-          setShowMoreInfo(!showMoreInfo);
-        }}
-      >
-        <div className="template-inner">
-          {productsClosed}
-          {toggleDownArrow}
-          {parseInt(eventID) === val.item_id ? (
-            <div className="productsInfoLong">
-              <hr />
-              <div>
-                <div className="market">
-                  <img src={`/images/markets/${marketLogo}-logo.png`} alt="" />
-                  <span className="box">{val.market_name}</span>
+    if (previousItem.product_id === currentItem.product_id) {
+      return null;
+    }
+    else {
+      return (
+        // Template contains all product cards
+        <div
+          className="template"
+          id={`${val.item_id}`}
+          key={key}
+          // Opens/closes the product card
+          onClick={(e) => {
+            if (eventID === e.currentTarget.id) {
+              setEventID("0");
+            } else {
+              setEventID(e.currentTarget.id);
+            }
+            setShowMoreInfo(!showMoreInfo);
+          }}
+        >
+          <div className="template-inner">
+            {productsClosed}
+            {toggleDownArrow}
+            {parseInt(eventID) === val.item_id ? (
+              <div className="productsInfoLong">
+                <hr />
+                <div>
+                  <div className="market">
+                    <img src={`/images/markets/${val.market_logo}.png`} alt="" />
+                    <span className="box">{val.market_name}</span>
+                  </div>
+                  <div className="expireDate">
+                    <span>promoção até</span>
+                    <span>{val.day_name}</span>
+                    <span>{val.formated_expire_date}</span>
+                  </div>
                 </div>
-                <div className="expireDate">
-                  <span>promoção até</span>
-                  <span>{weekExpireDay}</span>
-                  <span>{expireDate}</span>
+                <div className="down-arrow">
+                  <img src={"/images/navbar/up-arrow.png"} alt="" />
                 </div>
               </div>
-              <div className="down-arrow">
-                <img src={"/images/navbar/up-arrow.png"} alt="" />
+            ) : null}
+          </div>
+          {nextItem.product_id === currentItem.product_id && parseInt(eventID) === val.item_id ? (
+            <div className="moreInfo" key={nextItem.key}>
+              <div>
+                <img src={`/images/markets/${nextItem.market_logo}.png`} alt="" />
+                <span className="moreInfoSpan1">{nextItem.market_name}</span>
+                <div className="moreInfoSpan2">
+                  <span>até dia</span>
+                  <span>{nextItem.formated_expire_date}</span>
+                </div>
+                <span className="moreInfoPrice moreInfoSpan3">
+                  <span>R$</span>
+                  <span>{nextItem.reais}</span>
+                  <span>,{nextItem.cents}</span>
+                </span>
               </div>
             </div>
           ) : null}
         </div>
-        {nextItem.product_id === currentItem.product_id ? (
-          <div className="moreInfo" key={nextItem.key}>
-            <div>
-              <img src={`/images/markets/${nextItemMarketLogo}-logo.png`} alt="" />
-              <span className="moreInfoSpan1">{nextItem.market_name}</span>
-              <div className="moreInfoSpan2">
-                <span>até dia</span>
-                <span>{nextItemExpireDate}</span>
-              </div>
-              <span className="moreInfoPrice moreInfoSpan3">
-                <span>R$</span>
-                <span>{priceFormated[0]}</span>
-                <span>,{priceFormated[1]}</span>
-              </span>
-            </div>
-          </div>
-        ) : null}
-      </div>
-    );
+      );
+    }
   });
 
   return (
