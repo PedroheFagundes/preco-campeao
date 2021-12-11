@@ -62,49 +62,14 @@ const Page = () => {
     }
 
     if (nextItem === undefined) {
-      nextItem = {};
+      nextItem = { market_name: "" };
     }
 
     console.log(previousItem);
     console.log(currentItem);
     console.log(nextItem, "fim");
 
-    // Split the price in to integer and the decimal part
-    let priceFormated = val.item_price.toString().split(".");
-
-    let startDate = new Date(val.item_start_date)
-      .toUTCString()
-      .substring(5, 16);
-    // Format the weekday to Brazil type
-    let weekStartDay = new Date(startDate)
-      .toLocaleDateString("pt-BR", { weekday: "long" })
-      .toUpperCase();
-    if (weekStartDay.includes("-FEIRA")) {
-      weekStartDay = weekStartDay.slice(0, -6);
-    }
-
-    startDate = new Date(startDate).toLocaleString("pt-BR").substring(0, 5);
-
-    let expireDate = new Date(val.item_expire_date)
-      .toUTCString()
-      .substring(5, 16);
-    // Format the weekday to Brazil type
-    let weekExpireDay = new Date(expireDate)
-      .toLocaleDateString("pt-BR", { weekday: "long" })
-      .toUpperCase();
-    if (weekExpireDay.includes("-FEIRA")) {
-      weekExpireDay = weekExpireDay.slice(0, -6);
-    }
-
-    expireDate = new Date(expireDate).toLocaleString("pt-BR").substring(0, 5);
-
     let marketLogo: string = val.market_name
-      .normalize("NFD")
-      .replace(/\p{Diacritic}/gu, "")
-      .replace(/\s+/g, "")
-      .toLowerCase();
-
-    let nextItemMarketLogo: string = nextItem.market_name
       .normalize("NFD")
       .replace(/\p{Diacritic}/gu, "")
       .replace(/\s+/g, "")
@@ -174,14 +139,13 @@ const Page = () => {
           ) : null}
         </div>
         {nextItem.product_id === currentItem.product_id ? (
-
           <div className="moreInfo" key={nextItem.key}>
             <div>
               <img src={`/images/markets/${nextItemMarketLogo}-logo.png`} alt="" />
               <span className="moreInfoSpan1">{nextItem.market_name}</span>
               <div className="moreInfoSpan2">
                 <span>até dia</span>
-                <span>{expireDate}</span>
+                <span>{nextItemExpireDate}</span>
               </div>
               <span className="moreInfoPrice moreInfoSpan3">
                 <span>R$</span>

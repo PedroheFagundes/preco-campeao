@@ -232,16 +232,41 @@ app.get("/activeitems", async (req, res) => {
   try {
     const activeItems = await pool.query(`
       SELECT
-          *
+        *,
+        left((cast(inf.item_price as varchar)), -3) as reais,
+        right((cast(inf.item_price as varchar)), 2) as cents,
+        TO_CHAR(inf.item_expire_date , 'DD/MM') as formated_expire_date,
+        case extract(dow from inf.item_expire_date)
+          when 0 then 'DOMINGO'
+          when 1 then 'SEGUNDA'
+          when 2 then 'TERÇA'
+          when 3 then 'QUARTA'
+          when 4 then 'QUINTA'
+          when 5 then 'SEXTA'
+          when 6 then 'SABADO'
+        end day_name,
+        case inf.market_name
+          when 'Atacadão' then 'atacadao'
+          when 'Big Blue' then 'bigblue'
+          when 'Bramil' then 'bramil'
+          when 'Casa Friburgo' then 'casafriburgo'
+          when 'Cavalo Preto' then 'cavalopreto'
+          when 'Gama' then 'gama'
+          when 'Pepê & Gabriel' then 'pepe&gabriel'
+          when 'R&E Mercado' then 'r&emercado'
+          when 'Serra Azul' then 'serraazul'
+          when 'Tio Dongo' then 'tiodongo'
+        end market_logo
       FROM
-          items_nova_friburgo inf
-          JOIN products p ON
+        items_nova_friburgo inf
+        JOIN products p ON
           inf.product_name = p.product_name
       WHERE
-          item_expire_date >= CAST(now() AS Date)
-          and item_start_date <= CAST(now() AS Date)
-      ORDER BY
-	        inf.product_name, inf.item_price
+        item_expire_date >= CAST(now() AS Date)
+        and item_start_date <= CAST(now() AS Date)
+      order by
+        inf.product_name,
+        inf.item_price
     `);
     res.json(activeItems.rows);
   } catch (err) {
