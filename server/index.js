@@ -128,7 +128,7 @@ app.post("/itemsnovafriburgo", async (req, res) => {
       INSERT INTO 
           items_nova_friburgo (market_name, product_name, item_price, item_start_date, item_expire_date)
       VALUES
-          ($1, $2, $3, $4, $5)
+          ($1, $2, $3, CAST($4 AS Date), CAST($5 AS Date))
       RETURNING
           *
       `,
