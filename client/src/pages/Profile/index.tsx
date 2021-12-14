@@ -6,16 +6,14 @@ const Page = () => {
     <ProfileArea>
       <div className="areaPix">
         <span>
-          {/*AJUDE A MANTER O SITE SEMPRE ATUALIADO*/}
           QUER CONTRIBUR PARA SEMPRE TER AS MELHORES PROMOÇÕES EM SUAS MÃOS?
         </span>
         <div>
-          {/*<img src="/images/pix.png" alt="" />*/}
           <span>CHAVE PIX E-MAIL</span>
           <span>pedrohefagundes@gmail.com</span>
           <hr />
           <span>
-            PIX POR LINK{" "}
+            PIX POR LINK
             <a
               href="https://nubank.com.br/pagar/oeti/kYsQQfzO7H"
               target="_blank"
@@ -29,7 +27,7 @@ const Page = () => {
       <div className="areaRedes">
         <span>NOS SIGA NO INSTAGRAM</span>
         <div>
-          <img src="/images/instagram.png" alt="" />
+          <img src="/images/instagram.png" loading="lazy" alt="" />
           <a
             className="instagram"
             href="https://instagram.com/precocampeao?utm_medium=copy_link"
@@ -165,7 +163,7 @@ const Page = () => {
       <div className="areaContato">
         <span>CRIADO E MANTIDO POR PEDRO FAGUNDES</span>
         <div>
-          <img src="/images/gmail.png" alt="" />
+          <img src="/images/gmail.png" loading="lazy" alt="" />
           <a
             className="instagram"
             href="mailto:pedrohefagundes@gmail.com"
@@ -176,7 +174,7 @@ const Page = () => {
           </a>
         </div>
         <div>
-          <img src="/images/instagram.png" alt="" />
+          <img src="/images/instagram.png" loading="lazy" alt="" />
           <a
             className="instagram"
             href="https://instagram.com/pedrohefagundes?utm_medium=copy_link"

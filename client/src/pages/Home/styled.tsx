@@ -25,9 +25,9 @@ export const HomeArea = styled.div`
     align-items: center;
     background-color: #00404a;
     border-radius: 9px;
-    margin-bottom: 15px;
     box-shadow: 0px 2px 2px #333;
     color: #00404a;
+    margin-bottom: 15px;
 
     * {
       pointer-events: none;

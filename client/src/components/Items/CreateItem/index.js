@@ -110,7 +110,7 @@ const InputProduct = () => {
           </div>
         </div>
         <br />
-        <button className="create">Criar Produto</button>
+        <button className="create">Criar Item</button>
         {message ?
           <span>Item criado com sucesso!</span>
           : null}

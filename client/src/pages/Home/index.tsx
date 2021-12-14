@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { navBarTheme } from "../../components/Themes";
@@ -51,6 +51,7 @@ const Page = () => {
     getProducts();
   }, []);
 
+  let sameProduct: any = [];
   // All the logic behind showing products
   const productShow = productFilter.map((val: any, key: number, items: any) => {
     let previousItem = items[key - 1];
@@ -65,10 +66,6 @@ const Page = () => {
       nextItem = { market_name: "" };
     }
 
-    console.log(previousItem);
-    console.log(currentItem);
-    console.log(nextItem, "fim");
-
     // Shows down arrow if the product is 'closed' and hide it i the product is 'open
     const toggleDownArrow =
       parseInt(eventID) === val.item_id ? null : (
@@ -80,7 +77,10 @@ const Page = () => {
     // Shows the product 'closed'
     const productsClosed = (
       <div className="noSelect productsClosedInfo">
-        <img src={`/images/products/${val.product_image}.png`} alt="" />
+        <img
+          src={`/images/products/${val.product_image}.png`}
+          onError={(e) => e.currentTarget.src = '/images/product.png'}
+          alt="" />
         <div>
           <span>{val.product_name}</span>
           <span>{val.product_info}</span>
@@ -92,70 +92,159 @@ const Page = () => {
         </span>
       </div>
     );
-
-    if (previousItem.product_id === currentItem.product_id) {
-      return null;
+    if (nextItem.product_id === currentItem.product_id) {
+      sameProduct = [...sameProduct, currentItem];
     }
-    else {
-      return (
-        // Template contains all product cards
-        <div
-          className="template"
-          id={`${val.item_id}`}
-          key={key}
-          // Opens/closes the product card
-          onClick={(e) => {
-            if (eventID === e.currentTarget.id) {
-              setEventID("0");
-            } else {
-              setEventID(e.currentTarget.id);
-            }
-            setShowMoreInfo(!showMoreInfo);
-          }}
-        >
-          <div className="template-inner">
-            {productsClosed}
-            {toggleDownArrow}
-            {parseInt(eventID) === val.item_id ? (
-              <div className="productsInfoLong">
-                <hr />
-                <div>
-                  <div className="market">
-                    <img src={`/images/markets/${val.market_logo}.png`} alt="" />
-                    <span className="box">{val.market_name}</span>
+    if (
+      previousItem.product_id === currentItem.product_id &&
+      nextItem.product_id !== currentItem.product_id
+    ) {
+      sameProduct = [...sameProduct, currentItem];
+    }
+    return (
+      <Fragment key={key}>
+        {previousItem.product_id === currentItem.product_id &&
+          nextItem.product_id !== currentItem.product_id ? (
+          <Fragment key={key}>
+            <div
+              className="template"
+              id={`${val.item_id}`}
+              key={key}
+              // Opens/closes the product card
+              onClick={(e) => {
+                if (eventID === e.currentTarget.id) {
+                  setEventID("0");
+                } else {
+                  setEventID(e.currentTarget.id);
+                }
+                setShowMoreInfo(!showMoreInfo);
+              }}
+            >
+              <div className="template-inner">
+                <div className="noSelect productsClosedInfo">
+                  <img
+                    src={`/images/products/${sameProduct[0].product_image}.png`}
+                    onError={(e) => e.currentTarget.src = '/images/product.png'}
+                    alt=""
+                  />
+                  <div>
+                    <span>{sameProduct[0].product_name}</span>
+                    <span>{sameProduct[0].product_info}</span>
                   </div>
-                  <div className="expireDate">
-                    <span>promoção até</span>
-                    <span>{val.day_name}</span>
-                    <span>{val.formated_expire_date}</span>
+                  <span className="price">
+                    <span>R$</span>
+                    <span>{sameProduct[0].reais}</span>
+                    <span>,{sameProduct[0].cents}</span>
+                  </span>
+                </div>
+                {toggleDownArrow}
+                {parseInt(eventID) === val.item_id ? (
+                  <div className="productsInfoLong">
+                    <hr />
+                    <div>
+                      <div className="market">
+                        <img
+                          src={`/images/markets/${sameProduct[0].market_logo}.png`}
+                          alt=""
+                        />
+                        <span className="box">
+                          {sameProduct[0].market_name}
+                        </span>
+                      </div>
+                      <div className="expireDate">
+                        <span>promoção até</span>
+                        <span>{sameProduct[0].day_name}</span>
+                        <span>{sameProduct[0].formated_expire_date}</span>
+                      </div>
+                    </div>
+                    <div className="down-arrow">
+                      <img src={"/images/navbar/up-arrow.png"} alt="" />
+                    </div>
                   </div>
-                </div>
-                <div className="down-arrow">
-                  <img src={"/images/navbar/up-arrow.png"} alt="" />
-                </div>
+                ) : null}
               </div>
-            ) : null}
-          </div>
-          {nextItem.product_id === currentItem.product_id && parseInt(eventID) === val.item_id ? (
-            <div className="moreInfo" key={nextItem.key}>
-              <div>
-                <img src={`/images/markets/${nextItem.market_logo}.png`} alt="" />
-                <span className="moreInfoSpan1">{nextItem.market_name}</span>
-                <div className="moreInfoSpan2">
-                  <span>até dia</span>
-                  <span>{nextItem.formated_expire_date}</span>
-                </div>
-                <span className="moreInfoPrice moreInfoSpan3">
-                  <span>R$</span>
-                  <span>{nextItem.reais}</span>
-                  <span>,{nextItem.cents}</span>
-                </span>
-              </div>
+              <Fragment key={key}>
+                {parseInt(eventID) === val.item_id ? (
+                  <Fragment key={key}>
+                    {sameProduct.slice(1).map((val: any, key: number) => {
+                      return (
+                        <div className="moreInfo" key={key}>
+                          <div>
+                            <img
+                              src={`/images/markets/${val.market_logo}.png`}
+                              alt=""
+                            />
+                            <span className="moreInfoSpan1">
+                              {val.market_name}
+                            </span>
+                            <div className="moreInfoSpan2">
+                              <span>até dia</span>
+                              <span>{val.formated_expire_date}</span>
+                            </div>
+                            <span className="moreInfoPrice moreInfoSpan3">
+                              <span>R$</span>
+                              <span>{val.reais}</span>
+                              <span>,{val.cents}</span>
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Fragment>
+                ) : null}
+                {(sameProduct = [])}
+              </Fragment>
             </div>
-          ) : null}
-        </div>
-      );
-    }
+          </Fragment>
+        ) : (
+          <Fragment key={key}>
+            {nextItem.product_id === currentItem.product_id ? null : (
+              <div
+                className="template"
+                id={`${val.item_id}`}
+                key={key}
+                // Opens/closes the product card
+                onClick={(e) => {
+                  if (eventID === e.currentTarget.id) {
+                    setEventID("0");
+                  } else {
+                    setEventID(e.currentTarget.id);
+                  }
+                  setShowMoreInfo(!showMoreInfo);
+                }}
+              >
+                <div className="template-inner">
+                  {productsClosed}
+                  {toggleDownArrow}
+                  {parseInt(eventID) === val.item_id ? (
+                    <div className="productsInfoLong">
+                      <hr />
+                      <div>
+                        <div className="market">
+                          <img
+                            src={`/images/markets/${val.market_logo}.png`}
+                            alt=""
+                          />
+                          <span className="box">{val.market_name}</span>
+                        </div>
+                        <div className="expireDate">
+                          <span>promoção até</span>
+                          <span>{val.day_name}</span>
+                          <span>{val.formated_expire_date}</span>
+                        </div>
+                      </div>
+                      <div className="down-arrow">
+                        <img src={"/images/navbar/up-arrow.png"} alt="" />
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            )}
+          </Fragment>
+        )}
+      </Fragment>
+    );
   });
 
   return (
@@ -173,13 +262,13 @@ const Page = () => {
             onClick={() => setThemes(navBarTheme["profileActive"])}
             to="/profile"
           >
-            <img src="/images/share.png" alt="" />
+            <img src="/images/share.png" loading="lazy" alt="" />
           </Link>
         </div>
         <div className="productShowArea">
           {productShow}
           <div className="endMessage">
-            <img src="/images/logo.png" alt="" />
+            <img src="/images/logo.png" loading="lazy" alt="" />
             <span>
               MAIS PRODUTOS
               <br />

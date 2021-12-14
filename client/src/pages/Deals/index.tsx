@@ -4,7 +4,7 @@ import { DealsArea } from "./styled";
 const Page = () => {
   return (
     <DealsArea>
-      <img src="/images/logo.png" alt=""/>
+      <img src="/images/logo.png" loading="lazy" alt="" />
       <span>Descontão<br />EM BREVE</span>
     </DealsArea>
   );

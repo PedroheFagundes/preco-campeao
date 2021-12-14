@@ -57,7 +57,7 @@ const Page = () => {
 
   useEffect(() => {
     getProducts();
-  },[]);
+  }, []);
 
   const todayDate = new Date().setHours(0, 0, 0, 0);
 
@@ -66,26 +66,26 @@ const Page = () => {
 
 
 
-/*   
-
-DESNECESSÁRIO AGORACOM O BACK END
-  
-// If there is not any sale of a product, it doesn't even show the white card that contains the product
-    // This if statement can be upgraded
-    if (
-      new Date(val.price[0][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[1][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[2][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[3][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[4][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[5][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[6][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[7][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[8][2]).setHours(0, 0, 0, 0) < todayDate &&
-      new Date(val.price[9][2]).setHours(0, 0, 0, 0) < todayDate
-    ) {
-      return null;
-    } */
+    /*   
+    
+    DESNECESSÁRIO AGORACOM O BACK END
+      
+    // If there is not any sale of a product, it doesn't even show the white card that contains the product
+        // This if statement can be upgraded
+        if (
+          new Date(val.price[0][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[1][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[2][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[3][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[4][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[5][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[6][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[7][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[8][2]).setHours(0, 0, 0, 0) < todayDate &&
+          new Date(val.price[9][2]).setHours(0, 0, 0, 0) < todayDate
+        ) {
+          return null;
+        } */
 
     console.log("here");
 
@@ -306,13 +306,13 @@ DESNECESSÁRIO AGORACOM O BACK END
             onClick={() => setThemes(navBarTheme["profileActive"])}
             to="/profile"
           >
-            <img src="/images/share.png" alt="" />
+            <img src="/images/share.png" loading="lazy" alt="" />
           </Link>
         </div>
         <div className="productShowArea">
           {productShow}
           <div className="endMessage">
-            <img src="/images/logo.png" alt="" />
+            <img src="/images/logo.png" loading="lazy" alt="" />
             <span>
               MAIS PRODUTOS
               <br />

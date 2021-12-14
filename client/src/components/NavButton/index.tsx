@@ -17,7 +17,7 @@ const NavButton = () => {
               onClick={() => setThemes(navBarTheme["homeActive"])}
             >
               <div className="buttonImages">
-                <img className="homeImg" src="/images/navbar/home.png" alt="" />
+                <img className="homeImg" src="/images/navbar/home.png" loading="lazy" alt="" />
                 <img
                   className="homeImg arrow"
                   src="/images/navbar/right-arrow.png"
