@@ -117,7 +117,6 @@ app.delete("/products/:product_id", async (req, res) => {
   }
 });
 
-
 // Create an item
 app.post("/itemsnovafriburgo", async (req, res) => {
   try {
@@ -274,6 +273,28 @@ app.get("/activeitems", async (req, res) => {
   }
 });
 
+// Create a feedback
+app.post("/feedback", async (req, res) => {
+  try {
+    const { feedback_description } =
+      req.body;
+    const newFeedback = await pool.query(
+      `
+      INSERT INTO 
+          feedback (created_at, feedback_description)
+      VALUES
+          (now(), $1)
+      RETURNING
+          *
+      `,
+      [feedback_description]
+    );
+
+    res.json(newFeedback.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
 //Estabilishing the port
 const PORT = process.env.PORT || 5000;
 
