@@ -21,7 +21,7 @@ export const ProfileArea = styled.div`
   .resp-sharing-button__link,
   .resp-sharing-button__icon {
     display: inline-block;
-    margin: 6px 4px;
+    margin: 4px 4px;
   }
 
   .resp-sharing-button__link {
@@ -32,7 +32,7 @@ export const ProfileArea = styled.div`
   .resp-sharing-button {
     border-radius: 5px;
     transition: 25ms ease-out;
-    padding: 10px 12px;
+    padding: 7px 9px;
     width: 100%;
   }
 
@@ -167,18 +167,20 @@ export const ProfileArea = styled.div`
     width: 90%;
     background-color: #e95f24;
     padding: 10px 10px;
-    margin-top: 20px;
+    margin-bottom: 5px ;
+    margin-top: 15px;
     color: #fff;
     text-align: center;
     font-size: 18px;
 
     div {
-      font-size: 22px;
+      font-size: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
 
       background-color: #fff;
+      margin: 10px 0px 0px 0px;
       padding: 10px 10px;
       color: #0a4a4a;
 
@@ -205,6 +207,7 @@ export const ProfileArea = styled.div`
     width: 90%;
     background-color: #fff;
     padding: 10px 10px;
+    margin: 5px;
     color: #0a4a4a;
     text-align: center;
     font-size: 18px;
@@ -214,13 +217,13 @@ export const ProfileArea = styled.div`
       display: flex;
       justify-content: center;
       img {
-        height: 40px;
+        height: 30px;
       }
       a.instagram {
         margin-left: 5px;
         text-decoration: none;
         border-radius: 5px;
-        font-size: 30px;
+        font-size: 25px;
         padding: 1px 4px;
         color: #0a4a4a;
       }
@@ -235,6 +238,7 @@ export const ProfileArea = styled.div`
     background-color: #fff;
     padding: 10px 10px;
     color: #0a4a4a;
+    margin: 5px;
     text-align: center;
     font-size: 18px;
 
@@ -257,6 +261,28 @@ export const ProfileArea = styled.div`
         padding: 1px 4px;
         color: #0a4a4a;
       }
+    }
+  }
+
+  .feedback {
+    width: 100%;
+    input {
+      padding: 4px 4px;
+      width: 75%;
+      border-radius: 6px;
+      margin: 0px 5px;
+      &:focus{
+        outline: none;
+        box-shadow: inset 0px 4px 4px #aaa;
+      }
+    }
+    button {
+      background-color: #e95f24;
+      border: none;
+      padding: 6px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #fff;
     }
   }
 `;

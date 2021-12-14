@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProfileArea } from "./styled";
 
 const Page = () => {
+
+  const [message, setMessage] = useState(false);
+  const [feedback_description, setFeedback_description] = useState("");
+
+  const onSubmitForm = async (e: any) => {
+    e.preventDefault();
+    try {
+      const body = {
+        feedback_description,
+      };
+      await fetch("https://preco-campeao.herokuapp.com/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      setMessage(true);
+    } catch (err: any) {
+      console.error(err.message);
+    }
+  };
+
   return (
     <ProfileArea>
       <div className="areaPix">
@@ -159,6 +180,19 @@ const Page = () => {
             </a>
           </div>
         </div>
+        <hr />
+        <span>ENVIE SUA CRÍTICA OU SUGESTÃO</span>
+        <form onSubmit={onSubmitForm} className="feedback">
+          <input
+            type="text"
+            value={feedback_description}
+            onChange={(e) => setFeedback_description(e.target.value)}
+          />
+          <button>ENVIAR</button>
+        </form>
+        {message
+          ? <span className="feedbackSuccess">Feedback enviado com sucesso!</span>
+          : null}
       </div>
       <div className="areaContato">
         <span>CRIADO E MANTIDO POR PEDRO FAGUNDES</span>
