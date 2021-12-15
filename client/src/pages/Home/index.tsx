@@ -6,18 +6,11 @@ import { HomeArea } from "./styled";
 
 const Page = () => {
   const [products, setProducts] = useState([]);
-
-  // Variable used to make product filter
   const [searchTerm, setSearchTerm] = useState("");
-
-  // Boolean to show and hide moreInfo panel
   const [showMoreInfo, setShowMoreInfo] = useState(false);
-
-  // Defines which product is open showing moreInfo, Product "0" means none of the products are open
   const [eventID, setEventID] = useState("0");
-
-  // Variable that sets which NavBar page is open and set the theme
   const [theme, setThemes] = useState(navBarTheme["homeActive"]);
+  const [productsLoaded, setProductsLoaded] = useState(true);
 
   // Reads all products from productsJSON and filters it while user is typing
   const productFilter = products.filter((val: any) => {
@@ -76,7 +69,7 @@ const Page = () => {
 
     // Shows the product 'closed'
     const productsClosed = (
-      <div className="noSelect productsClosedInfo">
+      <div onLoad={() => setProductsLoaded(false)} className="noSelect productsClosedInfo">
         <img
           src={`/images/products/${val.product_image}.png`}
           onError={(e) => e.currentTarget.src = '/images/product.png'}
@@ -267,14 +260,22 @@ const Page = () => {
         </div>
         <div className="productShowArea">
           {productShow}
-          <div className="endMessage">
-            <img src="/images/logo.png" loading="lazy" alt="" />
-            <span>
-              MAIS PRODUTOS
-              <br />
-              EM BREVE
-            </span>
-          </div>
+          {productsLoaded
+            ? <div className="endMessage">
+              <img src="/images/loading-product.png" loading="lazy" alt="" />
+              <span>
+                CARREGANDO PRODUTOS
+              </span>
+            </div>
+            :
+            <div className="endMessage">
+              <img src="/images/logo.png" loading="lazy" alt="" />
+              <span>
+                MAIS PRODUTOS
+                <br />
+                EM BREVE
+              </span>
+            </div>}
         </div>
       </HomeArea>
     </ThemeProvider>
