@@ -35,10 +35,10 @@ const Page = () => {
       const jsonData = await response.json();
 
       setProducts(jsonData);
+      setProductsLoaded(false);
     } catch (err: any) {
       console.error(err.message);
     }
-    setProductsLoaded(false);
   };
 
   useEffect(() => {
