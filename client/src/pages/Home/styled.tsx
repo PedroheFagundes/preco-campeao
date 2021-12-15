@@ -276,4 +276,55 @@ export const HomeArea = styled.div`
       opacity: 30%;
     }
   }
+
+  .tutorialArea {
+    width: 90%;
+    background-color: #E95F24;
+    box-shadow: 0px 2px 2px #333;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    
+    span {
+      color: #fff;
+      font-size: 26px;
+      padding-bottom: 5px;
+    }
+
+    .tutorialDescription {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+      span {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 9px;
+        padding: 10px;
+        color: #1d5c66;
+        font-size: 22px;
+        text-align: center;
+        span {
+          padding: 0;
+          color: #00404a;
+          font-weight: bold;
+        }
+      }
+      img {
+        width: 100px;
+        height: 107px;
+        margin-left: 5px;
+      }
+    }
+  }
+  span:last-child {
+    text-align: justify;
+    font-size: 19px;
+    padding: 0;
+  }
 `;

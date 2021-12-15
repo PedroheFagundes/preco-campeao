@@ -25,26 +25,6 @@ const Page = () => {
 
   return (
     <ProfileArea>
-      <div className="areaPix">
-        <span>
-          QUER CONTRIBUR PARA SEMPRE TER AS MELHORES PROMOÇÕES EM SUAS MÃOS?
-        </span>
-        <div>
-          <span>CHAVE PIX E-MAIL</span>
-          <span>pedrohefagundes@gmail.com</span>
-          <hr />
-          <span>
-            PIX POR LINK
-            <a
-              href="https://nubank.com.br/pagar/oeti/kYsQQfzO7H"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CLIQUE AQUI!
-            </a>
-          </span>
-        </div>
-      </div>
       <div className="areaRedes">
         <span>NOS SIGA NO INSTAGRAM</span>
         <div>
@@ -181,8 +161,9 @@ const Page = () => {
           </div>
         </div>
         <hr />
-        <span>ENVIE SUA CRÍTICA OU SUGESTÃO</span>
-        <form onSubmit={onSubmitForm} className="feedback">
+        <p className="feedbackTitle">ESTÁ GOSTANDO DO PREÇO CAMPEÃO?</p>
+        <p className="feedbackText">Envie sua crítica, sugestão ou alguma funcionalidade que gostaria de ver por aqui!</p>
+        <form onSubmit={onSubmitForm} className="feedbackForm">
           <input
             type="text"
             value={feedback_description}

@@ -163,72 +163,33 @@ export const ProfileArea = styled.div`
     margin: 10px 0px;
   }
 
-  .areaPix {
-    width: 90%;
-    background-color: #e95f24;
-    padding: 10px 10px;
-    margin-bottom: 5px ;
-    margin-top: 15px;
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-
-    div {
-      font-size: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      background-color: #fff;
-      margin: 10px 0px 0px 0px;
-      padding: 10px 10px;
-      color: #0a4a4a;
-
-      img {
-        width: 100px;
-        margin-bottom: 10px;
-      }
-
-      a {
-        text-decoration: none;
-        background-color: #e95f24;
-        border-radius: 5px;
-        padding: 1px 4px;
-        color: #fff;
-      }
-
-      hr {
-        width: 90%;
-      }
-    }
-  }
-
   .areaRedes {
     width: 90%;
     background-color: #fff;
     padding: 10px 10px;
-    margin: 5px;
+    margin: 25px 0px;
     color: #0a4a4a;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
 
     div {
       margin: 0;
       display: flex;
       justify-content: center;
       img {
-        height: 30px;
+        height: 35px;
       }
       a.instagram {
         margin-left: 5px;
         text-decoration: none;
         border-radius: 5px;
-        font-size: 25px;
+        font-size: 30px;
         padding: 1px 4px;
         color: #0a4a4a;
       }
     }
     hr {
+      margin: 15px 0px;
       width: 90%;
     }
   }
@@ -264,13 +225,13 @@ export const ProfileArea = styled.div`
     }
   }
 
-  .feedback {
+  .feedbackForm {
     width: 100%;
     input {
       padding: 4px 4px;
       width: 75%;
       border-radius: 6px;
-      margin: 0px 5px;
+      margin: 0px 5px 10px 5px;
       &:focus{
         outline: none;
         box-shadow: inset 0px 4px 4px #aaa;
@@ -284,5 +245,18 @@ export const ProfileArea = styled.div`
       font-weight: bold;
       color: #fff;
     }
+  }
+
+  .feedbackTitle {
+    font-size: 23px;
+    padding: 0px;
+    margin-bottom: 5px;
+  }
+
+  .feedbackText {
+    font-size: 17px;
+    padding: 0px;
+    margin: 10px; 
+    color: #1d5c66;
   }
 `;
