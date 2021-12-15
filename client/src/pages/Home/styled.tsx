@@ -318,8 +318,8 @@ export const HomeArea = styled.div`
         }
       }
       img {
-        width: 100px;
-        height: 107px;
+        width: 107px;
+        height: 114px;
         margin-left: 5px;
       }
     }
