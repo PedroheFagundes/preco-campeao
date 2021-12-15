@@ -38,11 +38,11 @@ const Page = () => {
     } catch (err: any) {
       console.error(err.message);
     }
+    setProductsLoaded(false);
   };
 
   useEffect(() => {
     getProducts();
-    setProductsLoaded(false)
   }, []);
 
   let sameProduct: any = [];
