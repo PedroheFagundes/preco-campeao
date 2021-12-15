@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CreateProductArea } from "./styled";
 
 const InputProduct = () => {
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState(true);
   const [product_name, setProduct_name] = useState("");
   const [product_info, setProduct_info] = useState("");
   const [product_category, setProduct_category] = useState("");
@@ -22,7 +22,11 @@ const InputProduct = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      setMessage(true);
+      setProduct_name("");
+      setProduct_info("");
+      setProduct_category("");
+      setProduct_image("");
+      setTimeout(() => { setMessage(false) }, 2000);
     } catch (err) {
       console.error(err.message);
     }

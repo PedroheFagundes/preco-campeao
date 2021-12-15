@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CreateItemArea } from "./styled";
 
 const InputProduct = () => {
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState(true);
   const [products, setProducts] = useState([]);
   const [market_name, setMarket_name] = useState("");
   const [product_name, setProduct_name] = useState("");
@@ -25,7 +25,12 @@ const InputProduct = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      setMessage(true);
+      setMarket_name("");
+      setProduct_name("");
+      setItem_price("");
+      setItem_start_date("");
+      setItem_expire_date("");
+      setTimeout(() => { setMessage(false) }, 2000);
     } catch (err) {
       console.error(err.message);
     }
