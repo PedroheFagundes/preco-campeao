@@ -260,12 +260,12 @@ const Page = () => {
           </Link>
         </div>
         <div className="tutorialArea">
-          <span>Boas vindas ao Preço Campeão!</span>
+          <span className="tutorialStart">Boas vindas ao Preço Campeão!</span>
           <div className="tutorialDescription">
             <span>Aqui você encontra as melhores promoções dos mercados de <br /><span>Nova Friburgo</span>!</span>
             <img src="/images/logo.png" loading="lazy" alt="" />
           </div>
-          <span>Procure por um produto na barra de pesquisa acima ou clique nos produtos na lista abaixo para ver todas informações.</span>
+          <span className="tutorialEnd">Procure por um produto na <span>barra de pesquisa acima</span> ou clique nos produtos na <span>lista abaixo</span> para ver todas informações.</span>
         </div>
         <div className="productShowArea">
           {productShow}

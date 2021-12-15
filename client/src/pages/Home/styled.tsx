@@ -289,7 +289,7 @@ export const HomeArea = styled.div`
     margin-bottom: 15px;
     padding: 10px;
     
-    span {
+    .tutorialStart {
       color: #fff;
       font-size: 26px;
       padding-bottom: 5px;
@@ -302,6 +302,7 @@ export const HomeArea = styled.div`
       width: 100%;
       margin-bottom: 10px;
       span {
+        box-shadow: 0px 2px 2px #333;
         width: 100%;
         background-color: #fff;
         border-radius: 9px;
@@ -313,6 +314,7 @@ export const HomeArea = styled.div`
           padding: 0;
           color: #00404a;
           font-weight: bold;
+        box-shadow: none;
         }
       }
       img {
@@ -322,9 +324,15 @@ export const HomeArea = styled.div`
       }
     }
   }
-  span:last-child {
+  .tutorialEnd {
+    color: #fff;
+    line-height: 130%;
     text-align: justify;
     font-size: 19px;
     padding: 0;
+    span {
+      text-shadow: 1px 1px #00404a;
+      font-weight: bold;
+    }
   }
 `;
