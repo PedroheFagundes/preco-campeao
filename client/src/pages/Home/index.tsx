@@ -8,6 +8,7 @@ const Page = () => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [showMoreInfo, setShowMoreInfo] = useState(false);
+  const [showTutorial, setShowTutorial] = useState(true);
   const [eventID, setEventID] = useState("0");
   const [theme, setThemes] = useState(navBarTheme["homeActive"]);
   const [productsLoaded, setProductsLoaded] = useState(true);
@@ -112,6 +113,7 @@ const Page = () => {
                   setEventID(e.currentTarget.id);
                 }
                 setShowMoreInfo(!showMoreInfo);
+                setShowTutorial(false);
               }}
             >
               <div className="template-inner">
@@ -205,6 +207,7 @@ const Page = () => {
                     setEventID(e.currentTarget.id);
                   }
                   setShowMoreInfo(!showMoreInfo);
+                  setShowTutorial(false);
                 }}
               >
                 <div className="template-inner">
@@ -251,6 +254,7 @@ const Page = () => {
             onChange={(event) => {
               setSearchTerm(event.target.value);
             }}
+            onFocus={() => setShowTutorial(false)}
           />
           <Link
             onClick={() => setThemes(navBarTheme["profileActive"])}
@@ -259,14 +263,16 @@ const Page = () => {
             <img src="/images/share.png" loading="lazy" alt="" />
           </Link>
         </div>
-        <div className="tutorialArea">
-          <span className="tutorialStart">Boas vindas ao Preço Campeão!</span>
-          <div className="tutorialDescription">
-            <span>Aqui você encontra as melhores promoções dos mercados de <br /><span>Nova Friburgo</span>!</span>
-            <img src="/images/logo.png" loading="lazy" alt="" />
+        {showTutorial
+          ? <div className="tutorialArea">
+            <span className="tutorialStart">Boas vindas ao Preço Campeão!</span>
+            <div className="tutorialDescription">
+              <span>Aqui você encontra as melhores promoções dos mercados de <br /><span>Nova Friburgo</span>!</span>
+              <img src="/images/logo.png" loading="lazy" alt="" />
+            </div>
+            <span className="tutorialEnd">Procure por um produto na <span>barra de pesquisa acima</span> ou clique nos produtos na <span>lista abaixo</span> para ver todas informações.</span>
           </div>
-          <span className="tutorialEnd">Procure por um produto na <span>barra de pesquisa acima</span> ou clique nos produtos na <span>lista abaixo</span> para ver todas informações.</span>
-        </div>
+          : null}
         <div className="productShowArea">
           {productShow}
           {productsLoaded
