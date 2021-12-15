@@ -42,6 +42,7 @@ const Page = () => {
 
   useEffect(() => {
     getProducts();
+    setProductsLoaded(false)
   }, []);
 
   let sameProduct: any = [];
@@ -69,7 +70,7 @@ const Page = () => {
 
     // Shows the product 'closed'
     const productsClosed = (
-      <div onLoad={() => setProductsLoaded(false)} className="noSelect productsClosedInfo">
+      <div className="noSelect productsClosedInfo">
         <img
           src={`/images/products/${val.product_image}.png`}
           onError={(e) => e.currentTarget.src = '/images/product.png'}
