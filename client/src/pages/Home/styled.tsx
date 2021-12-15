@@ -331,7 +331,7 @@ export const HomeArea = styled.div`
     font-size: 19px;
     padding: 0;
     span {
-      text-shadow: 1px 1px #00404a;
+      text-shadow: 1px 2px #00404a;
       font-weight: bold;
     }
   }
