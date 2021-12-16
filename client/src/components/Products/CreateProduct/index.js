@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import EditProduct from "../EditProduct";
 import { CreateProductArea } from "./styled";
+
 
 const InputProduct = () => {
   const [message, setMessage] = useState(false);
@@ -34,7 +36,7 @@ const InputProduct = () => {
   };
 
   return (
-    <CreateProductArea>
+    <><CreateProductArea>
       <h3>Criar Produto</h3>
       <form onSubmit={onSubmitForm}>
         <div className="upperBottomLine">
@@ -44,8 +46,7 @@ const InputProduct = () => {
               type="text"
               value={product_name}
               maxLength="17"
-              onChange={(e) => setProduct_name(e.target.value)}
-            />
+              onChange={(e) => setProduct_name(e.target.value)} />
           </div>
           <div className="inputField">
             <p>Informação do Produto</p>
@@ -53,8 +54,7 @@ const InputProduct = () => {
               type="text"
               value={product_info}
               maxLength="21"
-              onChange={(e) => setProduct_info(e.target.value)}
-            />
+              onChange={(e) => setProduct_info(e.target.value)} />
           </div>
         </div>
         <div className="upperBottomLine">
@@ -63,16 +63,14 @@ const InputProduct = () => {
             <input
               type="text"
               value={product_category}
-              onChange={(e) => setProduct_category(e.target.value)}
-            />
+              onChange={(e) => setProduct_category(e.target.value)} />
           </div>
           <div className="inputField">
             <p>Imagem do Produto</p>
             <input
               type="text"
               value={product_image}
-              onChange={(e) => setProduct_image(e.target.value)}
-            />
+              onChange={(e) => setProduct_image(e.target.value)} />
           </div>
         </div>
         <br />
@@ -82,6 +80,8 @@ const InputProduct = () => {
           : null}
       </form>
     </CreateProductArea>
+      <EditProduct />
+    </>
   );
 };
 

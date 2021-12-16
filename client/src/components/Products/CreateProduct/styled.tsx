@@ -4,8 +4,8 @@ export const CreateProductArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
   background-color: #fff;
+  border-radius: 9px;
   padding: 15px;
   margin-top: 15px;
 

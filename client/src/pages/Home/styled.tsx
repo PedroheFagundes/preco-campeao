@@ -59,7 +59,7 @@ export const HomeArea = styled.div`
       height: aut0;
 
       span {
-        font-size: 28px;;
+        font-size: 26px;;
         line-height: 100%;
       }
 
