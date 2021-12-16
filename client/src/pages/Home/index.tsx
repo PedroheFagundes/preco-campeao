@@ -263,17 +263,17 @@ const Page = () => {
             <img src="/images/share.png" loading="lazy" alt="" />
           </Link>
         </div>
-        {showTutorial
-          ? <div className="tutorialArea">
-            <span className="tutorialStart">Boas vindas ao Preço Campeão!</span>
-            <div className="tutorialDescription">
-              <span>Aqui você encontra as melhores promoções dos mercados de <br /><span>Nova Friburgo</span>!</span>
-              <img src="/images/logo.png" loading="lazy" alt="" />
-            </div>
-            <span className="tutorialEnd">Procure por um produto na <span>barra de pesquisa acima</span> ou clique nos produtos na <span>lista abaixo</span> para ver todas informações.</span>
-          </div>
-          : null}
         <div className="productShowArea">
+          {showTutorial
+            ? <div className="tutorialArea">
+              <span className="tutorialStart">Boas vindas ao Preço Campeão!</span>
+              <div className="tutorialDescription">
+                <span>Aqui você encontra as melhores promoções dos mercados de <br /><span>Nova Friburgo</span>!</span>
+                <img src="/images/logo.png" loading="lazy" alt="" />
+              </div>
+              <span className="tutorialEnd">Procure por um produto na <span>barra de pesquisa acima</span> ou clique nos produtos na <span>lista abaixo</span> para ver todas informações.</span>
+            </div>
+            : null}
           {productShow}
           {productsLoaded
             ? <div className="endMessage">
