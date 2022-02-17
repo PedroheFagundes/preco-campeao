@@ -3,7 +3,7 @@
 
 I've created this web app using:
 - ReactJS and TypeScript for the Client Side;
-- NodeJS for the Server Side
+- NodeJS for the Server Side;
 - PostgreSQL for Database.
 
 In this CRUD application you can create, update and delete markets, items and associates items in sale to a market.  
