@@ -1,7 +1,7 @@
 # PREÇO CAMPEÃO
 [![Preço Campeão](https://github.com/PedroheFagundes/preco-campeao/blob/master/client/public/images/preco-campeao.jpg "Preço Campeão")](https://some-url.dev/)  
 
-I've created web app using:
+I've created this web app using:
 - ReactJS and TypeScript for the Client Side;
 - NodeJS for the Server Side
 - PostgreSQL for Database.
